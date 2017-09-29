@@ -1,0 +1,63 @@
+
+<section id="login_with_email" class="login-wrapper">
+  <div class="form-box">
+    <h2 ng-if="showIntermediateTitle">{{ 'Please Sign-in to Continue' | translate }}</h2>
+
+    <!-- <h2>{{'connect to epart' | translate }}</h2> -->
+    <div ng-if="!showSocialLogins" class="social-buttons">
+      <a ng-repeat="provider in authProviders | orderBy : provider.provider" ng-hide="provider.link"
+         ng-click="sendGaEvent('login popup','login with '+ provider.provider); socialLogin(provider)"
+       class="btn dt-btn btn-{{provider.class}} social-login">
+        <i class="fa fa-{{provider.provider}}"></i> {{'Login with'| translate}} {{provider.text  | translate}}
+      </a>
+    </div>
+    <div ng-if="showSocialLogins">
+      <!-- Temporarily removed social logins until multiple domains will be supported. -->
+
+      <div ng-show="false" class="social-buttons">
+        <a ng-repeat="provider in authProviders | orderBy : provider.provider" ng-hide="provider.link" ng-click="sendGaEvent('login popup','התחברות עם '+provider.provider); socialLogin(provider)"
+           class="btn btn-{{provider.class}} social-login">
+          <i class="fa fa-{{provider.provider}}"></i> {{'Login with'| translate}} {{provider.text  | translate}}
+          <span ng-hide="true">{{'Login with Facebook' | translate }}</span>
+        </a>
+      </div>
+
+      <div ng-show="false" class="text-center add-padding font-bigger">- {{'or' | translate }} -</div>
+
+      <a ng-click="sendGaEvent('register popup','email registration'); showEmailForm=true"
+         class="btn btn-default" ng-show="!showEmailForm">
+        <i class="fa fa-envelope-o"></i> {{'Login with'| translate}} {{'Email' | translate}}
+      </a>
+
+      <form ng-init="showEmailForm=true" name="loginForm" role="form" ng-submit="login()" method="post" ng-show="showEmailForm">
+        <div class="callout callout-danger" ng-if="loginError">
+          <p>{{loginError.message | translate}}</p>
+        </div>
+<!--
+        <auto:fields fields="schema" data="credentials" options="options"></auto:fields>
+-->
+        <div class="form-group">
+          <input ng-model="credentials.email" type="email" placeholder="{{ 'Email' | translate }}" minlength="4" aria-labelledby="{{ 'Email' | translate }}" required/>
+        </div>
+        <div class="form-group">
+          <input ng-model="credentials.password"  type="password" placeholder="{{ 'Password' | translate }}" minlength="5" aria-labelledby="{{ 'Password' | translate }}" required/>
+        </div>
+
+        <button ng-click="sendGaEvent('login popup','login');" type="submit" ng-disabled="!loginForm.$valid" class="btn bg-olive btn-block" translate>{{'Sign in' | translate }}</button>
+        <div ng-if="formErrorMsg" class="form-errors-container">{{ formErrorMsg.general }}.</div>
+
+        <div class="login-footer clearfix">
+          <div class="login-footer-link">
+            {{'Not Registered?' | translate }} <a href="#" ng-click="register()">{{'Sign Up' | translate }}</a>
+          </div>
+          <div class="login-footer-link">
+            <a href="#" ng-click="requestResetPassword()">{{'Forgot Password?' | translate }}</a>
+          </div>
+        </div>
+      </form>
+
+
+    </div>
+
+  </div>
+</section>

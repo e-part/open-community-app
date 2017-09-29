@@ -1,0 +1,40 @@
+{
+  "name": "Faq",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "question": {
+      "type": "string",
+      "required": true
+    },
+    "answer": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

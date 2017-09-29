@@ -1,0 +1,37 @@
+<h3 class="form-title">
+  <div>{{formSection.title}}</div>
+</h3>
+<div class="form-row row clear-both" ng-repeat="meeting in ctrl.post.meetings track by $index">
+  <div class="actions-box" ng-click="ctrl.removeMeeting($index)">
+    <i class="fa fa-trash-o" aria-hidden="true" ></i>
+  </div>
+  <div class="col-xs-12 col-md-6 form-cell left-side-cell">
+    <div class="input-cont half-width">
+      <label for="meetingDate" translate>Meeting Date</label>
+      <p class="input-group datepicker-field">
+        <input id="meetingDate" type="text" class="form-control" uib-datepicker-popup="shortDate"
+               ng-model="meeting.date" is-open="dt2.opened"
+               close-text="Close"/>
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-default" ng-click="dt2.opened = true"><i
+                        class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+      </p>
+    </div>
+    <div class="input-cont half-width">
+      <label for="meetingTime" translate>Meeting Time</label>
+      <div id="meetingTime" class="timepicker" uib-timepicker show-spinners="false" ng-model="meeting.date" show-meridian="true"></div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-6 form-cell">
+    <div class="input-cont">
+      <label for="meetingLocation" translate>Meeting Location</label>
+      <input type="text" class="input-field" id="meetingLocation" ng-model="meeting.location"/>
+    </div>
+  </div>
+</div>
+<!--<div class="form-row row clear-both">
+  <button class="btn btn-primary btn-success form-section-create-btn" ng-click="ctrl.addMeeting()">
+    <i class="fa fa-plus" aria-hidden="true"></i> &nbsp;{{'Add a meeting' | translate}}
+  </button>
+</div>-->

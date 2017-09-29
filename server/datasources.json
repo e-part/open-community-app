@@ -1,0 +1,48 @@
+{
+  "memory_db": {
+    "name": "memory_db",
+    "connector": "memory"
+  },
+  "db": {
+    "host": "127.0.0.1",
+    "port": 3306,
+    "database": "epart_webapp",
+    "name": "db",
+    "user": "root",
+    "connector": "mysql",
+    "connectTimeout" : 30000,
+    "acquireTimeout" : 30000
+  },
+  "mandrill": {
+    "connector": "lb-connector-mandrill",
+    "apikey": "XXX"
+  },
+  "epart_mail": {
+    "name": "Email",
+    "defaultForType": "mail",
+    "connector": "mail",
+    "transports": [
+      {
+        "type": "SMTP",
+        "host": "email-smtp.eu-west-1.amazonaws.com",
+        "secure": false,
+        "port": 25,
+        "auth": {
+          "user": "XXX",
+          "pass": "XXX"
+        }
+      }
+    ]
+  },
+  "epart-app-dev": {
+    "name": "epart-app-dev",
+    "connector": "loopback-component-storage",
+    "provider": "amazon",
+    "key": "XXX",
+    "keyId": "XXX"
+  },
+  "transient": {
+    "name": "transient",
+    "connector": "transient"
+  }
+}

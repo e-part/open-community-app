@@ -1,0 +1,23 @@
+{
+  "name": "AppModel",
+  "base": "PersistedModel",
+  "properties": {
+    "createdAt": {
+      "type": "date"
+    },
+    "updatedAt": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}

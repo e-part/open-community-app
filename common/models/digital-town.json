@@ -1,0 +1,32 @@
+{
+  "name": "DigitalTown",
+  "base": "Model",
+  "plural": "DigitalTown",
+
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "validations": [],
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

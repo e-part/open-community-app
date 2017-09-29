@@ -1,0 +1,129 @@
+@import "variables";
+@import "responsive";
+
+.categories-selection {
+	&.col-md-12, &.col-lg-12 {
+		padding-right: 0;
+	}
+	header {
+	    position: fixed;
+	    z-index: 111;
+	    background: $gray-bg;
+	    padding: 25px 20px 0 20px;
+	    top: $header-height;
+	    left: 0;
+	    height: 170px;
+		width: 100%;
+		margin-bottom: 0;
+		h1 {
+			text-align: center;
+			font-size: 35px;
+			margin-bottom: 10px;
+		}
+		h3 {
+			text-align: center;
+			margin-bottom: 10px;
+		}
+		h4 {
+			text-align: center;
+			color: $primary-color;
+			button{
+				margin-right: 10px;
+				margin-left: 10px;
+				&.disabled {
+					opacity: 0.2;
+				}
+			}
+		}
+	}
+
+	.categories-selection-list {
+		list-style-type: none;
+		padding: 0;
+		text-align: center;
+		&.margin-top {
+			margin-top: 160px;
+		}
+		li {
+			width: 48%;
+			margin: 0 1% 2% 1%;
+			display: inline-block;
+			position: relative;
+			background: $white;
+
+			&>div.selected {
+				box-shadow: 0 0 5px 2px $primary-color;
+			}
+
+			&:hover {
+				.category-image {
+					transform: scale(1.05) rotate(0.5deg);
+					-webkit-transform: scale(1.05) rotate(0.5deg);
+				}
+			}
+
+			.category-image-wrapper {
+				height: 150px;
+				overflow: hidden;
+				.category-image {
+					transition: all 0.3s;
+					-webkit-transition: all 0.3s;
+					height: 150px;
+				}
+			}
+
+			.category-details {
+				padding: 10px;
+				vertical-align: middle;
+				font-size: 18px;
+
+				button {
+					float: left;
+          .app-ltr & { /* handle ltr case */
+            float: right;
+          }
+			        &.selected {
+			          background: $primary-color;
+			          border: 1px solid $primary-color;
+			          color: $white;
+			        }
+				}
+
+				span {
+					vertical-align: -webkit-baseline-middle;
+				}
+        .category-name {
+          padding-top: 8px;
+        }
+			}
+		}
+	}
+}
+
+@include media-max($layout-breakpoint-md) {
+	.categories-selection {
+		padding-right: 0;
+	}
+}
+
+@include media-max($layout-breakpoint-sm) {
+
+	.categories-selection {
+		padding-right: 0;
+		.categories-selection-list {
+
+			li {
+				width: 96%;
+				margin: 0;
+				margin-bottom: 20px;
+
+				.category-image-wrapper {
+				}
+
+				.category-details {
+					padding: 10px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,7 @@
+{
+  "Container": {
+    "dataSource": "epart-app-stage",
+    "public": true
+  }
+
+}

@@ -1,0 +1,11 @@
+{
+  "defaultExplorerUrl": "https://live.smart.london",
+  "clientPort" : "",
+  "apiPort" : "80",
+  "logPath" : "/var/epart/log/",
+  "digitalTownDomain" : "http://smart.london/",
+  "digitalTownApi" : "https://v1-sso-api.digitaltown.com/api/",
+  "digitalTownSSODomain" : "https://v1-sso-api.digitaltown.com/",
+  "https" : true
+
+}

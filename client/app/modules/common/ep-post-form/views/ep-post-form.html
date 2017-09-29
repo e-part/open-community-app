@@ -1,0 +1,35 @@
+<form name="postForm" class="col-xs-12 epart-admin-form admin-post-form user-post-form">
+  <div class="form-content">
+    <div class="form-panel-body">
+      <div class="row">
+        <div class="col-xs-12">
+          <div ng-repeat="formSection in ctrl.formSections" ng-if="!formSection.hideSection" ng-include="formSection.partial">
+          </div>
+        </div>
+      </div>
+      <div class="form-footer">
+
+        <button type="submit" class="btn btn-primary btn-success" ng-click="ctrl.submit()"
+                ng-disabled="postForm.$invalid"
+                translate>
+          <span ng-show="!ctrl.post.id" translate>Post</span>
+          <span ng-show="ctrl.post.id" translate>Save Changes</span>
+        </button>
+        <button type="submit" class="btn btn-secondary" ng-click="ctrl.submit(true)"
+                ng-disabled="postForm.$invalid"
+                translate>
+          <span translate>Save as Draft</span>
+        </button>
+        <a ng-if="ctrl.inEditMode && !postForm.$dirty" ui-sref="app.public.post({permaLink:ctrl.post.permaLink})"
+           target="_blank">
+          <button ng-show="ctrl.post.status === 'PUBLISHED'" type="button" class="btn btn-default">
+          <span translate>
+            View Post
+          </span>
+          </button>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</form>

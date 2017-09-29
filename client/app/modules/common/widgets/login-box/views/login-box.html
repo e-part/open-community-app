@@ -1,0 +1,13 @@
+<div class="widgets-sidebar">
+  <div class="side-widget login-box">
+  		<h4>{{'You Got Plenty of Options to Make a Change' | translate }}</h4>
+      <p>{{'Citizens are taking a step forward, Sign up and take a sit in the discussion table next to your decision makers.' | translate }}</p>
+
+        <a ng-repeat="provider in authProviders" ng-hide="provider.link" ng-click="sendGaEvent('login box widget',provider.provider); ctrl.socialLogin(provider)" class="btn btn-{{provider.class}}">
+			   <i class="fa fa-{{provider.provider}}"></i> {{provider.text | translate}}
+      	</a>
+      	<a ng-click="sendGaEvent('login box widget','דוא״ל'); ctrl.openLoginDialog()" class="btn btn-email">
+			   <i class="fa fa-envelope-o"></i> {{'Email' | translate}}
+      	</a>
+  </div>
+</div>

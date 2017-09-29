@@ -1,0 +1,144 @@
+<div class="col-md-4 bs-wrapper side-widgets-container">
+
+  <!-- POST STATISTICS WIDGET -->
+  <section ng-if="ctrl.post.type === ctrl.POST_TYPES.DISCUSSION" class="stats-widget">
+    <div class="clearfix">
+      <h3 class="section-title">{{ctrl.postTexts.statsWidgetTitle}}</h3>
+    </div>
+    <div class="content">
+      <div class="col-xs-4 stats-item" ng-repeat="statsItem in ctrl.postStats" >
+        <div class="item-container">
+          <!--
+                        ng-class="{{statsItem.iconClass}}
+          -->
+          <div class="icon"> <img ng-src="{{statsItem.imgSrc}}"/></div>
+          <div class="count">{{statsItem.count}}</div>
+          <div class="stats-title">{{statsItem.text}}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEETING DETAILS -->
+  <section class="meeting-details" ng-if="ctrl.post.meetings.length">
+    <div class="clearfix">
+      <h3 class="section-title">{{ctrl.postTexts.meetingsWidgetTitleText}}</h3>
+    </div>
+    <div class="details-cont">
+      <div class="info-cont" ng-repeat="meeting in ctrl.post.meetings">
+        <div class="info-item date-info">
+          <i class="material-icons">schedule</i>
+
+          {{meeting.date | date:'fullDate'}} at  {{meeting.date | date:'h:mm a'}}
+        </div>
+        <div class="info-item location-info">
+          <i class="material-icons">place</i>
+          {{meeting.location}}
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- TIME PLEDGE WIDGET -->
+  <section ng-if="ctrl.post.type === ctrl.POST_TYPES.PROJECT" class="pledges-widget" >
+    <h3 class="section-title">{{'Pledge Volunteer Hours' | translate}}</h3>
+    <div class="content">
+      <div class="pledge-actions" ng-if="!ctrl.userPledgedTime" >
+        <div class="float-left amount-input">
+          <input ng-model="ctrl.hoursToPledge" type="number" step="1" placeholder="{{'Hours' | translate}}"/>
+        </div>
+        <div class="float-left submit-btn-cont">
+          <button class="btn btn-primary btn-success" ng-click="ctrl.submitTimePledge(ctrl.hoursToPledge)" translate>Continue</button>
+        </div>
+      </div>
+      <div class="user-pledged-cont" ng-if="ctrl.userPledgedTime">
+        {{ 'Thank you for taking part of the project and working with us to improve our city.' | translate }}
+        <br/>
+        <br/>
+        <i class="fa fa-heart heart"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESOURCES PLEDGE WIDGET -->
+  <section ng-if="ctrl.post.type === ctrl.POST_TYPES.PROJECT" class="resources-widget" >
+    <h3 class="section-title">{{'Project Resources' | translate}}</h3>
+    <div class="content">
+      <div class="resource-item-cont titles">
+        <div class="row-item description" translate>Description</div>
+        <div class="row-item quantity" translate>
+          Missing Items
+        </div>
+        <div class="row-item user-action" translate>
+          Your Items
+        </div>
+      </div>
+      <div class="resource-item-cont" ng-repeat="resource in ctrl.post.itemRequests">
+        <div class="row-item description">{{resource.description}}</div>
+        <div class="row-item quantity">{{ctrl.getPledgesSum(resource)}} / {{resource.quantity}}</div>
+        <div class="row-item user-action">
+          <button class="btn" ng-click="ctrl.updateUserPledge(resource, -1)"
+                  ng-disabled="!resource.userPledge || (resource.userPledge.quantity === 0)">
+            <i class="material-icons">keyboard_arrow_down</i>
+
+          </button>
+          <span> {{resource.userPledge.quantity || 0 }} </span>
+          <button class="btn" ng-click="ctrl.updateUserPledge(resource, 1)"
+                  ng-disabled="ctrl.getPledgesSum(resource) === resource.quantity">
+            <i class="material-icons">keyboard_arrow_up</i>
+
+          </button>
+        </div>
+
+        <!--
+                <div class="row-item pledgers">
+                  <ul>
+                    <li  ng-repeat="pledge in resource.itemPledges">
+                      <cl-photo image-alt="user profile" image-src="{{pledge.user.imageUrl}}"
+                                image-class="profile-img-small-round" image-width="50" image-height="50" image-crop="thumb"
+                                image-gravity="faces" image-zoom="0.8"></cl-photo>
+
+        &lt;!&ndash;
+                      {{pledge.user.firstName + ' ' + pledge.user.lastName +':'+ pledge.quantity}}
+        &ndash;&gt;
+                    </li>
+                  </ul>
+                </div>
+        -->
+      </div>
+    </div>
+  </section>
+  <!-- POLLS -->
+  <section ng-if="ctrl.post.type === ctrl.POST_TYPES.DISCUSSION" class="poll" ng-repeat="poll in ctrl.post.polls" ng-class="{'results':poll.voted}" >
+    <h3>{{poll.question}}</h3>
+    <div class="poll-buttons">
+      <div class="col-xs-6 poll-answer" ng-repeat="answer in poll.answers" ng-class="{'fixed': !poll.voted}">
+        <button ng-click="sendGaEvent('post page','הצבעה בסקר'); ctrl.vote(poll, answer.id)"
+                class="poll-{{answer.answerType}}"  ng-class="answer.color"
+                style="height: {{answer.columnHeight}}px;" >
+          {{answer.answer}}
+          <div class="results-percent">{{answer.percentage}}%</div>
+          <div class="results-key">{{answer.answer}}</div>
+        </button>
+      </div>
+
+    </div>
+
+  </section>
+  <!-- POST VIDEO -->
+  <section ng-show="ctrl.post.videoUrl" class="video">
+    <iframe width="100%" height="200" ng-src="{{ctrl.post.videoUrl}}" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <!-- RELATED DISCUSSIONS-->
+  <section class="timeline-widget">
+    <div class="clearfix">
+      <h3 class="section-title">{{'Related Discussions' | translate}}</h3>
+    </div>
+    <div class="more-posts" ng-include="'/modules/public/post/views/more-posts.html'"></div>
+
+  </section>
+
+</div>

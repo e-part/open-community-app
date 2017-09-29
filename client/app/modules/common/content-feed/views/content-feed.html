@@ -1,0 +1,63 @@
+<div id="feed_container">
+  <div class="feed-items-container" ng-repeat="postsSection in feedPosts" ng-if="postsSection.showSection !== false" ng-init="$last && ctrl.itemsLoaded()">
+    <div ng-if="postsSection.posts.length && postsSection.showSectionTitle" class="section-title">
+      <h3>{{postsSection.title}}</h3>
+    </div>
+    <ul class="feed-list">
+      <li class="feed-post-item" ng-repeat="post in postsSection.posts">
+        <a ui-sref="^.post({permaLink: post.permaLink, id: post.id})">
+          <div class="image-wrapper">
+            <div class="post-image" back-img="{{ctrl.getPostThumbnail(post, 'featuredImage')}}"></div>
+            <!-- <div class="post-image-overlay"></div> -->
+          </div>
+        </a>
+        <div class="content-display">
+          <div class="post-type-indication">
+            {{post.type === 'DISCUSSION' ? 'Consultation' : 'Project'}}
+          </div>
+          <div class="texts-wrapper">
+            <a ui-sref="^.post({permaLink: post.permaLink, id: post.id})">
+              <h3>{{post.title | add3dots:70:true}}</h3>
+            </a>
+            <a ui-sref="^.post({permaLink: post.permaLink, id: post.id})">
+              <h5>{{post.subtitle | add3dots:110:true}}</h5>
+            </a>
+            <div class="post-categories">
+              <a ng-repeat="category in post.categories | limitTo: 3" ui-sref="app.public.category({slug: category.slug, id: category.id})" class="category-tag">{{category.name}}</a> <span ng-if="post.categories.length > 3" class="more-categories"> +{{post.categories.length - 3}}</span>
+            </div>
+          </div>
+          <div class="location">
+            <span ng-if="post.committees.length"><i class="material-icons">place</i> <span ng-repeat="c in post.committees | limitTo: 2">{{c.name}}<span ng-if="!$last">,</span> </span></span>
+          </div>
+          <div class="user-engagement-bar clearfix">
+            <div class="meeting-date">
+              <i class="material-icons">schedule</i>
+              {{post.endDate | formatLocaleDate:false:false}}
+            </div>
+            <div class="last-commenters" ng-if="post.comments.length >= 1">
+              <cl-photo image-class="commenter" ng-repeat="c in post.comments | limitTo: 3" image-src="{{c.creator.imageUrl}}" image-width="50" image-height="50" image-gravity="faces" image-crop="thumb" image-alt="user profile" image-zoom="0.8"></cl-photo>
+            </div>
+            <div class="comments-count" ng-if="post.comments.length >= 1">
+              <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                   width="247.000000pt" height="194.000000pt" viewBox="0 0 247.000000 194.000000"
+                   preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(0.000000,194.000000) scale(0.100000,-0.100000)" stroke="none">
+                  <path d="M0 1185 l0 -755 220 0 c121 0 220 -1 220 -3 0 -2 -32 -94 -70 -206
+              -39 -112 -69 -206 -66 -208 2 -3 130 90 283 206 l279 211 792 0 792 0 0 755 0
+              755 -1225 0 -1225 0 0 -755z m2345 483 c3 -90 5 -381 3 -648 l-3 -485 -764 -3
+              -763 -2 -146 -111 c-81 -61 -148 -107 -149 -102 -2 5 12 55 31 111 l35 102
+              -157 0 c-86 0 -194 3 -239 7 l-83 6 0 643 0 644 1114 0 1114 0 7 -162z">
+                </g>
+              </svg>
+              {{post.commentsCount || post.comments.length}}+
+            </div>
+          </div>
+          <div class="edit-indication" ng-if="ctrl.isEditable">
+            <span>{{ctrl.getStatus(post.status)}} | </span><a ui-sref="app.public.user-posts.edit({id: post.id})"><span>Edit</span></a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+

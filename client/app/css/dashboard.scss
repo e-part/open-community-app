@@ -1,0 +1,726 @@
+@import "variables";
+@import "responsive";
+
+.dashboard-contanier {
+  padding: 0;
+
+  header.dashboard-header {
+    h1 {
+      float: right;
+    }
+    .sorting {
+      font-size: 18px;
+      font-weight: bold;
+      a {
+        &.active {
+          color: $black;
+        }
+      }
+      select {
+        margin: 10px;
+        height: 30px;
+        width: 320px;
+        border-radius: 3px;
+        font-weight: normal;
+        font-size: 16px;
+
+      }
+      .edit-committees-icon {
+        vertical-align: middle;
+        cursor: pointer;
+        font-size: 16px;
+      }
+    }
+  }
+  .change-week {
+    margin-top: 5px;
+    a {
+      opacity: 0.2;
+      pointer-events: none;
+      &.visible {
+        opacity: 1;
+        pointer-events: all;
+      }
+      i {
+        vertical-align: sub;
+        font-size: 14px;
+      }
+    }
+    .next-week {
+      float: left;
+    }
+    .last-week {
+      float: right;
+    }
+  }
+  ul.calendar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: $white;
+    &.week-view {
+      /*border-bottom: 1px solid $primary-color;*/
+      li {
+        &.calendar-day {
+          height: auto;
+          min-height: 250px;
+          border-bottom: 0;
+          ul {
+            li {
+              a {
+                max-height: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    li {
+      width: 212px;
+      display: inline-block;
+      /*border-left: 2px solid $gray-bg;*/
+      &.calendar-hl {
+        text-align: center;
+        padding: 10px 0;
+        background: $primary-color;
+        color: $white;
+      }
+      &.calendar-day {
+        text-align: center;
+        font-size: 26px;
+        border-bottom: 1px solid $light-gray;
+        height: 185px;
+        vertical-align: top;
+        overflow: hidden;
+        transition: all 0.2s;
+        padding: 3px;
+        &.expanded {
+          box-shadow: 0 0 5px $dark-gray;
+          background: $white;
+          overflow: visible;
+          position: relative;
+          z-index: 111;
+          -ms-transform: scale(1.2);
+          -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+          ul {
+            background: $white;
+          }
+        }
+        &.last-month {
+          opacity: 0.3;
+        }
+        .day-dates {
+          float: right;
+          color: darken($dark-gray, 10%);
+          p {
+            text-align: right;
+            margin-bottom: 0px;
+            &.day-date {
+              font-size: 26px;
+              line-height: 30px;
+            }
+            &.hebrew-date {
+              font-size: 14px;
+            }
+          }
+        }
+        a.expand-btn {
+          float: left;
+          font-size: 14px;
+          margin-top: 30px;
+        }
+        ul {
+          padding: 0;
+          margin: 0;
+          li {
+            font-size: 16px;
+            text-align: right;
+            color: $black;
+            padding: 5px;
+            margin-top: 7px;
+            width: 100%;
+            min-height: 54px;
+            background: $white;
+            box-shadow: 1px 1px 2px 1px $gray-borders;
+            border-right: 2px solid $primary-color;
+            &:hover {
+
+            }
+            &.disabled {
+              border-right: 2px solid #a9a9a9;
+              &:hover {
+                background: $lower-gray;
+              }
+              a {
+                cursor: text;
+              }
+            }
+            a {
+              color: $black;
+              display: block;
+              min-height: 44px;
+              max-height: 44px;
+
+              i {
+                float: left;
+                vertical-align: top;
+                font-size: 24px;
+                color: $orange;
+              }
+            }
+            &:last-child {
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+      &:nth-of-type(6n) {
+        width: 140px;
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .messages-widget {
+    min-height: 100px;
+    .posts-lists {
+      padding-top: 15px;
+      li {
+        &.selected {
+          background-color: #f1f1f1;
+        }
+
+      }
+    }
+
+    .messages-list {
+      min-height: 300px;
+      max-height: 500px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .input-form-container {
+    .textarea-container {
+      overflow: hidden;
+      width: auto;
+      padding-top: 2px;
+      padding-right:15px;
+      padding-left:5px;
+      .app-ltr & {
+        padding-left:15px;
+        padding-right:5px;
+      }
+    }
+    textarea {
+      border: 0;
+      resize: vertical;
+      padding: 1px 5px;
+      width: 100%;
+      font-size: 18px;
+      box-shadow: 0 0 3px $gray-middle;
+      &.expanded {
+        min-height: 100px;
+      }
+    }
+    .profile-img-small-round {
+      vertical-align: top;
+      float: right;
+      .app-ltr & {
+        float: left;
+      }
+    }
+
+    button {
+      float: left;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-left: 5px;
+      margin-bottom: 10px;
+      .app-ltr & {
+        float: right;
+        margin-left: 0px;
+        margin-right: 5px;
+
+      }
+    }
+  }
+
+  .post-item {
+    .section-widget-title {
+      margin: 15px;
+      font-weight: bold;
+      color: $primary-color;
+
+      .message-tab-select-link {
+        color: #000000;
+
+        /*
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 5px;
+        margin-right: 5px;*/
+        &.active {
+          color: $primary-color;
+        }
+      }
+    }
+
+    .post-widget {
+      border: solid 1px #f1f1f1;
+      border-radius: 5px;
+      margin-top: 15px;
+
+      &.poll-section {
+        height: 180px;
+        .poll-buttons {
+          text-align: center;
+          margin: 30px auto;
+          display: table;
+          > div {
+            vertical-align: bottom;
+            position: relative;
+            display: inline-block;
+            padding: 10px;
+            &.poll-yes {
+              background: $primary-color;
+            }
+            &.poll-no {
+              background: $red;
+            }
+            .results-percent {
+              position: absolute;
+              width: 100%;
+              left: 0;
+              top: -20px;
+              font-size: 15px;
+              color: $black;
+            }
+            .results-key {
+              position: absolute;
+              width: 100%;
+              height: 40px;
+              left: 0;
+              bottom: -40px;
+              font-size: 14px;
+              color: #000000;
+              font-weight: 400;
+              overflow: hidden;
+              padding: 1px;
+            }
+          }
+        }
+      }
+      &.messages-section {
+        height: 100%;
+      }
+      &.stats-section {
+        .stats-item {
+          padding-bottom: 20px;
+          .item-container {
+            height: 100px;
+            width: 100px;
+            margin: auto;
+            border: 1px solid $primary-color;
+            border-radius: 7px;
+            padding: 15px;
+            text-align: center;
+            color: $primary-color;
+            font-weight: bold;
+            font-size: 36px;
+            .app-ltr & {
+              height: 115px;
+              width: 115px;
+              padding: 10px;
+            }
+            .stats-title {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+      &.word-cloud {
+        overflow: auto;
+        .tag-cloud {
+          margin: auto;
+        }
+
+        .tangcloud span {
+          line-height: 100%;
+        }
+
+        .tangcloud-item-1 {
+          font-size: 1.3em;
+          color: #080808;
+        }
+
+        .tangcloud-item-2 {
+          font-size: 1.6em;
+          color: #101010;
+        }
+
+        .tangcloud-item-3 {
+          font-size: 1.9em;
+          color: #181818;
+        }
+
+        .tangcloud-item-4 {
+          font-size: 2.2em;
+          color: #303030;
+        }
+
+        .tangcloud-item-5 {
+          font-size: 2.5em;
+          color: #282828;
+        }
+
+        .tangcloud-item-6 {
+          font-size: 2.8em;
+          color: #202020;
+        }
+
+        .tangcloud-item-7 {
+          font-size: 3.1em;
+          color: #383838;
+        }
+
+        .tangcloud-item-8 {
+          font-size: 3.4em;
+          color: #404040;
+        }
+
+        .tangcloud-item-9 {
+          font-size: 3.7em;
+          color: #484848;
+        }
+
+        .tangcloud-item-10 {
+          font-size: 4em;
+          color: #000000;
+        }
+
+        .tangcloud-item-hidden {
+          visibility: hidden;
+        }
+      }
+    }
+  }
+  .full-width-section {
+    background: $white;
+    margin-top: 20px;
+    padding: 15px 20px;
+
+    .post-title {
+      min-height: 33px;
+      margin-right: 15px;
+      margin-left: 15px;
+      h3 {
+        width: 75%;
+        display: inline-block;
+        padding-top: 6px;
+      }
+      .go-to-post-btn {
+        font-weight: bold;
+        min-width: 116px;
+        float: left;
+        .app-ltr & {
+          float: right;
+        }
+      }
+    }
+
+  }
+
+  .epart-communities {
+    .dashboard-extras-list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      margin-top: 20px;
+      text-align: center;
+      li {
+        display: inline-block;
+        padding: 5px 15px;
+        margin: 10px 6px;
+        box-shadow: 0 0 2px 1px $primary-color;
+        border-radius: 15px;
+        font-size: 16px;
+        color: $white;
+        transition: all 0.3s;
+        &:hover {
+          box-shadow: 0 0 2px 2px $primary-color;
+        }
+        a {
+          color: $primary-color;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .add-committees {
+    margin: 20px 0 0 0;
+    text-align: center;
+    font-size: 24px;
+    padding: 15px 0;
+    background: $white;
+  }
+
+  .dashboard-extras {
+    section {
+      padding: 0;
+      margin: 0;
+      h3 {
+        border-bottom: 1px solid $gray-borders;
+        padding-bottom: 5px;
+      }
+      &:nth-child(odd) {
+        & > div {
+          margin-right: 10px;
+        }
+      }
+      &:nth-child(even) {
+        & > div {
+          margin-left: 10px;
+        }
+      }
+      &:nth-child(odd), &:nth-child(even) {
+        & > div {
+          background: $white;
+          padding: 15px 20px;
+          min-height: 441px;
+          margin-top: 20px;
+
+        }
+      }
+      .no-content {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 22px;
+        color: $gray-text;
+      }
+      ul.hot-posts-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+          width: 285px;
+          margin: 20px 10px 0 10px;
+          display: inline-block;
+          border: 1px solid $light-gray;
+          vertical-align: top;
+          &:nth-of-type(odd) {
+            margin-right: 0;
+          }
+          &:nth-of-type(even) {
+            margin-left: 0;
+          }
+          .post-image {
+            width: 100%;
+            height: 100px;
+          }
+          p {
+            background: $white;
+            margin: 0;
+            padding: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  ul.items-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background: $white;
+    &.text-items {
+      li {
+        border-bottom: 0px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        img {
+          float:right;
+          width:30px;
+          .app-ltr & {
+            float: left;
+          }
+        }
+        .text {
+          margin-right: 41px;
+          .app-ltr & {
+            margin-right: 0px;
+            margin-left: 41px;
+          }
+        }
+      }
+    }
+    li {
+      transition: all 0.3s;
+      border-bottom: 1px solid $gray-borders;
+      position: relative;
+      &:hover {
+        background: $gray-bg;
+      }
+      a {
+        color: $black;
+        display: inline-block;
+        padding: 10px 5px 10px 5px;
+      }
+      &:last-child {
+        border-bottom: 0;
+      }
+      .message-photo-wrapper {
+        float: right;
+        .app-ltr & {
+          float: left;
+        }
+      }
+      .message-content {
+        /*float: right;*/
+        padding-right: 60px;
+        .app-ltr & {
+          padding-right: 0px;
+          padding-left: 60px;
+        }
+        p {
+          margin: 0;
+          padding: 0;
+        }
+        .message-details {
+          margin-bottom: 5px;
+          .message-writer {
+            display: inline-block;
+            color: $gray-text;
+          }
+          .user-occupation {
+            display: inline-block;
+            color: $gray-text;
+            display: none;
+          }
+          .message-time {
+            display: block;
+            color: $gray-text;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            .app-ltr & {
+              left: inherit;
+              right: 20px;
+            }
+          }
+        }
+        .message-text {
+          font-size: 16px;
+          padding-left: 120px;
+          .app-ltr & {
+            padding-left: 0px;
+            padding-right: 20px;
+
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.add-committees-box {
+  position: fixed;
+  width: 660px;
+  height: 420px;
+  top: 50%;
+  left: 50%;
+  margin-top: -210px;
+  margin-left: -330px;
+  z-index: 9999999999999999991;
+  background: $white;
+  border-radius: 30px;
+  padding: 30px 50px;
+  text-align: center;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+    margin-bottom: 20px;
+
+    li {
+      width: 50%;
+      display: inline-block;
+      font-size: 16px;
+      text-align: right;
+      margin-bottom: 5px;
+      float: right;
+    }
+  }
+  .exit-add-committees {
+    margin-right: 10px;
+    color: $gray-text;
+    &:hover {
+      color: $black;
+    }
+  }
+  .btn {
+    font-size: 14px;
+    padding: 4px 10px;
+  }
+}
+
+@include media-max($layout-breakpoint-lg) {
+  .dashboard-contanier {
+    header.dashboard-header {
+      text-align: center;
+      h1 {
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      button {
+        display: none;
+      }
+    }
+    ul.calendar {
+      li {
+        width: 100%;
+        &.calendar-hl {
+          display: none;
+        }
+        &.calendar-day {
+          min-height: 70px !important;
+          height: auto;
+          overflow: visible;
+          &:nth-of-type(6n) {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .messages-widget {
+      margin-bottom: 0px;
+    }
+    .add-committees {
+      display: none;
+    }
+    .dashboard-extras {
+      margin-top: 0;
+      section {
+        margin-top: 20px;
+        &:first-child {
+          & > div {
+            margin-right: 0;
+          }
+        }
+        &:last-child {
+          & > div {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}

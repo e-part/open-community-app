@@ -1,0 +1,168 @@
+<div class="page-content-container clearfix">
+  <div class="col-xs-12 col-sm-12 dashboard-contanier">
+    <header class="dashboard-header">
+      <div class="sorting">{{'Discussion' | translate }}:
+        <select ng-model="ctrl.selectedPost" ng-change="ctrl.postSelected(ctrl.selectedPost)">
+          <option ng-repeat="p in ctrl.posts" value="{{p.id}}" >{{( p.title) | add3dots:50:true}}</option>
+        </select>
+      </div>
+    </header>
+    <div class="clearfix">
+      <div class="col-sm-12 col-xs-12 full-width-section messages-widget post-item"
+           ng-repeat="post in ctrl.posts" ng-show="post.id == ctrl.selectedPost">
+        <div class="post-title">
+          <h3>{{post.title}}</h3>
+          <a ng-if="post.migrationStatus === 'NORMAL' || post.parentPost" class="go-to-post-btn" target="_blank"
+             href="/post/{{post.parentPost ? post.parentPost.permaLink :post.permaLink}}">
+            <button class="btn btn-primary">{{'Open Discussion Page' | translate}}</button></a>
+
+        </div>
+        <div class="col-lg-6 col-xs-12 input-form-container">
+          <!-- Statistics Widget -->
+          <div class="col-xs-12 stats-section post-widget">
+            <h4 class="section-widget-title">{{'Statistics' | translate}}</h4>
+            <div class="col-xs-4 stats-item" ng-repeat="statsItem in post.statsItems" >
+              <div class="item-container" ng-class="statsItem.color">
+                <div class="count">{{statsItem.count}}</div>
+                <div class="stats-title">{{statsItem.text}}</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 post-widget messages-section">
+            <h4 class="section-widget-title">
+              <a href="#" ng-click="post.messagesTab = 'EXTERNAL'" class="message-tab-select-link"
+                 ng-class="{'active':  post.messagesTab == 'EXTERNAL' || ! post.messagesTab }">{{'External Discussion' |
+                translate}}</a> |
+              <a href="#" ng-click="post.messagesTab = 'INTERNAL'" class="message-tab-select-link"
+                 ng-class="{'active':  post.messagesTab == 'INTERNAL'}">{{'Internal Discussion' | translate}}</a>
+            </h4>
+            <div class="external-messages-tab" ng-show="!post.messagesTab || post.messagesTab === 'EXTERNAL'">
+              <!--
+                            <div ng-if="!post.comments.length" class="no-content">לא קיימות תגובות לתצוגה</div>
+              -->
+              <ul class="items-list">
+                <li class="clearfix" ng-repeat="comment in post.comments | limitTo:4 | orderBy : '-createdAt'">
+                  <a ui-sref="app.public.post({permaLink: comment.post.permaLink, comment_id: comment.id})"
+                     target="_blank">
+                    <div class="message-photo-wrapper">
+                      <cl-photo image-src="{{comment.creator.imageUrl}}" image-class="profile-img-small-round"
+                                image-width="50" image-height="50" image-gravity="faces" image-crop="thumb"
+                                image-zoom="0.8" image-alt="user profile"></cl-photo>
+                    </div>
+                    <div class="message-content">
+                      <div class="message-details">
+                        <p class="message-writer">
+                          {{comment.creator.firstName + ' ' + comment.creator.lastName}}
+                        </p>
+                        <p class="message-time">{{comment.createdAt | formatLocaleDate:true}}</p>
+                      </div>
+                      <p class="message-text">
+                        {{comment.content | add3dots:100:true}}
+                      </p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+            </div>
+            <div class="internal-messages-tab" ng-show="post.messagesTab === 'INTERNAL'">
+              <form ng-submit="ctrl.postMessage(post)" class="clearfix">
+                <cl-photo image-alt="my profile picture"
+                          image-src="{{ctrl.sessionData.currentUser.imageUrl}}" image-class="profile-img-small-round"
+                          image-width="50" image-height="50" image-crop="thumb" image-gravity="faces"
+                          image-zoom="0.8"></cl-photo>
+
+                <div class="textarea-container">
+      				    <textarea ng-focus="post.expandForm = true;"
+                        placeholder="{{'Insert new message' | translate }}"
+                        ng-model="ctrl.newMessage" ng-class="{'expanded': post.expandForm == true}"></textarea>
+                </div>
+                <button  type="submit"
+                        ng-disabled="!ctrl.newMessage" ng-show="post.expandForm"
+                        class="btn btn-xs btn-success">{{'send' | translate }}
+                </button>
+              </form>
+              <ul class="items-list messages-list">
+                <li class="clearfix" ng-repeat="comment in post.messages | orderBy : '-createdAt'">
+                  <a href="#">
+                    <div class="message-photo-wrapper">
+                      <cl-photo image-src="{{comment.creator.imageUrl}}" image-class="profile-img-small-round"
+                                image-width="50" image-height="50" image-gravity="faces" image-crop="thumb"
+                                image-zoom="0.8"
+                                image-alt="user profile"></cl-photo>
+                    </div>
+                    <div class="message-content">
+                      <div class="message-details">
+                        <p class="message-writer">
+                          {{comment.creator.firstName + ' ' + comment.creator.lastName}}
+                        </p>
+                        <p class="message-time">{{comment.createdAt | formatLocaleDate:true}}</p>
+                      </div>
+                      <p class="message-text">
+                        {{comment.content}}
+                      </p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Discussion Conclusions -->
+          <div ng-show="post.conclusions && post.conclusions.length" class="col-xs-12 post-widget input-form-container">
+            <h4 class="section-widget-title">{{'Conclusions For Implementation' | translate}}</h4>
+            <ul class="items-list text-items">
+              <li ng-repeat="conclusion in post.conclusions track by $index">
+                <img ng-src="{{conclusion.iconUrl}}">
+                <div class="text">{{conclusion.text}}</div>
+              </li>
+            </ul>
+            <!--            <div class="textarea-container">
+                                      <textarea ng-focus="post.expandConclusionBox = true;"
+                                        placeholder="{{'Insert new Conclusion' | translate }}"
+                                        ng-model="post.newConclusion" ng-class="{'expanded': post.expandForm == true}"></textarea>
+                        </div>
+                        <button ng-click="ctrl.addPostItem(post,'conclusions', 'newConclusion')"
+                                ng-disabled="!post.newConclusion" ng-show="post.expandConclusionBox"
+                                class="btn btn-xs btn-success">{{'Add' | translate }}
+                        </button>-->
+          </div>
+        </div>
+        <div class="col-lg-6 col-xs-12">
+          <section class="col-xs-12 poll-section post-widget" ng-repeat="poll in post.polls">
+            <h4 class="section-widget-title">{{poll.question}}</h4>
+            <div class="poll-buttons" ng-style="ctrl.getPollWidth(poll)">
+              <div class="poll-answer" ng-style="ctrl.getColumnWidth(poll)" ng-repeat="answer in poll.answers">
+                <div ng-class="answer.color" style="height: {{answer.columnHeight}}px;">
+                  <div class="results-percent">{{answer.percentage}}%</div>
+                  <div class="results-key">{{answer.answer | add3dots:20:true}}</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div ng-show="ctrl.topHashags && ctrl.topHashags.length" class="col-xs-12 post-widget word-cloud">
+            <ng-tag-cloud class="tag-cloud" cloud-width="500" cloud-height="300" cloud-data="ctrl.topHashags"></ng-tag-cloud>
+          </div>
+          <div class="col-xs-12 post-widget charts-container">
+            <h4 class="section-widget-title">{{'Users Stats' | translate}}</h4>
+            <nvd3 class="col-xs-6 chart-container" options="post.locationChartConfig.chartOptions" data="post.locationChartConfig.chartData"></nvd3>
+            <nvd3 class="col-xs-6 chart-container" options="post.genderChartConfig.chartOptions" data="post.genderChartConfig.chartData"></nvd3>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<section class="add-committees-box" ng-show="darkScreen">
+  <ul class="clearfix">
+    <li ng-repeat="c in ctrl.allCommittees"><input type="checkbox" ng-checked="c.selected" ng-model="c.selected">
+      {{c.name}}
+    </li>
+  </ul>
+  <button class="btn btn-epart" ng-click="ctrl.updateCommittees()">{{'update committees' | translate }}</button>
+  <a ng-click="ctrl.closeAddCommittees()" class="exit-add-committees" href="">{{'exit' | translate }}</a>
+</section>

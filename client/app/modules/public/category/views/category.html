@@ -1,0 +1,25 @@
+<div class="page-content-container category-page clearfix">
+  <div class="hidden-xs col-sm-3 col-lg-2 nav-side-bar">
+    <site-navigation></site-navigation>
+  </div>
+	<div class="col-xs-12 col-sm-9 col-lg-7 content-feed" role="main">
+		<div class="content-feed-title" back-img="{{ctrl.category.imageUrl}}">
+			<div class="content-feed-title-overlay"></div>
+		    <h3>{{ctrl.category.name}}</h3>
+			<div class="follow-container hidden-xs" ng-if="!ctrl.isMK">
+				<button class="btn btn-follow" ng-show="!ctrl.category.following;" ng-click="sendGaEvent('category page','מעקב'); ctrl.addRemoveCategory(ctrl.category);"><i class="material-icons">add</i> {{'Interested?' | translate }}</button>
+				<button class="btn btn-following" ng-show="ctrl.category.following" ng-click="sendGaEvent('category page','ביטול מעקב'); ctrl.addRemoveCategory(ctrl.category)"><i class="fa fa-check"></i> {{'Interested!' | translate }}</button>
+			</div>
+		</div>
+		<content-feed feed-posts="ctrl.feedPosts"></content-feed>
+    <div class="empty-feed-message" ng-if="!ctrl.hasPosts">
+      {{'No consultations yet. :(' | translate}}
+    </div>
+
+	</div>
+  <div class="hidden-sm hidden-xs hidden-md col-lg-3 nav-side-bar">
+    <recommend-to-friend category="ctrl.category"></recommend-to-friend>
+    <community-list community-members="ctrl.followers" ></community-list>
+  </div>
+
+</div>

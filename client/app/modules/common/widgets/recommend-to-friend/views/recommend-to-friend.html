@@ -1,0 +1,7 @@
+<aside class="recommend-to-friend side-widget">
+  <h4 translate>
+    The subject has {{ctrl.followersCount}} followers. Know people who care about {{category.name}}? Let them know.
+  </h4>
+  <a href="{{ctrl.shareUrls.twitter}}" ng-click="ctrl.openSharePopup($event)" target="_blank" class="btn btn-twitter"><i class="fa fa-twitter"></i> {{'Twitter' | translate }}</a>
+  <a href="{{ctrl.shareUrls.facebook}}" ng-click="ctrl.FBshare($event)" target="_blank" class="btn btn-facebook"><i class="fa fa-facebook-f"></i> {{'Facebook' | translate }}</a>
+</aside>

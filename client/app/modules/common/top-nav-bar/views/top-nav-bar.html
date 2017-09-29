@@ -1,0 +1,183 @@
+<header>
+  <div id="top-nav-bar" role="banner">
+    <div class="nav-bar-content">
+      <div class="logo-cont text-left" >
+        <div class="mobile-side-menu-btn visible-xs" ng-click="ctrl.showMobileSideMenu(); sendGaEvent('top nav bar','mobile menu');">
+<!--
+          <i class="material-icons" ng-click="ctrl.showMobileSideMenu(); sendGaEvent('top nav bar','mobile menu');">menu</i>
+-->
+<!--
+          <i class="material-icons" ng-click="ctrl.showMobileSideMenu(); sendGaEvent('top nav bar','mobile menu');">menu</i>
+-->
+          ☰
+        </div>
+        <div class="dt-mobile-side-menu" ng-show="ctrl.mobileSideMenuVisible">
+          <div ng-include="'/modules/common/top-nav-bar/views/partials/dt-mobile-side-menu.html'"></div>
+        </div>
+
+        <a ng-href="{{ctrl.dtHome}}" class="logo-img" ng-click="sendGaEvent('top nav bar','logo');">
+          <div class="logo-text" ng-show="CLIENT_CONFIG.attributes.features.showTextualLogo">{{CLIENT_CONFIG.name}}</div></a>
+      </div>
+      <div class="middle-cont" ng-class="{'dynamic-nav-links' : CLIENT_CONFIG.attributes.features.showHeaderNavLinks}">
+        <div class="hidden-xs hidden-sm">
+          <div ng-if="CLIENT_CONFIG.attributes.features.showHeaderSearch" class="search-input-wrapper">
+            <input type="text" placeholder="{{'Search places, people, attractions...' | translate}}"
+                   ng-model="ctrl.searchText" class="search-site" />
+            <button class="search-btn" ng-click="ctrl.searchSite()">
+              <i class="fa fa-search"></i>
+            </button>
+            <div ng-show="ctrl.searchResults && ctrl.showSearchResults" class="search-results" ng-bind-html="ctrl.searchResults"></div>
+          </div>
+          <div ng-if="CLIENT_CONFIG.attributes.features.showHeaderNavLinks" class="dt-links"
+               ng-class="{'show-results' : ctrl.showSearchResults}">
+            <section role="search" class="header-search" ng-class="{'visible' : ctrl.showSearchBox}" >
+              <input type="text" ng-model="ctrl.searchText" placeholder="{{ctrl.showSearchBox ? 'Search...' : '&#xF002;'}}"
+                     ng-click="ctrl.showSearchInput()">
+              <button ng-click="ctrl.searchSite()" class="btn search-btn"><i class="fa fa-search"></i></button>
+              <div ng-show="ctrl.searchResults && ctrl.showSearchResults" class="search-results" ng-bind-html="ctrl.searchResults"></div>
+
+            </section>
+            <ul class="links-list" ng-class="{'hidden' : ctrl.showSearchBox}">
+              <li ng-repeat="link in ctrl.dtLinks" ng-if="!link.mobileOnly"><a href="{{link.href}}" ng-class="{'active': link.active}">
+                {{ link.text }}
+              </a>
+                <ul ng-if="link.subMenuItems" class="sub-menu">
+                  <li ng-repeat="subMenuLink in link.subMenuItems">
+                    <a href="{{subMenuLink.href}}">
+                      {{ subMenuLink.text }}
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <div class="right-side-cont" ng-class="{'user-signed-out':!ctrl.sessionData.currentUser}"
+           ng-show="ctrl.sessionData.sessionRetrievedOnce">
+        <div class="header-links" >
+
+          <a href="#" ng-show="!ctrl.sessionData.currentUser" class="btn btn-link small-text hidden-xs sign-in ng-animate-disabled sign-in-button"
+             ng-click="ctrl.login(); sendGaEvent('top nav bar','login');">{{::'Sign in' | translate}}</a>
+
+          <a href="#"  class="btn btn-link small-text hidden-xs ng-animate-disabled register-btn" ng-show="!ctrl.sessionData.currentUser"
+             ng-click="ctrl.register(); sendGaEvent('top nav bar','register');">{{::'Register' | translate}}</a>
+
+          <a href="#" ng-if="!ctrl.sessionData.currentUser"
+             class="btn btn-link small-text visible-xs ng-animate-disabled sign-in-button-mobile"
+             ng-click="ctrl.login(); sendGaEvent('top nav bar','sign in');">{{::'Sign in' | translate}}</a>
+
+
+          <cl-photo ng-if="ctrl.sessionData.currentUser" image-src="{{ctrl.sessionData.currentUser.imageUrl}}
+          " image-width="50" image-height="50"  image-gravity="faces" image-crop="thumb" image-alt="user profile"
+                    image-zoom="0.8" image-class="user-avatar" ng-click="ctrl.showMenu();
+                     sendGaEvent('top nav bar','profile pic');"></cl-photo>
+
+          <div class="user-menu header-menu" ng-show="ctrl.menuVisible">
+            <ul>
+              <li ng-click="ctrl.menuVisible=false"><a ng-href="{{ctrl.$state.href(ctrl.sessionData.homeState)}}">{{'Home' | translate}}</a></li>
+              <li ng-if="ctrl.hasAdminRole()" ng-click="ctrl.menuVisible=false"><a ui-sref="app.admin.home">{{'Admin Dashboard' | translate}}</a></li>
+              <li ng-click="ctrl.menuVisible=false"><a ui-sref="app.public.profile({id: ctrl.sessionData.currentUser.id})">{{'Profile' | translate}}</a></li>
+              <li ng-click="ctrl.menuVisible=false"><a ui-sref="app.public.user-settings">{{'Settings' | translate}}</a></li>
+              <li ng-click="ctrl.menuVisible=false" ng-if="!ctrl.isMK"><a ui-sref="app.public.categories-selection">{{'Select Subjects' | translate}}</a></li>
+              <!--
+                            <li ng-click="ctrl.menuVisible=false" ng-show="ctrl.lang === 'he_IL'"><a href="#" ng-click="ctrl.switchLocale('en_US')">English</a></li>
+              -->
+              <li ng-click="ctrl.menuVisible=false"><a href="#" ng-show="ctrl.sessionData.currentUser" ng-click="ctrl.logout()">{{::'Logout' | translate}}</a></li>
+            </ul>
+          </div>
+          <div class="header-buttons">
+            <div ng-if="ctrl.sessionData.currentUser" ng-click="ctrl.showNotificationsBox(); sendGaEvent('top nav bar','show notifications');"
+                 class="header-btn">
+              <i ng-if="ctrl.unreadNotificationsCount" class="material-icons">notifications</i>
+              <i ng-if="!ctrl.unreadNotificationsCount" class="material-icons">notifications_none</i>
+              <div ng-if="ctrl.unreadNotificationsCount" class="notifications-count">{{ctrl.unreadNotificationsCount}}</div>
+            </div>
+            <div class=" visible-xs header-btn" ng-if="!ctrl.isMK" >
+              <i class="material-icons" ng-click="ctrl.showSiteNav(); sendGaEvent('top nav bar','top menu');">menu</i>
+            </div>
+            <div class="header-btn" ng-class="{'logged-out' : !ctrl.sessionData.currentUser}" ng-click="ctrl.showAccessibilityBox()">
+              <i class="material-icons accessibility-menu" >accessible</i>
+            </div>
+          </div>
+
+
+          <!-- Notifications Popup -->
+          <div ng-if="ctrl.sessionData.currentUser" ng-scrollbars ng-scrollbars-config="ctrl.scrollConfig" ng-show="ctrl.notificationsBoxVisible"
+               class="notifications-box header-menu">
+            <ul>
+              <li ng-repeat="notification in ctrl.notifications track by $index"  class="notification-item clearfix">
+                <div ng-switch="notification.name">
+                  <a ng-switch-when="POST_COMMENT_REPLY" ui-sref="app.public.post({permaLink : notification.postPermaLink, comment_id: notification.commentId})">
+                    <div back-img="{{notification.image || defaultAvatar}}" class="user-avatar"></div>
+                    <div class="notification-content">
+                      <span class="bold-text">{{notification.eventBy}} </span>
+                      <span class="normal-text">{{ notification.text}} </span>
+                      <span class="bold-text">{{notification.postTitle}}</span>
+                    </div>
+                  </a>
+
+                  <a ng-switch-when="POST_PUBLISHED" ui-sref="app.public.post({permaLink : notification.postPermaLink})">
+                    <span class="normal-text">{{ notification.text}} </span>
+                    <span class="bold-text">{{notification.postTitle}}</span>
+                  </a>
+
+                  <a ng-switch-when="USER_FOLLOWED" ui-sref="app.public.profile({id : notification.followerId})">
+                    <div back-img="{{notification.image || defaultAvatar}}" class="user-avatar"></div>
+                    <div class="notification-content">
+                      <span class="bold-text">{{notification.eventBy}} </span>
+                      <span class="normal-text">{{ notification.text}} </span>
+                    </div>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- Accessibility Menu -->
+          <div class="accessibility-menu header-menu" ng-show="ctrl.accessibilityMenuVisible">
+            <ul>
+              <li>
+                <b><u>{{'Accessibility Menu' | translate}}</u></b>
+              </li>
+              <li><i ng-show="accessibilityCfg.links" class="fa fa-check" aria-hidden="true"></i>
+                <a ng-href="#" ng-click="ctrl.injectAccessibilityStyles('links')">{{'Underline Links' | translate}}</a>
+              </li>
+              <li><i ng-show="accessibilityCfg.largefontSize" class="fa fa-check" aria-hidden="true"></i>
+                <a ng-href="#" ng-click="ctrl.injectAccessibilityStyles('largefontSize')">{{'Switch Font Size' | translate}}</a>
+              </li>
+              <li><i ng-show="accessibilityCfg.highContrast" class="fa fa-check" aria-hidden="true"></i>
+                <a ng-href="#" ng-click="ctrl.injectAccessibilityStyles('highContrast')">{{'Switch Contrast' | translate}}</a>
+              </li>
+              <li>
+                <a ng-href="#" ng-click="ctrl.resetAccessibilitySettings()">{{'Reset Settings' | translate}}</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="hidden-xs hidden-sm contact-bubble">
+                <a href="{{ctrl.contactUrl}}" title="{{'Contact Us' | translate}}">?</a>
+            </div>
+
+      </div>
+
+      <div class="hidden-xs col-sm-3">
+      </div>
+
+    </div>
+  </div>
+
+  <div ng-if="ctrl.sessionData.currentUser && !ctrl.sessionData.currentUser.emailVerified" class="row email-verification-warn">
+    <div class="col-xs-12">
+      {{'Please approve the registration, E-mail has been sent to your inbox.' | translate}}
+    </div>
+  </div>
+</header>
+<ul class="mobile-site-nav-menu" ng-show="ctrl.siteNavVisible">
+  <li ng-repeat="category in ctrl.catefories" ng-click="ctrl.siteNavVisible=false">
+    <a ui-sref="app.public.category({slug: category.slug, id: category.id})"
+       ng-class="{active: ctrl.$stateParams.slug === category.slug }" >{{category.name}}</a>
+  </li>
+  <li ng-click="ctrl.siteNavVisible=false"><a ui-sref="app.public.categories-selection" ng-class="{active: ctrl.$state.current.name === 'app.public.categories-selection' }">{{'Select Subjects' | translate }}</a></li>
+</ul>

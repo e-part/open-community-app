@@ -1,0 +1,20 @@
+@import "variables";
+@import "mixins";
+
+#app-footer {
+  height: 70px;
+  position: absolute;
+  width: 100%;
+  display: block;
+  background-color: $primary-color;
+  color: #ffffff;
+  bottom: 0px;
+/*  &.show {
+    height: 70px;
+  }*/
+  .site-footer {
+    line-height: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

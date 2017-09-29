@@ -1,0 +1,128 @@
+<section id="register" class="login-wrapper">
+  <div class="form-box">
+    <!-- Temporarily removed social logins until multiple domains will be supported. -->
+
+    <div ng-show="false" class="social-buttons">
+      <a ng-repeat="provider in authProviders | orderBy : provider.provider" ng-hide="provider.link" ng-click="sendGaEvent('register popup','התחברות עם '+provider.provider); socialLogin(provider)"
+       class="btn btn-{{provider.class}} social-login">
+        <i class="fa fa-{{provider.provider}}"></i> {{'Join with'| translate}} {{provider.text  | translate}}
+        <span ng-hide="true">{{'Join with Facebook' | translate }}</span>
+      </a>
+    </div>
+    <div ng-show="false" class="text-center add-padding font-bigger">- {{'or' | translate }} -</div>
+
+    <a ng-click="sendGaEvent('register popup','התחברות עם מייל'); showEmailForm=true"
+     class="btn btn-default" ng-show="!showEmailForm">
+      <i class="fa fa-envelope-o"></i> {{'Join with'| translate}} {{'Email' | translate}}
+    </a>
+    <form ng-init="showEmailForm=true" name="joinForm" class="form-signin" role="form" ng-submit="register()" autocomplete="off" ng-show="showEmailForm">
+
+      <div class="form-group">
+        <input ng-model="registration.firstName" type="text" placeholder="{{ 'First Name' | translate }}" minlength="2"
+               aria-labelledby="{{ 'First Name' | translate }}" required/>
+      </div>
+      <div class="form-group">
+        <input ng-model="registration.lastName" type="text" placeholder="{{ 'Last Name' | translate }}" minlength="2"
+               aria-labelledby="{{ 'Last Name' | translate }}" required/>
+      </div>
+      <div class="form-group">
+        <input ng-model="registration.email" type="email" placeholder="{{ 'Email' | translate }}" minlength="4" aria-labelledby="{{ 'Email' | translate }}" required/>
+      </div>
+      <div class="form-group">
+        <input ng-model="registration.newPassword"  type="password" placeholder="{{ 'Password' | translate }}" minlength="6"
+               aria-labelledby="{{ 'Password' | translate }}" required/>
+      </div>
+      <div class="form-group">
+        <input ng-model="registration.confirmPassword"  type="password" placeholder="{{ 'Confirm Password' | translate }}"
+               minlength="6" aria-labelledby="{{ 'Confirm Password' | translate }}' | translate }}" required/>
+      </div>
+<!--      $scope.schema = [
+      {
+      label: '',
+      property: 'firstName',
+      placeholder: gettextCatalog.getString('First Name'),
+      type: 'text',
+      attr: {
+      ngMinlength: 2,
+      required: true,
+      ariaLabelledby: gettextCatalog.getString('First Name')
+
+      // autocomplete: 'off',
+      },
+      msgs: {
+      minlength: false
+      }
+      }, {
+      label: '',
+      property: 'lastName',
+      placeholder: gettextCatalog.getString('Last Name'),
+      type: 'text',
+      attr: {
+      ngMinlength: 2,
+      required: true,
+      ariaLabelledby: gettextCatalog.getString('Last Name')
+      },
+      /*          msgs: {
+      minlength: gettextCatalog.getString(
+      'Needs to have at least 2 characters')
+      }*/
+      }, {
+      label: '',
+      property: 'email',
+      placeholder: gettextCatalog.getString('Email'),
+      type: 'email',
+
+
+      // help: gettextCatalog.getString(
+      //   'Don\'t worry we won\'t spam your inbox'),
+      attr: {
+      required: true,
+      ngMinlength: 4,
+      ariaLabelledby: gettextCatalog.getString('Email')
+      },
+      msgs: {
+      //required: gettextCatalog.getString('You need an email address'),
+      email: gettextCatalog.getString('Email address needs to be valid'),
+      }
+      }, {
+      label: '',
+      property: 'newPassword',
+      placeholder: gettextCatalog.getString('Password'),
+      type: 'password',
+      attr: {
+      required: true,
+      ngMinlength: 6,
+      ariaLabelledby: gettextCatalog.getString('Password')
+      }
+      }, {
+      label: '',
+      property: 'confirmPassword',
+      placeholder: gettextCatalog.getString('Confirm Password'),
+      type: 'password',
+      attr: {
+      confirmPassword: 'registration.newPassword',
+      required: true,
+      ngMinlength: 6,
+      // autocomplete: 'off',
+      },
+      msgs: {
+      match: gettextCatalog.getString(
+      'Your passwords need to match')
+      }
+      }];-->
+
+      <button ng-click="sendGaEvent('register popup','הרשמה');" type="submit" ng-disabled="!joinForm.$valid" class="btn bg-olive btn-block" ng-class="{'btn-primary':joinForm.$valid}" translate>
+        {{'Signup' | translate }}
+      </button>
+      <div ng-if="formErrorMsg" class="form-errors-container">{{formErrorMsg.general | translate}}.</div>
+      <div class="agree-to-terms text-center add-margin-top">
+        {{'By clicking signup you are agreeing to the' | translate }}<a ui-sref="app.public.terms" target="_blank"> {{'Terms and Conditions' | translate }}</a>
+      </div>
+
+      <div class="text-center add-padding-top add-margin-top">
+        {{'Already a Member?' | translate }} <a href='#' ng-click="login(true);">{{'Login' | translate }}</a>
+      </div>
+    </form>
+
+  </div>
+</section>

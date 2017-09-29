@@ -1,0 +1,22 @@
+{
+  "db": {
+    "port": 3306,
+    "host" : "XXX",
+    "user" : "XXX",
+    "password": "XXX",
+    "database": "epart_webapp",
+    "name": "db",
+    "connector": "mysql"
+  },
+  "transient": {
+    "name": "transient",
+    "connector": "transient"
+  },
+  "epart-app-prod": {
+    "name": "epart-app-prod",
+    "connector": "loopback-component-storage",
+    "provider": "amazon",
+    "key": "XXX",
+    "keyId": "XXX"
+  }
+}

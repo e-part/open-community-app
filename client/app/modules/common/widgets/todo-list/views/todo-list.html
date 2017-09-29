@@ -1,0 +1,8 @@
+<div class="widgets-sidebar">
+  <div ng-if="!ctrl.allTododsCompleted" class="side-widget todo-list">
+  	<h4>{{'Your Checklist' | translate }}</h4>
+  	<ul>
+  	<li ng-repeat="todo in ctrl.todos" ng-class="{done: todo.done}"><i class="fa fa-check"></i> <a ui-sref="{{todo.link}}" ng-class="{disabled: todo.done}">{{todo.item}}</a></li>
+  	</ul>
+  </div>
+</div>

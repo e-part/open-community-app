@@ -1,0 +1,25 @@
+<ul class="more-posts-list">
+  <li ng-repeat="recPost in ctrl.recommendedPosts">
+    <div class="">
+      <a ui-sref="app.public.post({ permaLink: recPost.permaLink })">
+        <div back-img="{{recPost.mainImage || ctrl.defaultPostBg}}" class="post-image col-xs-5"></div>
+      </a>
+
+      <div class="text col-xs-7">
+        <div class="title-cont">
+          <a ui-sref="app.public.post({ permaLink: recPost.permaLink })">
+            {{recPost.title | add3dots:100:true}}
+          </a>
+        </div>
+        <div class="meeting-date">
+          <i class="material-icons">schedule</i>
+          {{recPost.endDate | formatLocaleDate:false:false}}
+        </div>
+      </div>
+
+    </div>
+    <!--    <a ui-sref="app.public.post({ permaLink: recPost.permaLink })">
+
+            </a>-->
+  </li>
+</ul>

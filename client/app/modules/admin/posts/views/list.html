@@ -1,0 +1,62 @@
+<div class="panel panel-default admin-list">
+  <div class="panel-heading">
+    <div class="panel-title-text">
+      {{ 'Posts' | translate }}
+    </div>
+    <span class="btn-group">
+      <a href="" class="btn btn-xs btn-success" ui-sref="^.add({type: 'DISCUSSION'})">
+        <i class="fa fa-plus"></i> {{ 'Add New Discussion' | translate }}
+      </a>
+    </span>
+        <span class="btn-group">
+      <a href="" class="btn btn-xs btn-success" ui-sref="^.add({type: 'PROJECT'})">
+        <i class="fa fa-plus"></i> {{ 'Add New Project' | translate }}
+      </a>
+    </span>
+  </div>
+  <div class="search-bar">
+    <div class="list-search-box" >
+      <label class="list-search-box-label" for="titleSearch" translate>Post Title</label>
+      <input id="titleSearch" placeholder="{{'Search Post..' | translate}} " type="text" ng-model="ctrl.freeTextFilterValue"
+             ng-change="ctrl.filterChanged( 'title', ctrl.freeTextFilterValue,['id', 'title','officialTitle'])"/>
+
+    </div>
+    <div class="list-search-box">
+      <label class="list-search-box-label" for="statusSearch" translate>Status</label>
+      <select id="statusSearch" ng-model="ctrl.filters.status.selected"
+              ng-options="option.text for option in ctrl.filters.status.data track by option.value"
+              ng-change="ctrl.filterChanged('status', ctrl.filters.status.selected.value, ['status'])"></select>
+    </div>
+
+    <div class="list-search-box">
+      <label class="list-search-box-label" for="migrationStatusSearch" translate>Migration Status</label>
+      <select id="migrationStatusSearch" class="list-search-box" ng-model="ctrl.filters.migrationStatus.selected"
+              ng-options="option.text for option in ctrl.filters.migrationStatus.data track by option.value"
+              ng-change="ctrl.filterChanged('migrationStatus', ctrl.filters.migrationStatus.selected.value, ['migrationStatus'])"></select>
+    </div>
+    <div class="list-search-box">
+      <label class="list-search-box-label" for="fromDateSearch" translate>From Date</label>
+      <input id="fromDateSearch" class="list-search-box" placeholder="From Date" type="date" ng-model="ctrl.filters.fromDate"
+             ng-change="ctrl.filterChanged('toDate',ctrl.filters.fromDate,['endDate'], 'dateGt')"/>
+    </div>
+
+    <div class="list-search-box">
+      <label class="list-search-box-label" for="toDateSearch" translate>To Date</label>
+      <input id="toDateSearch" class="list-search-box" placeholder="To Date" type="date" ng-model="ctrl.filters.toDate"
+             ng-change="ctrl.filterChanged('fromDate', ctrl.filters.toDate,['endDate'], 'dateLt')"/>
+    </div>
+    <div class="list-search-box">
+      <label class="list-search-box-label" for="isCancelledFilter" translate>Show Cancelled Only</label>
+      <input id="isCancelledFilter" class="list-search-box" placeholder="To Date" type="checkbox" ng-model="ctrl.filters.isCancelled"
+             ng-change="ctrl.filterChanged('isCancelled', ctrl.filters.isCancelled,['isCancelled'])"/>
+    </div>
+
+  </div>
+  <div>
+    <div class="grid-container" ui-grid="ctrl.gridOptions" ui-grid-auto-resize ui-grid-pagination ui-grid-resize-columns dir="{{appDirection}}"></div>
+
+  </div>
+
+</div>
+
+

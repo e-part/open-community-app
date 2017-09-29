@@ -1,0 +1,38 @@
+{
+  "name": "Organization",
+  "plural": "organizations",
+  "base": "AppModel",
+  "properties": {
+    "name": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "users": {
+      "type": "hasMny",
+      "model": "user"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

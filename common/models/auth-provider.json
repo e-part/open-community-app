@@ -1,0 +1,40 @@
+{
+  "name": "AuthProvider",
+  "plural": "AuthProviders",
+  "base": "PersistedModel",
+  "strict": false,
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "authPath": {
+      "type": "string"
+    },
+    "provider": {
+      "type": "string"
+    },
+    "class": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

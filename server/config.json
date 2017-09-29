@@ -1,0 +1,37 @@
+{
+  "language": "EN",
+  "restApiRoot": "/api",
+  "host": "localhost",
+  "port": 3000,
+  "defaultExplorerUrl": "http://localhost:3000",
+  "apiPort" : "3000",
+  "clientPort" : "9000",
+  "logPath" : "log/",
+  "cookieSecret": "F1FEE670-3C72-11E4-916C-0800200C9A66",
+  "digitalTownDomain" : "http://gator.dev.rezserve.net/",
+  "digitalTownApi" : "https://v1.srv.sso.uat.rezserve.net/api/",
+  "digitalTownSSODomain" : "https://v1.srv.sso.uat.rezserve.net/",
+
+  "remoting": {
+    "context": {
+      "enableHttpContext": false
+    },
+    "rest": {
+      "normalizeHttpPath": false,
+      "xml": false
+    },
+    "json": {
+      "strict": false,
+      "limit": "100kb"
+    },
+    "urlencoded": {
+      "extended": true,
+      "limit": "100kb"
+    },
+    "cors": false,
+    "errorHandler": {
+      "disableStackTrace": true
+    }
+  },
+  "legacyExplorer": false
+}

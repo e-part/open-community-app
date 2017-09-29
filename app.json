@@ -1,0 +1,7 @@
+{
+  "name": "epart-app",
+  "description": "ePart App",
+  "repository": "https://github.com/e-part/epart-app",
+  "logo": "https://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "angular", "loopback", "admin", "api"]
+}

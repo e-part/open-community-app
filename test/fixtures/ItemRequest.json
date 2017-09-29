@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "postId": 1,
+    "description": "item 1",
+    "quantity": 5,
+    "customerId" : 1
+  },
+  {
+    "id": 2,
+    "postId": 1,
+    "description": "item 2",
+    "quantity": 5,
+    "customerId" : 1
+  },
+  {
+    "id": 3,
+    "postId": 4,
+    "description": "item 3",
+    "quantity": 5,
+    "customerId" : 2
+  }
+]

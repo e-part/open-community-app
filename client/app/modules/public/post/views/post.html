@@ -1,0 +1,63 @@
+<div class="page-content-container post-page clearfix">
+  <!-- POST HEADER -->
+  <div ng-include="'/modules/public/post/views/partials/header.html'"></div>
+  <div class="secondary-container">
+    <!-- MAIN CONTENT CONTAINER -->
+    <!-- PUBLIC DISCUSSION PAGE-->
+    <div ng-show="ctrl.currentProcessStep === 'discussion'" class="col-md-8 bs-wrapper main-content-container">
+
+      <!-- PARTICIPANTS -->
+      <header class="mks-list-container" ng-if="ctrl.allDiscussionMembers.length" ng-class="{'expanded': expandList == true}">
+        <div class="clearfix">
+          <h3 class="section-title">{{'Participants' | translate }}</h3>
+        </div>
+        <div class="mk-list-wrapper">
+          <i class="arrow material-icons" id="left_arrow" ng-if="ctrl.showArrows" ng-click="ctrl.moveMksList('left')">chevron_left</i>
+          <i class="arrow material-icons" id="right_arrow" ng-if="ctrl.showArrows" ng-click="ctrl.moveMksList('right')">chevron_right</i>
+          <ul class="mks-list" style="margin-left: -{{ctrl.steps}}px;">
+            <li ng-repeat="user in ctrl.allDiscussionMembers"
+                 ng-init="$last && ctrl.prepareMksList()">
+              <a ui-sref="app.public.profile({id: user.id})">
+                <cl-photo image-alt="user profile" image-src="{{user.imageUrl}}" image-class="mk-image"
+                          image-width="50" image-height="50" image-crop="thumb" image-gravity="faces"
+                          image-zoom="0.8"></cl-photo>
+                <p>{{user.firstName}} {{user.lastName}}</p>
+                <img alt="" class="org-icon" ng-if="ctrl.showMks && $index < ctrl.mks.length" src="../images/britain-flag.png" />
+                <div title="Creator" class="org-icon creator" ng-if="!ctrl.showMks && ctrl.post.owner && ctrl.post.owner.id === user.id" >{{'C' | translate}}</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <!-- POST SUMMARY -->
+      <section class="clearfix">
+        <div class="clearfix">
+          <h3 class="section-title">{{:: ctrl.postTexts.postbackgroundTitle}}</h3>
+        </div>
+        <div class="post-content" ng-bind-html="ctrl.post.content">
+
+        </div>
+
+      </section>
+      <section ng-if="ctrl.post.ownerSummary"class="clearfix">
+        <div  class="clearfix">
+          <h3 class="section-title">{{'Discussion Conclusion' | translate }}</h3>
+        </div>
+        <div class="post-owner-summary">
+          {{::ctrl.post.ownerSummary}}
+        </div>
+      </section>
+      <div ng-include="'/modules/public/post/views/partials/comments.html'"></div>
+
+
+    </div>
+    <!-- CONCLUSIONS PAGE-->
+    <div ng-show="ctrl.currentProcessStep === 'conclusions'" class="col-md-8 bs-wrapper main-content-container"
+         ng-include="'/modules/public/post/views/partials/conclusions.html'"></div>
+    <!-- SIDE WIDGETS -->
+    <div ng-include="'/modules/public/post/views/partials/side-widgets.html'"></div>
+
+
+  </div>
+
+</div>

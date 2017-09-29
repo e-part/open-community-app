@@ -1,0 +1,160 @@
+<!doctype html>
+<html ng-controller="LayoutCtrl" lang="en">
+<head>
+  <base href="/">
+  <title ng-bind="metaTags.title"></title>
+
+  <meta http-equiv="Content-Language" content="en">
+
+  <!-- base meta tags -->
+  <meta charset="utf-8">
+  <meta name="description" content="{{metaTags.description}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="google-site-verification" content="OrtX6x_Cg0uQyP-DIuZnSks0A8XZmdGGcKITGUN1lQE" />
+  <!-- -->
+
+  <!-- facebook meta tags -->
+  <meta property="og:url"                content="{{metaTags.url}}">
+  <meta property="og:type"               content="{{metaTags.type}}">
+  <meta property="og:title"              content="{{metaTags.title}}">
+  <meta property="og:description"        content="{{metaTags.description}}">
+  <meta property="og:image"              content="{{metaTags.image}}">
+  <meta property="og:site_name"          content="ePart">
+  <!-- -->
+
+  <!-- twitter meta tags -->
+  <meta name="twitter:title"            content="{{metaTags.title}}">
+  <meta name="twitter:description"      content="{{metaTags.description}}">
+  <meta name="twitter:image:src"        content="{{metaTags.image}}">
+  <!-- -->
+
+  <!-- Place all third party asset files here! -->
+<!--
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|Open+Sans:400,700|PT+Sans+Narrow:400,700" rel="stylesheet">
+-->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="vendor/angular-ui-grid/ui-grid.css" />
+  <link rel="stylesheet" href="vendor/tag-cloud/ng-tag-cloud.css" />
+
+  <!-- -->
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css styles/main.css -->
+  <!-- include: "type": "css", "files": "css/*.css" -->
+  <!-- include: "type": "css", "files": "modules/**/*.css" -->
+  <!-- endbuild -->
+
+</head>
+<body ng-class="[CLIENT_CONFIG.className,
+(accessibilityCfg.links ? 'accessibility-links' : ''),
+  (accessibilityCfg.largefontSize ? 'accessibility-large-font-size' :''),
+  (accessibilityCfg.highContrast ? 'accessibility-high-contrast' :'')]"
+       ng-controller="AppCtrl">
+<div class="dark-layer" ng-class="{'active': darkScreen}" ng-click="closeDarkLayer()"></div>
+<div class="logo-hidden" style="display: none;"></div>
+<div id="NOTIFICATIONS" role="dialog"></div>
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<top-nav-bar ng-if="sessionData.sessionRetrievedOnce"></top-nav-bar>
+<div ng-if="loadingRoute && sessionData.sessionRetrievedOnce" class="view-loading-image-container">
+  <span class="view-loading-image">
+    <i class="fa fa-spinner fa-pulse"></i>
+  </span>
+</div>
+<div ui-view ng-class="{'full-height': currentUser.id === undefined}"></div>
+<ep-footer id="app-footer">
+
+</ep-footer>
+<!-- <div ng-controller="toasty-controller">
+  <toasty-container toasty-defaults='{"timeout": 3000, "close-button":true, "sound": false}'></toasty-container>
+</div> -->
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+
+<script ng-if="ENV === 'production'">
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push (arguments)
+    }, i[r].l = 1 * new Date ();
+    a = s.createElement (o),
+      m = s.getElementsByTagName (o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore (a, m)
+  }) (window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', 'UA-66701579-1');
+  // ga('send', 'pageview');
+</script>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '611558115690973',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script type='text/javascript'>
+  var toky_container=document.createElement('div');
+  toky_container.id='toky';
+  (document.getElementsByTagName('body')[0]).appendChild(toky_container);
+  var toky_id = 345;
+  (function () {
+    var toky = document.createElement('script');
+    toky.type = 'text/javascript';
+    toky.async = true;
+    toky.src = '//az601263.vo.msecnd.net/webview/'+toky_id+'/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(toky);
+  })();
+</script>
+<!-- build:js scripts/oldieshim.js -->
+<!--[if lt IE 9]>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/json3/lib/json3.js"></script>
+<![endif]-->
+<!-- endbuild -->
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- Local third party js -->
+<script src="vendor/tinymce/ui.tinymce.js"></script>
+<script src="vendor/tinymce/tinymce.min.js"></script>
+<script src="vendor/CountDownJS/CountDownJS.js"></script>
+<script src="vendor/HebCal/hebcal.noloc.min.js"></script>
+<script src="vendor/angular-ui-grid/ui-grid.min.js"></script>
+<script src="https://apis.google.com/js/client.js"></script>
+<!--
+<script src="vendor/i18n/angular-locale-he-il.js"></script>
+-->
+
+<!-- build:js scripts/scripts.js -->
+<!-- JS -->
+<!-- include: "type": "js", "files": "js/*.js" -->
+<!-- MODULES -->
+<!-- include: "type": "js", "files": "modules/**/*.js" -->
+<!-- endbuild -->
+
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<div class="page-content-container clearfix">
+  <div class="hidden-xs col-sm-2 nav-side-bar">
+    <site-navigation></site-navigation>
+  </div>
+  <div class="col-sm-10 col-xs-12 bot" role="main">
+		<section class="main-bot-section">
+			<h1 ng-if="!searching">{{'Searching for Specific Discussion?' | translate }}</h1>
+			<h3 ng-if="!searching">{{'Our Bot is Here to Help' | translate }}</h3>
+			<h1 class="more-margin" ng-if="searching">{{'I found' | translate }} {{ctrl.posts.length}} {{'posts that might interest you' | translate }}!</h1>
+			<img class="ohgif" alt="" src="../images/giphy-1.gif" ng-class="{'show-active': !searching}">
+			<img class="ohgif" alt="" src="../images/giphy-2.gif" ng-class="{'show-active': searching}">
+			<div ng-hide="searching">
+				<p>{{'What Subjects interest you?' | translate }}</p>
+				<ul class="categories-list">
+					<li ng-repeat="c in ctrl.categoriesList" ng-click="sendGaEvent('bot page','בחירת נושא'); c.selected = !c.selected; ctrl.selectCategory(c)" ng-class="{selected: c.selected}">{{c.name}}</li>
+				</ul>
+				<button ng-show="ctrl.selectedCategories.length" class="btn btn-xl btn-epart" ng-click="sendGaEvent('bot page','חיפוש דיונים'); ctrl.searchPosts(); searching=true">{{'Let`s Go!' | translate }}</button>
+			</div>
+			<div ng-show="searching" class="results">
+				<ol class="posts-list">
+					<li ng-repeat="p in ctrl.posts">
+            			<a ng-if="p.migrationStatus === 'NORMAL'" ng-href="{{ctrl.$state.href('app.public.post',{permaLink : p.permaLink})}}">
+              				{{p.title}}
+            			</a>
+            			<span ng-if="p.migrationStatus === 'KNESSET_MIGRATED'">{{p.officialTitle}}</span>
+
+            			<span class="endDate">({{p.endDate | formatLocaleDate}})</span>
+          			</li>
+				</ol>
+				<button class="btn btn-xl btn-epart" ng-click="searching=false">{{'Try Again' | translate }}</button>
+			</div>
+		</section>
+	</div>
+</div>

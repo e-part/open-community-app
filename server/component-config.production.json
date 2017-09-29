@@ -1,0 +1,11 @@
+{
+  "loopback-component-mailchimp": {
+    "connector": "loopback-connector-mailgun",
+    "apikey": "XXX",
+    "defaultListId": "XXX",
+    "defaults": {
+      "double_optin": false
+    }
+  },
+  "loopback-component-explorer": null
+}

@@ -1,0 +1,8 @@
+{
+  "defaultExplorerUrl": "http://52.16.78.198",
+  "clientPort" : "",
+  "apiPort" : "80",
+  "logPath" : "/var/epart/log/",
+  "https" : true
+
+}

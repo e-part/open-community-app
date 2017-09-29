@@ -1,0 +1,7 @@
+<div class="media-upload-container"  ng-mouseleave="showUploadButton = false"  ng-mouseover="showUploadButton = true">
+  <label translate>{{label}}</label>
+  <div class="row">
+    <div ng-show="showUploadButton || !ctrl.mediaUrl" class="upload-icon" ng-click="ctrl.chooseMedia('imageUrl')"><i class="fa fa-upload" aria-hidden="true"></i></div>
+    <img class="media-image-display" ng-src="{{ctrl.mediaUrl}}"  />
+  </div>
+</div>

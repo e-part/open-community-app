@@ -1,0 +1,66 @@
+{
+  "name": "ItemRequest",
+  "plural": "itemRequests",
+  "base": "AppModel",
+  "injectOptionsFromRemoteContext": true,
+  "mixins": {
+    "Multitenancy": {
+      "addCustomerToRemotingContext" : true,
+      "enforceCustomerField" : true
+    }
+  },
+  "properties": {
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "quantity": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "customer": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": "customerId"
+    },
+    "post": {
+      "type": "belongsTo",
+      "model": "Post",
+      "foreignKey": "postId"
+    },
+    "itemPledges": {
+      "type": "hasMany",
+      "model": "ItemPledge"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

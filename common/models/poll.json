@@ -1,0 +1,67 @@
+{
+  "name": "Poll",
+  "plural": "polls",
+  "base": "AppModel",
+  "injectOptionsFromRemoteContext": true,
+  "mixins": {
+    "Multitenancy": {
+      "addCustomerToRemotingContext" : true,
+      "enforceCustomerField" : true
+    }
+  },
+  "properties": {
+    "question": {
+      "type": "string"
+    },
+    "archived": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "answers": {
+      "type": "hasMany",
+      "model": "PollAnswer"
+    },
+    "usersVotes": {
+      "type": "hasMany",
+      "model": "PollVote"
+    },
+    "post": {
+      "type": "belongsTo",
+      "model": "Post"
+    },
+    "customer": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": "customerId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

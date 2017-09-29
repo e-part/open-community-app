@@ -1,0 +1,34 @@
+{
+  "name": "Decision",
+  "plural": "decisions",
+  "base": "AppModel",
+  "properties": {
+    "text": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

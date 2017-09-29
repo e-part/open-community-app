@@ -1,0 +1,31 @@
+{
+  "name": "Setting",
+  "plural": "settings",
+  "base": "PersistedModel",
+  "properties": {
+    "key": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

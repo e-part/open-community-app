@@ -1,0 +1,58 @@
+<header class="post-page-header clearfix" back-img="{{ctrl.getPostThumbnail(ctrl.post, 'mainImage')}}">
+  <div class="header-overlay"></div>
+  <div class="back-button-cont">
+    <a ui-sref="app.public.main" class="back-btn" title="{{'Go Back to main feed' | translate}}"><i class="material-icons">arrow_back</i></a>
+  </div>
+  <div ng-if="ctrl.post.type === ctrl.POST_TYPES.DISCUSSION">
+    <count-down time="ctrl.post.endDate" ng-if="ctrl.currentTime < ctrl.post.endDate"></count-down>
+    <div class="post-closed" ng-if="ctrl.currentTime > ctrl.post.endDate">{{'Public Discussion Ended' | translate }}
+    </div>
+  </div>
+  <div class="header-content col-sm-8 col-xs-12">
+    <h1>{{ctrl.post.title}}</h1>
+    <h2>{{ctrl.post.subtitle}}</h2>
+    <div class="post-categories-wrapper">
+      <a ng-repeat="category in ctrl.post.categories"
+         ui-sref="app.public.category({slug: category.slug, id: category.id})"
+         class="category-tag">{{category.name}}</a>
+    </div>
+    <div class="post-details">
+      <div ng-if="ctrl.post.committees.length" class="location">
+        <i class="material-icons">place</i> <span ng-repeat="c in ctrl.post.committees | limitTo: 2">{{c.name}}<span
+        ng-if="!$last">,</span> </span>
+      </div>
+    </div>
+  </div>
+  <div class="project-status col-xs-12" ng-if="ctrl.post.type === ctrl.POST_TYPES.PROJECT">
+    <div class="status-element" >
+      <div class="stats">
+        <div class="people-count stats-cont">
+          <div class="count">{{ctrl.post.timePledges.length}}</div>
+          <div class="explanation">{{'Have Pledged' | translate}}</div>
+        </div>
+        <div class="pledge-count stats-cont">
+          <div class="count">{{ctrl.totalPledgedHours}} hours</div>
+          <div class="explanation" >{{'Out of ' + ctrl.post.minimumRequiredHours+ ' hours requested' | translate}}</div>
+        </div>
+      </div>
+      <div class="stats-progress-bar">
+        <div class="progress-cont">
+          <div class="fulfilled" ng-style="ctrl.timePlageProgressStyle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="share-buttons">
+    <a href="{{ctrl.shareUrls.facebook}}"
+       ng-click="sendGaEvent('post page','שיתוף פוסט בפייסבוק'); ctrl.FBshare($event)" target="_blank"
+       class="fa fa-facebook-f facebook"></a>
+    <a href="{{ctrl.shareUrls.twitter}}"
+       ng-click="sendGaEvent('post page','שיתוף פוסט בטוויטר'); openSharePopup($event)" target="_blank"
+       class="fa fa-twitter twitter"></a>
+  </div>
+  <div class="image-caption" ng-if="ctrl.post.imageCaption">{{'image caption' | translate }}:
+    {{ctrl.post.imageCaption}}
+  </div>
+</header>
+

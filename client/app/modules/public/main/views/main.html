@@ -1,0 +1,40 @@
+<div class="home-header-image page-content-container hidden-xs" ng-if="CLIENT_CONFIG.attributes.features.showHeader">
+	<div class="home-header-tr">
+		<div class="home-header-td">
+			<div class="home-header-overlay"></div>
+
+			<div class="homepage-hero-module">
+			    <div class="video-container">
+			        <div class="filter"></div>
+			        <video autoplay muted class="fillWidth" ng-repeat="s in ctrl.headerSubjects" ng-init="$last && ctrl.headerInit()" ng-src="{{s.video}}" ng-show="$index === ctrl.showHeaderSubjectId">
+			        </video>
+			        <div class="poster hidden">
+			            <img src="../images/knesset-banner.jpg" alt="">
+			        </div>
+			    </div>
+			</div>
+
+			<h1>{{'Londoners, Have Your Say!' | translate }}</h1>
+			<a ng-click="sendGaEvent('home page','הצטרף'); ctrl.openLoginDialog()" ng-if="!ctrl.sessionData.currentUser" class="join">{{'Join Now' | translate }}</a>
+			<button class="close-hp-header" ng-click="sendGaEvent('home page','סגירת header'); showHpHeader=false"><i class="material-icons">close</i></button>
+		</div>
+	</div>
+</div>
+
+<div class="page-content-container clearfix">
+  <div class="hidden-xs col-sm-3 col-lg-2 nav-side-bar">
+    <site-navigation></site-navigation>
+  </div>
+	<div class="col-xs-12 col-sm-9 col-lg-7 content-feed" role="main">
+ 		<content-feed feed-posts="ctrl.feedPosts" ></content-feed>
+	</div>
+  <div class="hidden-sm hidden-xs hidden-md col-lg-3 nav-side-bar">
+<!--
+    <login-box ng-if="!ctrl.sessionData.currentUser"></login-box>
+-->
+    <todo-list ng-if="ctrl.sessionData.currentUser" user="ctrl.sessionData.currentUser"></todo-list>
+    <community-list community-members="ctrl.topContributors" list-title="'Top Contributors' | translate"></community-list>
+    <comments-list title="{{'Latest Comments' | translate }}" comments="ctrl.latestComments"></comments-list>
+  </div>
+</div>
+

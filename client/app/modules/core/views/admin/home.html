@@ -1,0 +1,36 @@
+
+<section class="content admin-dashboard">
+
+  <div class="row stats-filters">
+    <span>
+        {{'Show Stats' | translate }}:
+      <a href="#" ng-click="ctrl.reloadData('LAST_WEEK')"
+         ng-class="{'active':  ctrl.showStatsFromDate == 'LAST_WEEK'}">{{ctrl.periods['LAST_WEEK'].text}}</a> |
+        <a href="#" ng-click="ctrl.reloadData('LAST_MONTH')"
+           ng-class="{'active':  ctrl.showStatsFromDate == 'LAST_MONTH'}">{{ctrl.periods['LAST_MONTH'].text}}</a> |
+      <a href="#" ng-click="ctrl.reloadData('ALL')"
+           ng-class="{'active':  ctrl.showStatsFromDate == 'ALL'}">{{ctrl.periods['ALL'].text}}</a>
+    </span>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="col-sm-4  col-xs-12" ng-class="{'pull-right': appDirection === 'rtl'}"
+           ng-repeat="box in ctrl.boxes">
+        <div class="info-box">
+          <!-- Apply any bg-* class to to the icon to color it -->
+          <span class="info-box-icon" ng-class="box.color"><i class="fa fa-star-o" ng-class="box.icon"></i></span>
+          <div class="info-box-content">
+            <span class="info-box-text">{{ box.name }}</span>
+            <span class="info-box-number">{{ box.quantity }}</span>
+          </div><!-- /.info-box-content -->
+        </div><!-- /.info-box -->
+      </div>
+    </div>
+  </div>
+  <div class="row charts-grid" >
+    <div class="col-sm-6  col-xs-12" ng-repeat="chart in ctrl.charts" >
+      <nvd3 class="col-xs-12 chart-container" options="chart.chartOptions" data="chart.chartData"></nvd3>
+    </div>
+
+  </div>
+</section>

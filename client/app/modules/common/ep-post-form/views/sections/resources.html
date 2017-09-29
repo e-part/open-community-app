@@ -1,0 +1,25 @@
+<h3 class="form-title">
+  <div>{{formSection.title}}</div>
+</h3>
+<div class="form-row row clear-both" ng-repeat="itemRequest in ctrl.post.itemRequests track by $index">
+  <div class="actions-box" ng-click="ctrl.removeItemRequest($index)">
+    <i class="fa fa-trash-o" aria-hidden="true" ></i>
+  </div>
+  <div class="col-xs-12 col-md-6 form-cell left-side-cell">
+    <div class="input-cont">
+      <label for="description" translate>Resource Description</label>
+      <input type="text" class="input-field" id="description" ng-model="itemRequest.description" />
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-6 form-cell">
+    <div class="input-cont half-width">
+      <label for="quantity" translate>Quantity</label>
+      <input type="number" class="input-field" id="quantity" step="1" ng-model="itemRequest.quantity" />
+    </div>
+  </div>
+</div>
+<div class="form-row row clear-both">
+  <button class="btn btn-primary btn-success form-section-create-btn" ng-click="ctrl.addItemRequest()">
+    <i class="fa fa-plus" aria-hidden="true"></i> &nbsp;{{'Add resource request' | translate}}
+  </button>
+</div>

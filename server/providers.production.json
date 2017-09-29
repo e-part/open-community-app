@@ -1,0 +1,72 @@
+{
+  "digital-town": {
+    "provider": "digitalTown",
+    "module": "passport-oauth2",
+    "strategy": "OAuth2Strategy",
+    "authorizationURL": "https://v1-sso-api.digitaltown.com/oauth/authorize",
+    "tokenURL": "https://v1-sso-api.digitaltown.com/api/token",
+    "authPath": "/api/auth/digitaltown",
+    "clientID": "XXX",
+    "clientSecret": "XXX",
+    "callbackPath": "/api/auth/digitaltown/callback",
+    "callbackURL": "https://live.smart.london/api/auth/digitaltown/callback",
+    "successRedirect": "/api/auth/account",
+    "scope": ["ID","email", "first_name","last_name","profile"]
+  },
+  "facebook-login": {
+    "provider": "facebook",
+    "module": "passport-facebook",
+    "clientID": "XXX",
+    "clientSecret": "XXX",
+    "callbackURL": "https://live.smart.london/api/auth/facebook/callback",
+    "authPath": "/api/auth/facebook",
+    "callbackPath": "/api/auth/facebook/callback",
+    "successRedirect": "/api/auth/account",
+    "failureRedirect" : "/api/auth/error",
+    "profileFields": ["id", "email", "gender", "is_verified", "languages", "picture.type(large)", "name", "verified","friends", "birthday","location"],
+    "scope": ["email","user_location","user_birthday"]
+  },
+
+  "facebook-mobile" : {
+    "provider": "facebook-mobile",
+    "module": "passport-facebook-token",
+    "strategy": "FacebookTokenStrategy",
+    "clientID": "XXX",
+    "clientSecret": "XXX",
+    "callbackPath": "/api/auth/facebook/token",
+    "failureFlash": true,
+    "session" : false,
+    "json":true,
+    "profileFields": ["id", "email", "gender", "is_verified", "languages", "picture.type(large)", "name", "verified","friends", "birthday","location"],
+    "scope": ["email","user_location","user_birthday"]
+  },
+  "twitter-login": {
+    "provider": "twitter",
+    "authScheme": "oauth",
+    "module": "passport-twitter",
+    "callbackURL": "https://live.smart.london/api/auth/twitter/callback",
+    "authPath": "/api/auth/twitter",
+    "callbackPath": "/api/auth/twitter/callback",
+    "successRedirect": "/api/auth/account",
+    "failureRedirect": "/api/auth/error",
+    "consumerKey": "XXX",
+    "consumerSecret": "XXX",
+    "includeEmail": true
+  },
+  "twitter-mobile": {
+    "provider": "twitter",
+    "authScheme": "oauth",
+    "strategy": "TwitterTokenStrategy",
+    "module": "passport-twitter-token",
+    "callbackURL": "https://live.smart.london/api/auth/twitter/callback",
+    "authPath": "/api/auth/twitter",
+    "callbackPath": "/api/auth/twitter/token",
+    "successRedirect": "/api/auth/account",
+    "failureRedirect": "/api/auth/error",
+    "consumerKey": "XXX",
+    "consumerSecret": "XXX",
+    "json" :true,
+    "session": false,
+    "includeEmail": true
+  }
+}

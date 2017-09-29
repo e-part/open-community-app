@@ -1,0 +1,253 @@
+@import "variables";
+@import "responsive";
+
+.user-profile {
+
+  header.profile-header {
+    background-image: url('../images/london-back-color.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+    position: relative;
+    .profile-image {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 10px solid $gray-bg;
+      float: right;
+      .app-ltr & { /* handle ltr case */
+        float: left;
+      }
+    }
+    .follow-container {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      .app-ltr & {
+        left: inherit;
+        right: 15px;
+
+      }
+      .follow-button {
+        background: rgba(255, 255, 255, 0.35);
+        color: $white;
+        border: 1px solid $white;
+        padding: 8px 20px 6px 20px;
+
+        i {
+          margin-left: 3px;
+        }
+
+        &:hover, &.followed {
+          background: rgba(255, 255, 255, 1);
+          color: $black;
+          &.followed {
+            i {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+    .profile-details {
+      float: right;
+      .app-ltr & { /* handle ltr case */
+        float: left;
+      }
+      margin: 45px 20px 0 45px;
+      color: $white;
+      h1 {
+        font-size: 52px;
+      }
+      a {
+        color: $white;
+      }
+    }
+
+  }
+  .profile-page-tabs {
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    background: $white;
+    margin: 0 auto;
+    position: relative;
+    /*width: 660px;*/
+    li {
+      display: inline-block;
+      text-align: center;
+      color: $primary-color;
+      width: 24%;
+      padding: 5px 0;
+      cursor: pointer;
+      outline: 0;
+      &.active {
+        border-bottom: 2px solid $primary-color;
+      }
+      &:first-child {
+      }
+      &:last-child {
+        border-left: 0;
+      }
+      .counter-value {
+        font-size: 20px;
+      }
+      .counter-title {
+        font-size: 18px;
+      }
+    }
+    &.hide-created-posts {
+      li {
+        width: 32%;
+      }
+    }
+  }
+
+  .profile-content {
+    margin: 0 auto;
+    margin-top: 20px;
+    position: relative;
+    /*width: 660px;*/
+    &.content-feed {
+      padding: 0;
+    }
+    ul.members-list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background: $white;
+      li {
+        float: right;
+        width: 50%;
+        padding: 15px;
+        border-bottom: 1px solid $gray;
+        .app-ltr & { /* handle ltr case */
+          float: left;
+        }
+        a {
+          display: block;
+        }
+
+        &:hover {
+          background: lighten($primary-color, 35%);
+          &.member-item {
+            .member-details {
+              .member-name {
+                color: $primary-color;
+              }
+            }
+          }
+        }
+        &.member-item {
+          .member-img {
+            height: 65px;
+            float: right;
+            border-radius: 50%;
+            width: 65px;
+            .app-ltr & { /* handle ltr case */
+              float: left;
+            }
+          }
+          .member-details {
+            float: right;
+            margin: 20px 20px 0 20px;
+            .app-ltr & { /* handle ltr case */
+              float: left;
+            }
+            .member-name {
+              font-size: 18px;
+              color: $dark-gray;
+            }
+            .follow-button {
+              margin-top: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@include media-max($layout-breakpoint-sm) {
+
+  .user-profile {
+    .content-feed {
+      padding-right: 0;
+    }
+    header.profile-header {
+      padding: 10px;
+      text-align: center;
+      .profile-image {
+        width: 50px;
+        height: 50px;
+        border: 3px solid $gray-bg;
+        float: none;
+        display: inline-block;
+      }
+      .follow-container {
+        position: static;
+        text-align: center;
+        margin-top: 10px;
+        button {
+          padding: 5px 45px 2px 15px;
+          font-size: 14px;
+          i {
+            width: 33px;
+            font-size: 20px;
+            line-height: 30px;
+          }
+        }
+      }
+      .profile-details {
+        margin: 5px 0 0 0;
+        display: block;
+        float: none;
+        h1 {
+          font-size: 32px;
+        }
+      }
+
+    }
+    .profile-page-tabs {
+      li {
+        display: inline-block;
+        width: 24%;
+        padding: 5px 0;
+        .counter-value {
+          font-size: 16px;
+        }
+        .counter-title {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .profile-content {
+      ul.members-list {
+        li {
+          float: none;
+          width: 100%;
+          padding: 10px;
+
+          &.member-item {
+            .member-img {
+              height: 40px;
+              width: 40px;
+            }
+            .member-details {
+              margin: 8px 20px 0 0;
+
+              .member-name {
+                font-size: 18px;
+              }
+              .follow-button {
+                margin-top: 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

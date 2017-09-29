@@ -1,0 +1,113 @@
+@import "variables";
+@import "responsive";
+
+.bot {
+	padding-left: 0;
+	padding-right: 20px;
+
+	.main-bot-section {
+		min-height: 200px;
+		background: $white;
+		padding: 30px 20px;
+		text-align: center;
+
+		h1 {
+			color: $black;
+			text-align: center;
+			font-size: 32px;
+			&.more-margin {
+				margin: 18px 0;
+			}
+		}
+		h3 {
+			margin-top: 10px;
+		}
+		.ohgif {
+			width: 0;
+			height: 0;
+			margin: 30px auto 0 auto;
+		    position: relative;
+		    opacity: 0;
+		    &.show-active {
+		    	height: auto;
+		    	opacity: 1;
+		    	width: 400px;
+		    }
+		}
+		p {
+			margin-top: 30px;
+			font-size: 22px;
+		}
+		ul.categories-list {
+			list-style-type: none;
+			padding: 0;
+			li {
+				display: inline-block;
+				background: $white;
+				box-shadow: 0 0 3px $dark-gray;
+				padding: 5px 0;
+				width: 200px;
+				border-radius: 5px;
+				color: darken($dark-gray,5%);
+				margin: 5px;
+				cursor: pointer;
+				&.selected {
+					box-shadow: 0;
+					color: $white;
+					background: lighten($primary-color,20%);
+				}
+			}
+		}
+		.choosed {
+			p {
+				color: $dark-gray;
+			}
+			.selected-categories {
+				display: inline-block;
+				font-size: 18px;
+				width: 830px;
+				padding: 0 100px 8px 100px;
+				border-bottom: 1px dashed $light-gray;
+				color: darken($dark-gray,5%);
+			}
+			button {
+				margin-top: 30px;
+				&.disabled {
+					opacity: 0.2;
+				}
+			}
+		}
+		.results {
+			margin-top: 20px;
+			ol {
+				margin: 0 auto;
+				margin-top: 20px;
+				/*list-style-type: none;*/
+				padding: 0;
+				width: 600px;
+				text-align: right;
+        .app-ltr & { /* handle ltr case */
+          text-align: left;
+        }
+				position: relative;
+				li {
+					font-size: 16px;
+					.meetingDate {
+						color: darken($gray,15%);
+						font-style: italic;
+					}
+				}
+			}
+			button {
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+@include media-max($layout-breakpoint-lg) {
+
+	.bot {
+
+	}
+}

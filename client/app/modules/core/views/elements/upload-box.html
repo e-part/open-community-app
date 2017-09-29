@@ -1,0 +1,14 @@
+<label translate>{{label}}</label>
+
+<div class="upload-box" nv-file-drop uploader="ctrl.uploader">
+  <div class="file-input-box btn btn-xs btn-file">
+    <div class="exp-text" ng-show="!ctrl.uploader.isUploading" ng-class="{uploaded:ctrl.mediaUrl}">
+      {{ description }}</div>
+    <div ng-show="ctrl.uploader.isUploading" class="progress" ng-class="{uploaded:ctrl.mediaUrl}" style="margin-bottom: 0;">
+      <div class="progress-bar" ng-class="{uploaded:ctrl.mediaUrl}" role="progressbar"
+           ng-style="{ 'width': ctrl.uploader.queue[ctrl.uploader.queue.length-1].progress + '%' }"></div>
+    </div>
+    <input class="file-input" nv-file-select type="file" uploader="ctrl.uploader"/>
+    <img ng-src="{{ ctrl.mediaUrl || 'http://upload.wikimedia.org/wikipedia/commons/c/ce/Transparent.gif'}}" />
+  </div>
+</div>

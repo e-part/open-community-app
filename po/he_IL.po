@@ -1,0 +1,2697 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: he_IL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: client/app/modules/admin/users/views/login.html:43
+msgid "{{'Sign in' | translate }}"
+msgstr ""
+
+#: client/app/modules/admin/users/views/register.html:19
+msgid "{{'Signup' | translate }}"
+msgstr ""
+
+#: client/app/modules/core/views/elements/media-upload-input.html:2
+msgid "{{label}}"
+msgstr ""
+
+#: client/app/modules/public/terms/controllers/terms.ctrl.js:19
+msgid ""
+"<h2>Terms of Use (&quot;Terms&quot;) </h2><p><span>Please read these Terms "
+"of Use (&quot;Terms&quot;, &quot;Terms of Use&quot;) carefully before using "
+"the https://beta.epart.co.il/website (the &quot;Service&quot;) operated by "
+"AVSHA, Inc. (&quot;us&quot;, &quot;we&quot;, or &quot;our&quot;). </span></"
+"p><p ><span>Your access to and use of the Service is conditioned on your "
+"acceptance of and compliance with these Terms. These Terms apply to all "
+"visitors, users and others who access or use the Service.</span></p><p "
+"><span>By accessing or using the Service you agree to be bound by these "
+"Terms. If you disagree with any part of the terms then you may not access "
+"the Service. </span></p><p><span ></span></p><h2>Termination</"
+"span><span>&nbsp;</h2><p ><span>We may terminate or suspend access to our "
+"Service immediately, without prior notice or liability, for any reason "
+"whatsoever, including without limitation if you breach the Terms.</span></"
+"p><p ><span>All provisions of the Terms which by their nature should survive "
+"termination shall survive termination, including, without limitation, "
+"ownership provisions, warranty disclaimers, indemnity and limitations of "
+"liability.</span></p><h2 >Links To Other Web Sites</h2><p ><span>Our Service "
+"may contain links to thirdparty web sites or services that are not owned or "
+"controlled by ePart.</span></p><p ><span>ePart has no control over, and "
+"assumes no responsibility for, the content, privacy policies, or practices "
+"of any third party web sites or services. You further acknowledge and agree "
+"that My Company, Inc. (change this) shall not be responsible or liable, "
+"directly or indirectly, for any damage or loss caused or alleged to be "
+"caused by or in connection with use of or reliance on any such content, "
+"goods or services available on or through any such web sites or services.</"
+"span></p><p ><span>&nbsp;We strongly advise you to read the terms and "
+"conditions and privacy policies of any thirdparty web sites or services that "
+"you visit. </span></p><h2 >Governing Law</h2><p ><span>These Terms shall be "
+"governed and construed in accordance with the laws of Israel, without regard "
+"to its conflict of law provisions.</span></p><p ><span>Our failure to "
+"enforce any right or provision of these Terms will not be considered a "
+"waiver of those rights. If any provision of these Terms is held to be "
+"invalid or unenforceable by a court, the remaining provisions of these Terms "
+"will remain in effect. These Terms constitute the entire agreement between "
+"us regarding our Service, and supersede and replace any prior agreements we "
+"might have between us regarding the Service.</span></p><h2>Changes </h2><p "
+"><span>We reserve the right, at our sole discretion, to modify or replace "
+"these Terms at any time. If a revision is material we will try to provide at "
+"least 30 &nbsp;days notice prior to any new terms taking effect. What "
+"constitutes a material change will be determined at our sole discretion.</"
+"span></p><p ><span>By continuing to access or use our Service after those "
+"revisions become effective, you agree to be bound by the revised terms. If "
+"you do not agree to the new terms, please stop using the Service. </span></"
+"p><h2 >Contact Us</span><span>&nbsp;</h2><p ><span>If you have any questions "
+"about these Terms, please contact us.</span></p>"
+msgstr ""
+"<p class=\"highlighted\">\n"
+"  ברוך הבא ל – ePart! אנו שמחים על הצטרפותך כמשתתף במיזם שלנו. אנו ממליצים "
+"כי תקרא את תנאי השימוש להלן, היות וההרשמה לאתר וההשתתפות במיזם מהווים הסכמה "
+"להוראות אלו.\n"
+"</p>\n"
+"<p>\n"
+"  ePart הינה פלטפורמה אינטרנטית חברתית אשר פותחה ומופעלת על ידי חברת אבשה "
+"יזמות חברתית בע”מ (להלן: \"<strong>ePart</strong>\") ואשר מאפשרת השתתפות "
+"פעילה והשפעה על קבלת ההחלטות על ידי הרשות המבצעת, הרשות המחוקקת והרשויות "
+"המקומיות בישראל, בדרך של קבלת מידע וסקירות ביחס לנושאים שונים העומדים לדיון, "
+"ומתן אפשרות להבעת דעה והבאתה לידיעת מקבלי ההחלטות לשם השפעה ו/או עזרה בקבלת "
+"ההחלטות. עשיית שימוש במערכת של ePart תכונה להלן \"<strong>השתתפות במיזם</"
+"strong>\". המשתתפים במיזם יכונו להלן \"<strong>משתתפים</strong>\".\n"
+"</p>\n"
+"<p>\n"
+"  על ידי הכניסה לאתר ו/או ההשתתפות במיזם (כולל צפיה ו/או שימוש בכל התוכן "
+"והשירותים הנגישים דרך כתובת האינטרנט  www.epart.co.il או בכל אתר ו/או רשת "
+"חברתית שיחליף אותו או יתווסף אליו וכן שימוש במידע וסקירות הנשלחות למשתתפים; "
+"להלן, בהכללה:  \"האתר” ו – \"התוכן\") ו/או ההשתתפות בכל דיון ו/או התכתבות עם "
+"אחרים דרך ו/או באמצעות שירות המופעל על ידי האתר ו/או ePart, הינך מאשר ללא כל "
+"הסתייגות וללא כל תנאים את הסכמתך המלאה לתנאי השימוש הכלליים הללו (להלן: "
+"\"תנאי השימוש\"). אם אינך מסכים לכל תנאי השימוש, אנא אל תעשה שימוש באתר ו/או "
+"בכל שירות ו/או כלי המופעל באמצעות האתר ו/או ePart. תנאי השימוש מתייחסים "
+"באופן שווה לבני שני המינים אך מנוסחים בלשון זכר מטעמי נוחות בלבד.\n"
+"</p>\n"
+"<p>\n"
+"  האתר ואופן הפעילות של המיזם מצויים בהליכי פיתוח. בהתאם לכך, התוכן של האתר, "
+"אופן הפעילות במסגרתו ו/או באמצעותו וההיצע הכללי של ePart עשויים להשתנות "
+"בעתיד. ePart אינה מתחייבת לאופן פעילות מסויים או לזמינות של כל מרכיב או "
+"תכונה של המערכת של האתר.\n"
+"</p>\n"
+"\n"
+"<div class=\"divider\"></div>\n"
+"\n"
+"<h2>שינוי תנאי השימוש</h2>\n"
+"<p>\n"
+"  ePart שומרת לעצמה את הזכות לשנות את תנאי השימוש בכל עת, לפי שיקול דעתה "
+"הבלעדי ומסיבה כלשהי וזאת מבלי צורך לתת הודעה מראש על כך, אולם כל שינוי כאמור "
+"יחול ממועד ביצוע השינוי ואילך. כל שינוי ו/או תיקון של תנאי השימוש יכנס לתוקף "
+"מיד עם פרסום הנוסח המתוקן באתר. הנוסח העדכני האחרון של תנאי השימוש כפי "
+"שמפורסם באתר הינו הנוסח היחידי התקף והוא מבטל כל נוסח קודם. השימוש באתר "
+"וההשתתפות בפעילות דרך האתר ו/או באמצעים העומדים לרשות המשתמשים על ידי ePart, "
+"מהווים הסכמה מראש לכל שינוי ו/או תיקון של תנאי השימוש. משכך, ישנה חשיבות לכך "
+"שתקרא את תנאי השימוש בכל כניסה לאתר ו/או לפני כל השתתפות במיזם וזאת על מנת "
+"לוודא שהינך מעודכן בנוסח האחרון של תנאי השימוש.\n"
+"</p>\n"
+"<h2>הרשמה לאתר וההשתתפות במיזם</h2>\n"
+"<p>\n"
+"  הרישום לאתר וההשתתפות במיזם הינם אסורים במידה והדבר נעשה תוך הפרה ו/או אי-"
+"ציות להוראות תנאי השימוש. בהרשמה לאתר וההשתתפות במיזם אתה מצהיר כי: (א) "
+"הפרטים שמסרת בעת הרישום לאתר הינם פרטים נכונים מלאים ומדויקים; (ב) נכונות "
+"הפרטים שמסרת בעת הרישום לאתר תשמר על ידך לאורך תקופת השימוש שלך באתר;  (ג) "
+"הינך מחזיק בתא דואר אלקטרוני ברשת האינטרנט אשר פרטיו הינם כפי שמסרת בעת "
+"הרישום; (ד) הינך מחזיק  בתעודה מזהה תקפה; ו – (ו) השימוש שלך באתר ו/או "
+"בשירותים אינו מנוגד לחוק כלשהו.\n"
+"</p>\n"
+"<p>\n"
+"  ePart שומרת לעצמה את הזכות לבטל את ההרשמה ואת ההשתתפות במיזם של כל מי "
+"שאינו עומד בתנאים האמורים לעיל, וזאת מבלי צורך לתת הסברים או התראה מראש קודם "
+"לביטול הרישום כאמור.\n"
+"</p>\n"
+"<p>\n"
+"  באם משתמש בחר להירשם ו/או להתחבר לאתר באמצעות חשבון הפייסבוק או חשבון "
+"הטוויטר שלו, הוא נותן בכך את הסכמתו לכך שהרשמתו לאתר והשתתפותו במיזם ישותפו "
+"באמצעות ו/או דרך חשבון הפייסבוק או הטוויטר שלו (לפי העניין) ולא תהיה לו כל "
+"טענה בקשר לכך.\n"
+"</p>\n"
+"\n"
+"<h2>התוכן באתר</h2>\n"
+"\n"
+"<p>\n"
+"  התוכן באתר ו/או זה המשותף על ידי ePart עם משתתפים במיזם, לרבות סקירות של "
+"נושאים העומדים לדיון וכדומה (\"<strong>תוכן של ePart</strong>\"), הינם "
+"קניינה של ePart והיא שומרת לעצמה את מלוא הזכויות בתוכן זה, לרבות זכויות "
+"היוצרים. אין לעשות כל שימוש מסחרי בתוכן של ePart ללא הסכמה מפורשת, מראש "
+"ובכתב מ – ePart. אין לשתף תכנים של ePart או לפרסמם כתכנים של ePart באם נערכו "
+"בהם שינויים או עריכה כלשהי.\n"
+"</p>\n"
+"<p>\n"
+"  בנוסף לאמור, האתר מכיל ו/או יכיל מידע, תוכנה, תמונות, גרפים וחומרים אחרים "
+"(כולם יחד: \"<strong>תכנים</strong>\"), אשר מוגנים ע”י זכויות יוצרים, זכויות "
+"מבצעים, סימני מסחר, סודות מסחריים או זכויות קנייניות אחרות. כל התכנים מוגנים "
+"בהתאם לדיני זכויות יוצרים ובהתאם לחוק זכויות יוצרים בישראל, ו- ePart הינה "
+"בעליהן (או משתמשת מורשית) של זכויות אלו, לרבות בבחירה, עיצוב, תיאום, הסדרה "
+"והשבחה של תכנים כאמור. למשתמש אסור לשנות, להסיר, למחוק, להגדיל, ליצור נגזרת "
+"עבודה או לנצל בכל דרך שהיא את התכנים, בשלמותם או בחלקם – שלא על פי האפשרויות "
+"לשיתוף בדוא”ל וברשתות החברתיות כפי שהן מתאפשרות באתר.\n"
+"</p>\n"
+"<p>\n"
+"  עיצוב האתר, הטקסט, הגרפיקות, בחירתם וסידורם, וכל זכויות היוצרים ביחס "
+"אליהם, הינם של ePart וכל הזכויות בהם שמורות לePart.\n"
+"</p>\n"
+"<p>\n"
+"  אנו מעודדים את המשתתפים להעביר אלינו הצעות ו/או רעיונות לייעול, שיפור ו/או "
+"שינוי האופן בו אנחנו פועלים (להלן: \"הצעות\"). בכל מקרה של העברת הצעות "
+"כאמור, ל – ePart תהיה זכות מלאה ורישיון, ללא תמורה, לעשות כל שימוש, לרבות "
+"שימוש מסחרי בהצעות אשר יועברו אליה על ידי המשתתפים במיזם וללא כל חבות או "
+"התחייבות כלפי מי שנתן את ההצעה.\n"
+"</p>\n"
+"<p>\n"
+"  נשמח לקבל מכם תגובות, רעיונות, שאלות ובקשות. אנא כיתבו אלינו "
+"<strong>לכתובת הבאה: hello@epart.co.il.</strong>\n"
+"</p>\n"
+"\n"
+"<h2>תוכן ולינקים חיצוניים</h2>\n"
+"\n"
+"<p>\n"
+"  ePart עשויה להציג תוכן של צדדים שלישיים ו/או קישורים (\"<strong>לינקים</"
+"strong>\") לאתרים חיצוניים (\"<strong>תוכן חיצוני</strong>\"). ל-ePart אין "
+"כל שליטה על תוכן חיצוני, היא אינה אחראית לו, ותוכן כזה מוצג על ידי ePart רק "
+"כשירות למשתמשים באתר. ePart לא תהיה אחראית לכל נזק ישיר או עקיף שייגרם או "
+"עלול להיגרם לך כתוצאה משימוש או הסתמכות על תוכן חיצוני. התוכן החיצוני ניתן "
+"אך ורק לשם הנוחות של המשתמשים ואין בהכללתו באתר או בכל סקירה הניתנת על ידי "
+"ePart משום מצג כלשהו ביחס לתוכן החיצוני, יוצריו או מהימנותו.\n"
+"</p>\n"
+"\n"
+"<h2>אופן ההשתתפות במיזם</h2>\n"
+"\n"
+"<p>\n"
+"  <strong>\n"
+"    ההשתתפות במיזם מותנית בכך שהמשתתף: (א) ישתמש בשפה מכובדת ומכבדת; (ב) "
+"יתנסח לגופו של עניין מתוך כוונה לסייע ולהשפיע לטובה על הדיון הציבורי וקבלת "
+"ההחלטות; (ג) לא ינקוט בכל שפה פוגענית, מעליבה, גסה או בוטה; (ד) לא יפרסם "
+"לשון הרע על אדם או מוסד כלשהו; (ה) לא יתחזה לאדם אחר ולא יציג עצמו כבעל "
+"השכלה ו/או הסמכה ו/או דרגה שאין לו; (ו) לא יגלה מידע אשר הינו חסוי ו/או סודי "
+"בהתאם לכל הסכם ו/או דין ו/או מידע שהינו פרטי ושאינו נחלת הכלל; (ז) לא יעבור "
+"כל עבירה על חוקי המדינה ו/או הוראות כל רשות או גוף שלטוני, לרבות לפי חוק "
+"הגנת הפרטיות, תשמ”א-1981, חוקי הצנזורה וחוקים הנוגעים לפרסומים אסורים.\n"
+"  </strong>\n"
+"</p>\n"
+"<p>\n"
+"  <strong>בנוסף לאמור, הינך מתחייב ש</strong>לא להעלות, לפרסם, לשלוח במייל "
+"או בכל דרך אחרת להעביר תוכן כלשהו שמכיל וירוסים, לתוכנות או לכל קוד מחשב "
+"אחר, מסמכים או תוכניות, שתוכנן, עלול להפריע, להרוס או להגביל את השימושיות של "
+"כל תוכנת מחשב, חומרה, ציוד או תוכן של כל צד שלישי.\n"
+"</p>\n"
+"<p>\n"
+"  <strong>\n"
+"    בכל מקרה של אי ציות לאמור לעיל, תהיה ל-ePart הזכות להפסיק את ההשתפות של "
+"המשתתף במיזם ו/או לבטל את ההרשמה שלו לאתר, וזאת לפי שיקול דעתה הבלעדי. כל אי "
+"ציות לדין יהיה על אחריות המשתתף בלבד. ePart אינה נוטלת כל אחריות על מעשים של "
+"המשתתפים ו/או על התוכן של הפניות שלהם אל מקבלי ההחלטות.\n"
+"  </strong>\n"
+"</p>\n"
+"\n"
+"<h2>הסכמה לקבלת תקשורת אלקטרונית</h2>\n"
+"\n"
+"<p>\n"
+"  בהרשמה לאתר, הנך מסכים לקבל תקשורת אלקטרונית מ-<strong>ePart אשר עשויה "
+"לכלול סקירות של נושאים העומדים לדיון, מידע על פעילות ו/או שירותים של ePart "
+"וכן פניות ו/או מידע אחר.</strong> הסכמה זו מהווה הסכמה מפורשת ורצונית שלך "
+"לקבל את התקשורת וההודעות מ-<strong>ePart</strong> לרבות מסרים המכילים תוכן "
+"העונה על ההגדרה \"דבר פרסומת”, על פי תיקון 40 לחוק התקשורת (בזק ושידורים), "
+"התשמ”ב-1982.\n"
+"</p>\n"
+"<p>\n"
+"  הינך רשאי, בכל עת, להודיע ל-ePart על רצונך להסיר את כתובתך מרשימת הדיוור "
+"של ePart, ע”י שליחת הודעה מתאימה על כך. במקרה כזה, רישומך לאתר יבוטל ולא "
+"תהיה לך אפשרות להמשיך ולהשתתף במיזם.\n"
+"</p>\n"
+"\n"
+"<h2>אחריות ושיפוי</h2>\n"
+"\n"
+"<p>\n"
+"  הנך מסכים להיות אחראי אישית ולשפות במלוא גובה הסכום את ePart וכל מי מטעמה, "
+"עבור כל נזק ישיר, עקיף ו/או תוצאתי, אשר ייגרמו עקב כל מעשה ו/או מחדל שלך, "
+"ללא הגבלה, כאשר נזקים אלו כוללים, ללא הגבלה, כל נזק ישיר עקיף ו/או תוצאתי, "
+"כולל, אך לא רק, נזקים שנגרמו מאובדן הכנסה, אובדן רכוש, קנסות, שכר טרחת עורכי-"
+"דין ועלויות נוספות, כולל, ללא הגבלה, נזקים שנגרמו כתוצאה מתביעה, תשלום "
+"קנסות, הפסדים ו/או צווי מניעה.\n"
+"</p>\n"
+"\n"
+"<h2>הגנה על פרטיות</h2>\n"
+"\n"
+"<p>\n"
+"  ePart דואגת לפרטיות של המשתמשים ואינה מעבירה את הפרטים אודות המשתמשים "
+"לאחרים. יחד עם זאת, הנך מבין ומסכים כי ePart תעביר את פרטיך וכל מידע אשר "
+"יהיה ברשותה על מנת לציית לחוק, בין אם תתבקש לעשות זאת על ידי גוף משפטי או "
+"ממשלתי בעל סמכות, ובין אם לפי שיקול דעתה צעד זה נחוץ, על מנת לשמור על החוק.\n"
+"</p>\n"
+"<p>\n"
+"  כמו כן, הנך מבין ומסכים כי ePart תעביר את פרטיך וכל מידע אשר יהיה ברשותה, "
+"לרבות תוכן, אם צעד זה נדרש: (1) על מנת לאכוף את תנאי השימוש; (2) על מנת "
+"להשיב לתביעה משפטית הטוענת כי בוצעה הפרה של זכויות צד שלישי; (3) על מנת להגן "
+"על הזכויות, הרכוש והאינטרסים של ePart ו/או עובדיה, משתמשים, מעניקי חסות, "
+"שותפים עיסקיים והציבור הכללי; או (4) בכל מחלוקת, דרישה או הליכים משפטיים, "
+"ככל שיהיו, בין המשתמש לבין ePart.\n"
+"</p>\n"
+"\n"
+"<h2>הגבלת אחריות</h2>\n"
+"\n"
+"<p>\n"
+"  כפי שהובהר לעיל, האתר משמש רק כפלטפורמה המאפשרת למשתמשים לפנות באופן ישיר "
+"ובלתי אמצעי אל נבחרי הציבור ומקבלי ההחלטות. ePart אינה נוטלת חלק פעיל "
+"בפעילות של המשתתפים במיזם, אינה משתתפת בתוכן פניותיהם ואינה מנהלת מעקב אחר "
+"פעילות המשתתפים. בהתאם לכך, ePart אינה אחראית לכל פעולה או מחדל של צדדים "
+"שלישיים כלשהם לרבות המשתתפים.\n"
+"</p>\n"
+"<p>\n"
+"  ePart עושה מאמץ להבטיח שהסקירות שמסופקות למשתתפים תהיינה מדוייקות ככל "
+"האפשר. למרות האמור, ePart אינה מבטיחה שלא תפולנה טעויות עובדתיות או אחרות "
+"בסקירות שכאלה, כגון: טעות לעניין מועד קיומו של דיון כלשהו, המשתתף מודע "
+"לאפשרות של טעויות כאמור ולא תהיינה לו כל טענה כלפי ePart בגין טעויות אשר "
+"יכול ותהיינה בסקירה כלשהי.\n"
+"</p>\n"
+"<p>\n"
+"  ePart אינה מתחייבת כי הפעילות והשירות באתר יהיו ללא הפרעות ו/או תקלות. "
+"במידה ונתגלתה תקלה בפעילות האתר, על המשתתף להודיע לePart, על מנת שזו תפעל "
+"לתיקון התקלה.\n"
+"</p>\n"
+"<p>\n"
+"  ePart לא תישא באחריות לפעילות כלשהי אשר אינה בשליטתה המלאה.\n"
+"</p>\n"
+"<p>\n"
+"  הנך מסכים ומאשר כי אתה מודע לכך ש- ePart אינה יכולה לאבטח את מערכות המידע "
+"והאבטחה בצורה הרמטית מפני מצבים של חדירה בלתי מורשית למערכות המידע ושימוש "
+"אסור במידע הרישום. ePart לא תישא באחריות במצבים בהם נעשתה חדירה בלתי מורשית "
+"ובוצעו פעולות בלתי חוקיות של אחרים במידע. הנך מסכים ומאשר כי לא תעמוד לך "
+"טענה ו/או דרישה כנגד ePart במצב זה.\n"
+"</p>\n"
+"\n"
+"<h2>סמכות שיפוט</h2>\n"
+"\n"
+"<p>\n"
+"  תנאי שימוש אלו יפורשו וידונו בהתאם לחוקיה של מדינת ישראל, והנך מסכים ליתן "
+"סמכות שיפוט בלעדית למערכת בתי המשפט במחוז תל אביב- יפו, בקשר לכל סכסוך שעשוי "
+"להתגלע בינך לבין ePart בכל נושא שהוא.\n"
+"</p>\n"
+"\n"
+"<h2>פניות אל ePart</h2>\n"
+"\n"
+"<p>\n"
+"  <strong>\n"
+"    בכל עניין הנוגע לשימוש באתר ו/או השתתפות במיזם ו/או לפעולות של משתתפים, "
+"ניתן לפנות אל ePart בדואר אלקטרוני לכתובת הבאה: hello@epart.co.il.\n"
+"  </strong>\n"
+"</p>"
+
+#: client/app/modules/admin/posts/views/form.html:82
+msgid "<i class=\"fa fa-plus\" aria-hidden=\"true\"></i>"
+msgstr ""
+
+#: client/app/modules/public/about/controllers/about.ctrl.js:52
+msgid ""
+"<p class=\"highlighted\">ePart is a civic startup which gives you, the "
+"citizen, the ability to influence the government on subjects you care about "
+"with only one click, from anywhere, anytime. </p><p> ePart makes civic "
+"engagement easy and simple – we use technology in order to deepen political "
+"participation by enabling citizens to connect continually with their elected "
+"representatives - not just once every four years, on election day.</p>"
+msgstr ""
+"<p class=\"highlighted\">\n"
+"        ePart הוא סטארט-אפ חברתי, שמחבר את האזרחים ישירות אל הנבחרים שלהם, "
+"מקצר את המרחק בין המקום בו הם נמצאים לכנסת\n"
+"        ישראל, לרשות המקומית שלהם או לממשלה ונותן להם את היכולת להשפיע.\n"
+"      </p>\n"
+"      <p>\n"
+"\n"
+"        אנחנו פועלים מתוך מטרה חברתית. אנחנו שואפים לחזק את הדמוקרטיה ואת "
+"המעורבות האזרחית, אבל אנחנו לא עמותה. אנחנו\n"
+"        משתמשים בטכנולוגיה, ופועלים מתוך מודל כלכלי – אבל אנחנו לא עוד סטארט-"
+"אפ. אנחנו משהו באמצע. באמריקה קוראים לזה\n"
+"        Civic Startup. בעברית זה נשמע יותר טוב.\n"
+"      </p>\n"
+"      <div class=\"divider\"></div>\n"
+"      <h2>מה אנחנו עושים</h2>\n"
+"      <p>\n"
+"\n"
+"        ePart רואה עצמו כגשר בין היכולת הטכנולוגית הקיימת לבין הצורך החברתי; "
+"ePart הופך את המידע לנגיש, ידידותי למשתמש,\n"
+"        פתוח ושקוף, מאפשר לאזרח להתעדכן בנושאים שמעניינים אותו – ובהם בלבד – "
+"ולהגיב באופן פשוט ומהיר, להשמיע את דעתו,\n"
+"        להשתתף, לשתף – ולהשפיע. הוא מקצר את המרחק בין האזרח לבין נבחר הציבור "
+"שלו, מציב אותו בתוך משכן הכנסת – אבל מבלי\n"
+"        לנסוע לירושלים, בתוך חדרי הוועדות – אבל מבלי להשתעמם מישיבות "
+"אינסופיות ומתישות. להשפיע על עתידו – גם בלי להיות\n"
+"        חתום על חוקים. התהליך הדמוקרטי כולו יהפוך כך לשוויוני יותר, והדיון "
+"הציבורי למעמיק ורציני יותר. קבלת ההחלטות של\n"
+"        נבחרי הציבור תתבסס על התמונה המלאה והמקיפה מכולן – חוכמת ההמונים.\n"
+"      </p>\n"
+"      <h2>למי אנחנו פונים</h2>\n"
+"      <p>\n"
+"\n"
+"        על ידי דיווח מאוזן ונטול פניות, וממשק טכנולוגי נגיש וישיר, ePart "
+"מאפשר למגוון אוכלוסיות רחב, מכל גווני הקשת\n"
+"        הישראלית, לקחת חלק בדיון, כדי ליצור קהילה של רעיונות – ולא של מפלגות "
+"וקבוצות, ולתת להם כלי יעיל וישיר לפנות אל\n"
+"        הנבחרים ולהשפיע על החוקים שחשובים להם, בכל תחום עניין שהוא. כן, "
+"הכוונה גם אליך.\n"
+"      </p>"
+
+#: client/app/modules/core/services/messages.service.js:27
+#: client/app/modules/core/services/messages.service.js:28
+msgid "A general error occurred, please try again"
+msgstr "אירעה שגיאה בשרת, בבקשה נסה שוב"
+
+#: client/app/modules/common/site-navigation/controllers/site-navigation.ctrl.js:50
+msgid "About"
+msgstr "אודות"
+
+#: client/app/modules/public/about/controllers/about.ctrl.js:10
+#: client/app/modules/public/about/controllers/about.ctrl.js:12
+msgid "About ePart"
+msgstr "קצת על ePart"
+
+#: client/app/modules/common/widgets/about/views/about.html:5
+msgid "About the team"
+msgstr "הכירו את הצוות"
+
+#: client/app/modules/common/widgets/about/views/about.html:4
+msgid "About us text"
+msgstr ""
+"ePart הוא סטארט-אפ חברתי, שמחבר את האזרחים ישירות אל הנבחרים שלהם, מקצר את "
+"המרחק בין המקום בו הם נמצאים לכנסת ישראל, לרשות המקומית שלהם או לממשלה ונותן "
+"להם את היכולת להשפיע."
+
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:74
+msgid "Accessibility Menu"
+msgstr "תפריט נגישות"
+
+#: client/app/modules/admin/posts/views/analyze.html:141
+msgid "Action Items"
+msgstr "החלטות"
+
+#: client/app/modules/public/dashboard/views/dashboard.html:126
+msgid "Add"
+msgstr "הוספה"
+
+#: client/app/modules/admin/posts/views/analyze.html:119
+msgid "Add a Conclusion"
+msgstr "הוספת מסקנה"
+
+#: client/app/modules/admin/categories/views/form.html:5
+msgid "Add a new category"
+msgstr "הוספת נושא חדש"
+
+#: client/app/modules/admin/committees/views/form.html:5
+msgid "Add a new committee"
+msgstr "הוספת ועדה חדשה"
+
+#: client/app/modules/admin/faqs/views/form.html:5
+msgid "Add a new Faq"
+msgstr "הוספת שאלה ותשובה"
+
+#: client/app/modules/admin/mks/views/form.html:5
+msgid "Add a new mk"
+msgstr "הוספת ח\"כ חדש"
+
+#: client/app/modules/admin/posts/views/form.html:5
+msgid "Add a new post"
+msgstr "הוספת דיון חדש"
+
+#: client/app/modules/admin/settings/views/form.html:5
+msgid "Add a new setting"
+msgstr "הוספת הגדרה חדשה"
+
+#: client/app/modules/admin/users/views/form.html:5
+msgid "Add a new user"
+msgstr "הוספת משתמש חדש"
+
+#: client/app/modules/admin/posts/views/form.html:62
+msgid "Add a Poll"
+msgstr "הוסף סקר"
+
+#: client/app/modules/admin/posts/views/list.html:8
+msgid "Add New Discussion"
+msgstr "הוספת דיון חדש"
+
+#: client/app/modules/common/export-to-calendar/controllers/export-to-calendar.ctrl.js:12
+msgid "Add to Calendar"
+msgstr "הוספה ליומן"
+
+#: client/app/modules/admin/posts/views/form.html:32
+msgid "Additional Knesset Members"
+msgstr "צירוף ח\"כים נוספים"
+
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:15
+msgid "Admin Dashboard"
+msgstr "ניהול מערכת"
+
+#: client/app/modules/admin/users/config/users.routes.js:152
+#: client/app/modules/admin/users/config/users.routes.js:205
+#: client/app/modules/admin/users/config/users.routes.js:57
+#: client/app/modules/admin/users/config/users.routes.js:66
+msgid "Administrator"
+msgstr "מנהל מערכת"
+
+#: client/app/modules/common/widgets/bot/views/bot.html:3
+msgid "Advanced Search"
+msgstr "חיפוש מתקדם"
+
+#: client/app/modules/core/controllers/admin-base.ctrl.js:17
+msgid "All"
+msgstr "הכל"
+
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:34
+msgid "All (ePart + Knesset)"
+msgstr "כל הסטטוסים"
+
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:27
+msgid "All Statuses"
+msgstr "כל הסטטוסים"
+
+#: client/app/modules/common/site-navigation/views/site-navigation.html:21
+#: client/app/modules/common/site-navigation/views/site-navigation.html:25
+#: client/app/modules/common/site-navigation/views/site-navigation.html:32
+msgid "All Subjects"
+msgstr "כל הנושאים"
+
+#: client/app/modules/admin/users/views/register.html:28
+msgid "Already a Member?"
+msgstr "כבר נרשמת?"
+
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:14
+msgid "Analysis Page"
+msgstr "לניתוח הדיון"
+
+#: client/app/modules/admin/faqs/services/faqs.service.js:67
+#: client/app/modules/admin/posts/views/form.html:75
+msgid "Answer"
+msgstr "תשובה"
+
+#: client/app/modules/admin/categories/services/categories.service.js:47
+#: client/app/modules/admin/committees/services/committees.service.js:38
+#: client/app/modules/admin/faqs/services/faqs.service.js:36
+#: client/app/modules/admin/files/services/file.service.js:15
+#: client/app/modules/admin/posts/controllers/posts.analize.ctrl.js:131
+#: client/app/modules/admin/posts/controllers/posts.analize.ctrl.js:161
+#: client/app/modules/admin/posts/controllers/posts.analize.ctrl.js:268
+#: client/app/modules/admin/posts/services/posts.service.js:103
+#: client/app/modules/admin/posts/services/posts.service.js:282
+#: client/app/modules/admin/settings/services/setting.service.js:38
+#: client/app/modules/admin/users/services/user.service.js:34
+#: client/app/modules/core/helpers/FormHelper.js:23
+#: client/app/modules/core/services/meta.service.js:91
+msgid "Are you sure?"
+msgstr "אתה בטוח שברצונך לבצע פעולה זו?"
+
+#: client/app/modules/public/reset-password/views/reset-password.html:68
+msgid "Back to Home Screen"
+msgstr "חזרה לעמוד הבית"
+
+#: client/app/modules/core/services/messages.service.js:25
+msgid "Bad input, please verify that the data is correct"
+msgstr ""
+
+#: client/app/modules/public/dashboard/controllers/dashboard.ctrl.js:68
+msgid "Beer-Sheva"
+msgstr "באר-שבע"
+
+#: client/app/modules/admin/files/views/upload.html:9
+msgid "Browse"
+msgstr "בחר קובץ"
+
+#: client/app/modules/admin/browser/views/main.html:3
+msgid "Browse your data here!"
+msgstr ""
+
+#: client/app/modules/admin/browser/views/main.html:2
+msgid "Browser"
+msgstr "דפדפן"
+
+#: client/app/modules/admin/users/views/register.html:24
+msgid "By clicking signup you are agreeing to the"
+msgstr "לחיצה על ‘הרשמה’ מהווה הסכמה ל"
+
+#: client/app/modules/admin/files/views/upload.html:69
+#: client/app/modules/core/services/core.service.js:49
+#: client/app/modules/public/post/views/post.html:189
+#: client/app/modules/public/post/views/post.html:278
+msgid "Cancel"
+msgstr "ביטול"
+
+#: client/app/modules/admin/categories/config/categories.config.js:6
+#: client/app/modules/admin/categories/views/list.html:4
+#: client/app/modules/admin/categories/views/main.html:2
+#: client/app/modules/admin/posts/views/analyze.html:13
+#: client/app/modules/admin/posts/views/form.html:16
+msgid "Categories"
+msgstr "נושאים"
+
+#: client/app/modules/public/user-settings/views/user-settings.html:13
+msgid "Change Image"
+msgstr "החלפת תמונה"
+
+#: client/app/modules/admin/users/views/profile.html:28
+msgid "Change it here!"
+msgstr ""
+
+#: client/app/modules/public/post/views/post.html:177
+#: client/app/modules/public/post/views/post.html:96
+msgid "Choose Related Tags"
+msgstr "בחירת תיוגים רלוונטים"
+
+#: client/app/modules/common/widgets/login-box/views/login-box.html:4
+msgid ""
+"Citizens are taking a step forward, Sign up and take a sit in the discussion "
+"table next to your decision makers."
+msgstr ""
+"דיונים חשובים קורים כאן כרגע ואזרחים רבים לוקחים בהם חלק. שמרנו גם לך מקום "
+"ליד שולחן הדיונים. קדימה להשפיע."
+
+#: client/app/modules/admin/categories/views/list.html:29
+msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a Category!"
+msgstr ""
+
+#: client/app/modules/admin/committees/views/list.html:33
+msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a Committee!"
+msgstr ""
+
+#: client/app/modules/admin/faqs/views/list.html:31
+msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a Faq!"
+msgstr ""
+
+#: client/app/modules/admin/files/views/upload.html:60
+msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a file!"
+msgstr ""
+
+#: client/app/modules/admin/mks/views/list.html:38
+msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a MK!"
+msgstr ""
+
+#: client/app/modules/admin/settings/views/list.html:31
+msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a setting!"
+msgstr ""
+
+#: client/app/modules/admin/files/views/list.html:30
+msgid ""
+"Click <a href=\"#\" ng-click=\"ctrl.addMedia()\">here</a> to add a file!"
+msgstr ""
+
+#: client/app/modules/public/post/controllers/post.ctrl.js:44
+msgid "Collect ideas from citizens"
+msgstr "העלאת רעיונות והצעות המתבססות על הידע והניסיון של המשתתפים"
+
+#: client/app/modules/common/site-navigation/views/site-navigation.html:8
+msgid "Coming Soon"
+msgstr "בקרוב"
+
+#: client/app/modules/public/post/views/post.html:225
+#: client/app/modules/public/post/views/post.html:310
+msgid "Comment"
+msgstr "תגובה"
+
+#: client/app/modules/public/post/controllers/post.ctrl.js:485
+msgid "Comment by"
+msgstr "התגובה של"
+
+#: client/app/modules/core/controllers/admin-base.ctrl.js:143
+#: client/app/modules/core/controllers/admin-base.ctrl.js:43
+#: client/app/modules/public/dashboard/controllers/dashboard.ctrl.js:186
+msgid "Comments"
+msgstr "תגובות"
+
+#: client/app/modules/admin/posts/views/analyze.html:70
+msgid "Comments Found"
+msgstr "תגובות שנמצאו"
+
+#: client/app/modules/core/controllers/admin-base.ctrl.js:47
+msgid "Comments Upvotes"
+msgstr "לייקים לתגובות"
+
+#: client/app/modules/admin/posts/services/posts.service.js:195
+msgid "Committee Meeting Date"
+msgstr "תאריך ישיבה"
+
+#: client/app/modules/admin/posts/services/posts.service.js:202
+msgid "Committee Meeting Hour"
+msgstr "שעת ישיבה"
+
+#: client/app/modules/admin/committees/config/committees.config.js:6
+#: client/app/modules/admin/committees/views/list.html:4
+#: client/app/modules/admin/posts/views/form.html:24
+#: client/app/modules/admin/users/views/form.html:21
+msgid "Committees"
+msgstr "ועדות"
+
+#: client/app/modules/admin/posts/views/analyze.html:137
+msgid "Conclusion Icon"
+msgstr "תמונה:"
+
+#: client/app/modules/admin/posts/views/analyze.html:133
+msgid "Conclusion Text"
+msgstr "מסקנה חדשה"
+
+#: client/app/modules/public/post/controllers/post.ctrl.js:59
+msgid "Conclusions and Decisions"
+msgstr "פרסום מסקנות והחלטות"
+
+#: client/app/modules/public/dashboard/views/dashboard.html:112
+msgid "Conclusions For Implementation"
+msgstr "מסקנות ליישום"
+
+#: client/app/modules/admin/files/views/upload.html:68
+msgid "Confirm"
+msgstr "אישור"
+
+#: client/app/modules/admin/users/controllers/register.ctrl.js:87
+#: client/app/modules/public/reset-password/views/reset-password.html:18
+msgid "Confirm Password"
+msgstr "סיסמה פעם נוספת"
+
+#: client/app/modules/admin/users/views/login.html:23
+msgid "connect to epart"
+msgstr "התחבר ל ePart"
+
+#: client/app/modules/public/categories-selection/views/categories-selection.html:16
+msgid "Continue"
+msgstr "המשך"
+
+#: client/app/modules/admin/users/views/form.html:11
+msgid "Could not add user!"
+msgstr ""
+
+#: client/app/modules/public/reset-password/controllers/reset-password.ctrl.js:71
+msgid "Could not reset the password, please repeat the process."
+msgstr "אירעה שגיאה במהלך איפוס הסיסמה, בבקשה נסה שוב."
+
+#: client/app/modules/core/config/core.config.js:26
+msgid "Dashboard"
+msgstr "בית"
+
+#: client/app/modules/core/services/core.service.js:69
+msgid "Data was saved successfully."
+msgstr "השמירה בוצעה בהצלחה."
+
+#: client/app/modules/public/post/views/post.html:133
+msgid "Date"
+msgstr "תאריך"
+
+#: client/app/modules/common/count-down/controllers/count-down.ctrl.js:39
+msgid "Days"
+msgstr "ימים"
+
+#: client/app/modules/admin/users/config/users.routes.js:153
+#: client/app/modules/admin/users/config/users.routes.js:206
+#: client/app/modules/admin/users/config/users.routes.js:58
+#: client/app/modules/admin/users/config/users.routes.js:67
+msgid "Decision Maker"
+msgstr "מקבל החלטות"
+
+#: client/app/modules/public/category/views/category.html:19
+msgid "Decision Makers"
+msgstr "מקבלי החלטות מעורבים בנושא"
+
+#: client/app/modules/public/post/views/post.html:210
+#: client/app/modules/public/post/views/post.html:295
+msgid "Delete"
+msgstr "מחיקה"
+
+#: client/app/modules/admin/categories/services/categories.service.js:48
+#: client/app/modules/admin/committees/services/committees.service.js:39
+#: client/app/modules/admin/faqs/services/faqs.service.js:37
+#: client/app/modules/admin/files/services/file.service.js:16
+#: client/app/modules/admin/posts/controllers/posts.analize.ctrl.js:132
+#: client/app/modules/admin/posts/controllers/posts.analize.ctrl.js:162
+#: client/app/modules/admin/posts/controllers/posts.analize.ctrl.js:269
+#: client/app/modules/admin/posts/services/posts.service.js:104
+#: client/app/modules/admin/posts/services/posts.service.js:283
+#: client/app/modules/admin/settings/services/setting.service.js:39
+#: client/app/modules/admin/users/services/user.service.js:35
+#: client/app/modules/core/helpers/FormHelper.js:24
+#: client/app/modules/core/services/meta.service.js:92
+msgid "Deleting this cannot be undone"
+msgstr "לאחר הפעולה לא ניתן יהיה להשיב את המידע."
+
+#: client/app/modules/public/user-settings/views/user-settings.html:51
+msgid "Desktop Notifications"
+msgstr "הודעות בשולחן העבודה"
+
+#: client/app/modules/public/dashboard/views/dashboard.html:4
+#: client/app/modules/public/post/views/post.html:128
+msgid "Discussion"
+msgstr "דיון"
+
+#: client/app/modules/admin/posts/views/analyze.html:11
+msgid "Discussion Analysis"
+msgstr "ניהול תגיות דיון"
+
+#: client/app/modules/public/post/views/post.html:76
+msgid "Discussion Background"
+msgstr "חומר רקע"
+
+#: client/app/modules/admin/posts/views/analyze.html:115
+msgid "Discussion Conclusion"
+msgstr "סיכום דיון"
+
+#: client/app/modules/public/post/views/partials/conclusions.html:4
+msgid "Discussion Conclusions and Decisions"
+msgstr "מסקנות והחלטות"
+
+#: client/app/modules/public/dashboard/controllers/dashboard.ctrl.js:11
+msgid "Discussion Management Dashboard"
+msgstr "מערכת ניהול דיונים"
+
+#: client/app/modules/public/post/views/post.html:342
+msgid "Discussion Timeline"
+msgstr "תהליך התייעצות"
+
+#: client/app/modules/public/profile/views/profile.html:27
+msgid "Discussions Participation"
+msgstr "דיונים בהם השתתפתי"
+
+#: client/app/modules/public/post/controllers/post.ctrl.js:232
+msgid "document"
+msgstr "מסמך"
+
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:17
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:28
+#: client/app/modules/admin/posts/services/posts.service.js:156
+msgid "Draft"
+msgstr "טיוטה"
+
+#: client/app/modules/public/post/views/post.html:208
+#: client/app/modules/public/post/views/post.html:293
+msgid "Edit"
+msgstr "עריכה"
+
+#: client/app/modules/admin/categories/views/form.html:6
+msgid "Edit category"
+msgstr "עריכת נושא"
+
+#: client/app/modules/admin/committees/views/form.html:6
+msgid "Edit committee"
+msgstr "עריכת ועדה"
+
+#: client/app/modules/admin/faqs/views/form.html:6
+msgid "Edit Faq"
+msgstr "עריכת שאלה ותשובה"
+
+#: client/app/modules/admin/mks/views/form.html:6
+msgid "Edit mk"
+msgstr "עריכת ח\"כ"
+
+#: client/app/modules/admin/posts/views/form.html:6
+msgid "Edit post"
+msgstr "עריכת דיון"
+
+#: client/app/modules/admin/settings/views/form.html:6
+msgid "Edit setting"
+msgstr "עריכת הגדרה"
+
+#: client/app/modules/admin/users/views/form.html:6
+msgid "Edit user"
+msgstr "עריכת משתמש"
+
+#: client/app/modules/public/main/controllers/main.ctrl.js:103
+msgid "education"
+msgstr "החינוך"
+
+#: client/app/modules/admin/mks/services/mks.service.js:45
+msgid "email"
+msgstr "מייל"
+
+#: client/app/modules/admin/users/config/users.routes.js:108
+#: client/app/modules/admin/users/controllers/login.ctrl.js:35
+#: client/app/modules/admin/users/controllers/login.ctrl.js:40
+#: client/app/modules/admin/users/controllers/register.ctrl.js:59
+#: client/app/modules/admin/users/controllers/register.ctrl.js:68
+#: client/app/modules/admin/users/services/user.service.js:124
+#: client/app/modules/admin/users/views/login.html:35
+#: client/app/modules/admin/users/views/register.html:15
+#: client/app/modules/common/widgets/login-box/views/login-box.html:10
+#: client/app/modules/public/reset-password/views/reset-password.html:37
+#: client/app/modules/public/user-settings/services/user-settings.service.js:79
+msgid "Email"
+msgstr "מייל"
+
+#: client/app/modules/core/services/messages.service.js:26
+msgid "Email address is incorrect"
+msgstr "כתובת הדוא\"ל אינה תקינה"
+
+#: client/app/modules/admin/users/controllers/login.ctrl.js:45
+#: client/app/modules/admin/users/controllers/register.ctrl.js:72
+msgid "Email address needs to be valid"
+msgstr ""
+
+#: client/app/modules/public/user-settings/views/user-settings.html:46
+msgid "Email Notifications"
+msgstr "על מה נודיע לך בהודעה במייל?"
+
+#: client/app/modules/public/subscriptions/controllers/subscriptions.ctrl.js:15
+msgid "Email Notifications Settings"
+msgstr "עריכת הגדרות דוא\"ל"
+
+#: client/app/modules/public/reset-password/views/reset-password.html:34
+msgid "Enter official mk email:"
+msgstr "נא להזין את כתובת המייל הרשמית לצורך איפוס סיסמתך:"
+
+#: client/app/modules/core/services/core.service.js:14
+#: client/app/modules/public/main/controllers/main.ctrl.js:10
+msgid "ePart"
+msgstr "ePart"
+
+#: client/app/modules/public/qa/controllers/qa.ctrl.js:9
+msgid "ePart - FAQ"
+msgstr "ePart - שאלות ותשובות"
+
+#: client/app/modules/public/qa/views/qa.html:20
+msgid "ePart - Learning Tool"
+msgstr "על ePart ככלי לימוד"
+
+#: client/app/modules/public/privacy/controllers/privacy.ctrl.js:10
+#: client/app/modules/public/terms/controllers/terms.ctrl.js:10
+msgid "ePart - Terms and Privacy Policy"
+msgstr "ePart - תנאי שימוש ומדיניות פרטיות"
+
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:21
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:35
+#: client/app/modules/admin/posts/services/posts.service.js:173
+msgid "ePart Edited Posts"
+msgstr "ערוך"
+
+#: client/app/modules/public/qa/views/qa.html:22
+msgid ""
+"ePart platform can be used as a learning tool for both teachers and students."
+msgstr ""
+"תלמידים? סטודנטים? מורים לאזרחות? גלו כיצד מערכת ePart יכולה לסייע לכם."
+
+#: client/app/modules/admin/settings/services/setting.service.js:50
+msgid "Error deleting setting"
+msgstr ""
+
+#: client/app/modules/core/services/core.service.js:72
+msgid "Error saving data."
+msgstr "הפעולה נכשלה, בבקשה נסה שנית."
+
+#: client/app/modules/admin/settings/services/setting.service.js:28
+msgid "Error saving setting"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/form.html:57
+msgid "Example: gocwRvLhDf8"
+msgstr "לדוגמא: gocwRvLhDf8"
+
+#: client/app/modules/public/user-settings/services/user-settings.service.js:90
+msgid "Example: Primary school teacher"
+msgstr "דוגמא: מורה בתיכון אילון"
+
+#: client/app/modules/public/dashboard/views/dashboard.html:167
+msgid "exit"
+msgstr "יציאה"
+
+#: client/app/modules/public/dashboard/views/dashboard.html:34
+msgid "External Discussion"
+msgstr "דיון משתמשים"
+
+#: client/app/modules/common/widgets/recommend-to-friend/views/recommend-to-friend.html:6
+msgid "Facebook"
+msgstr "פייסבוק"
+
+#: client/app/modules/admin/posts/views/form.html:52
+msgid "Facebook Image"
+msgstr "תמונת פייסבוק"
+
+#: client/app/modules/common/site-navigation/controllers/site-navigation.ctrl.js:54
+msgid "FAQ"
+msgstr "שאלות ותשובות"
+
+#: client/app/modules/admin/faqs/config/faqs.config.js:6
+#: client/app/modules/admin/faqs/views/list.html:4
+msgid "Faqs"
+msgstr "שאלות ותשובות"
+
+#: client/app/modules/admin/posts/views/form.html:51
+msgid "Featured Image"
+msgstr "תמונה לפיד ראשי"
+
+#: client/app/modules/core/services/messages.service.js:30
+msgid "Field Already Exists"
+msgstr "השדה כבר קיים במערכת"
+
+#: client/app/modules/admin/files/views/upload.html:17
+msgid "Filename"
+msgstr "שם הקובץ"
+
+#: client/app/modules/admin/files/config/file.config.js:6
+#: client/app/modules/admin/files/views/list.html:4
+msgid "Files"
+msgstr "קבצים"
+
+#: client/app/modules/common/widgets/todo-list/controllers/todo-list.ctrl.js:60
+msgid "Fill Your Hometown"
+msgstr "עדכון עיר מגורים"
+
+#: client/app/modules/admin/users/services/user.service.js:132
+msgid "First name"
+msgstr "שם פרטי"
+
+#: client/app/modules/admin/users/config/users.routes.js:90
+#: client/app/modules/admin/users/controllers/register.ctrl.js:30
+#: client/app/modules/admin/users/controllers/register.ctrl.js:35
+#: client/app/modules/public/user-settings/services/user-settings.service.js:62
+msgid "First Name"
+msgstr "שם פרטי"
+
+#: client/app/modules/admin/mks/services/mks.service.js:29
+msgid "firstName"
+msgstr ""
+
+#: client/app/modules/public/profile/views/profile.html:18
+msgid "follow"
+msgstr "עקוב"
+
+#: client/app/modules/common/widgets/todo-list/controllers/todo-list.ctrl.js:55
+msgid "Follow 3 Subjects"
+msgstr "בחירת 3 נושאים למעקב"
+
+#: client/app/modules/public/profile/views/profile.html:30
+msgid "Followers"
+msgstr "עוקבים"
+
+#: client/app/modules/public/profile/views/profile.html:19
+msgid "following"
+msgstr "עוקב"
+
+#: client/app/modules/public/profile/views/profile.html:33
+msgid "Following"
+msgstr "עוקב/ת"
+
+#: client/app/modules/admin/users/views/login.html:51
+msgid "Forgot Password?"
+msgstr "שכחת את הסיסמה?"
+
+#: client/app/modules/core/services/messages.service.js:29
+msgid "Form data is incorrect"
+msgstr "חלק מהשדות בטופס אינם תקינים"
+
+#: client/app/modules/common/widgets/comments-list/views/comments-list.html:21
+msgid "From"
+msgstr "מתוך"
+
+#: client/app/modules/admin/posts/views/list.html:33
+msgid "From Date"
+msgstr "מתאריך"
+
+#: client/app/modules/admin/users/views/login.html:14
+msgid "have an account"
+msgstr "כבר נרשמת?"
+
+#: client/app/modules/common/site-navigation/controllers/site-navigation.ctrl.js:38
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:14
+msgid "Home"
+msgstr "בית"
+
+#: client/app/modules/public/user-settings/views/user-settings.html:33
+msgid "Hometown"
+msgstr "מקום מגורים"
+
+#: client/app/modules/common/count-down/controllers/count-down.ctrl.js:40
+msgid "Hours"
+msgstr "שעות"
+
+#: client/app/modules/public/bot/views/bot.html:9
+msgid "I found"
+msgstr "מצאתי"
+
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:55
+#: client/app/modules/admin/users/config/users.routes.js:82
+msgid "ID"
+msgstr "מזהה"
+
+#: client/app/modules/admin/users/views/form.html:30
+msgid "Image"
+msgstr "תמונה"
+
+#: client/app/modules/public/post/views/post.html:39
+msgid "image caption"
+msgstr "צילום"
+
+#: client/app/modules/admin/posts/views/form.html:53
+msgid "Image Caption"
+msgstr "קרדיט תמונה"
+
+#: client/app/modules/public/post/controllers/post.ctrl.js:51
+msgid ""
+"In this step, We will analyze the data and ideas gathered during the public "
+"brainstorming"
+msgstr ""
+"בשלב זה, אנחנו ננתח את המידע שעלה בסיעור המוחות הציבורי כדי לגבש מסקנות "
+"והחלטות"
+
+#: client/app/modules/public/dashboard/views/dashboard.html:121
+msgid "Insert new Conclusion"
+msgstr "הוספת מסקנה"
+
+#: client/app/modules/public/dashboard/views/dashboard.html:77
+msgid "Insert new message"
+msgstr "הודעה חדשה.."
+
+#: client/app/modules/public/categories-selection/views/categories-selection.html:30
+#: client/app/modules/public/category/views/category.html:11
+msgid "Interested!"
+msgstr "חשוב לי!"
+
+#: client/app/modules/public/categories-selection/views/categories-selection.html:29
+#: client/app/modules/public/category/views/category.html:10
+msgid "Interested?"
+msgstr "חשוב לך?"
+
+#: client/app/modules/public/dashboard/views/dashboard.html:37
+msgid "Internal Discussion"
+msgstr "דיון פנימי"
+
+#: client/app/modules/core/services/messages.service.js:31
+msgid "Invalid field format"
+msgstr "השדה לא תקין"
+
+#: client/app/modules/core/services/messages.service.js:32
+msgid "Invalid field value"
+msgstr "השדה לא תקין"
+
+#: client/app/modules/admin/users/config/users.routes.js:234
+msgid "Invitation Sent"
+msgstr "זימון נשלח"
+
+#: client/app/modules/admin/users/config/users.routes.js:236
+msgid "Invitation wasn't sent."
+msgstr "שגיאה בשליחת הזימון, בבקשה נסו שוב."
+
+#: client/app/modules/common/top-nav-bar/controllers/top-nav-bar.ctrl.js:44
+msgid "is added to your followers"
+msgstr "הצטרף לעוקבים שלך."
+
+#: client/app/modules/public/dashboard/controllers/dashboard.ctrl.js:64
+msgid "Jerusalem"
+msgstr "ירושלים"
+
+#: client/app/modules/admin/users/views/login.html:5
+#: client/app/modules/admin/users/views/register.html:3
+msgid "join epart"
+msgstr "הצטרפות ל ePart"
+
+#: client/app/modules/public/main/views/main.html:18
+msgid "Join Now"
+msgstr "הצטרפות"
+
+#: client/app/modules/admin/users/views/register.html:15
+#: client/app/modules/admin/users/views/register.html:7
+msgid "Join with"
+msgstr "הצטרפות עם"
+
+#: client/app/modules/admin/users/views/login.html:13
+msgid "join with email"
+msgstr "הצטרף עם אי מייל"
+
+#: client/app/modules/admin/users/views/register.html:8
+msgid "Join with Facebook"
+msgstr "הצטרפות עם פייסבוק"
+
+#: client/app/modules/admin/settings/services/setting.service.js:78
+msgid "Key"
+msgstr ""
+
+#: client/app/modules/common/export-to-calendar/controllers/export-to-calendar.ctrl.js:26
+msgid "Knesset meeting:"
+msgstr ""
+
+#: client/app/modules/admin/posts/services/posts.service.js:145
+msgid "Knesset official title"
+msgstr "כותרת רשמית של הכנסת"
+
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:22
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:36
+#: client/app/modules/admin/posts/services/posts.service.js:177
+msgid "Knesset Posts"
+msgstr "נמשך מהכנסת"
+
+#: client/app/modules/core/controllers/admin-base.ctrl.js:28
+msgid "Last Month"
+msgstr "חודש"
+
+#: client/app/modules/admin/users/services/user.service.js:140
+msgid "Last name"
+msgstr "שם משפחה"
+
+#: client/app/modules/admin/users/config/users.routes.js:99
+#: client/app/modules/admin/users/controllers/register.ctrl.js:45
+#: client/app/modules/admin/users/controllers/register.ctrl.js:50
+#: client/app/modules/public/user-settings/services/user-settings.service.js:71
+msgid "Last Name"
+msgstr "שם משפחה"
+
+#: client/app/modules/core/controllers/admin-base.ctrl.js:22
+msgid "Last Week"
+msgstr "שבוע"
+
+#: client/app/modules/admin/mks/services/mks.service.js:37
+msgid "lastName"
+msgstr ""
+
+#: client/app/modules/public/main/views/main.html:35
+msgid "Latest Comments"
+msgstr "תגובות מדיונים בוערים"
+
+#: client/app/modules/public/bot/views/bot.html:17
+msgid "Let`s Go!"
+msgstr "קדימה לעבודה!"
+
+#: client/app/modules/public/reset-password/views/reset-password.html:65
+msgid "Logging in.."
+msgstr "מתחבר לאתר..."
+
+#: client/app/modules/admin/users/views/register.html:28
+msgid "Login"
+msgstr "התחברות"
+
+#: client/app/modules/core/services/messages.service.js:24
+msgid "Login failed, Please try again"
+msgstr "ההתחברות נכשלה, בבקשה נסה שוב"
+
+#: client/app/modules/admin/users/views/login.html:8
+msgid "login with"
+msgstr "התחברות עם"
+
+#: client/app/modules/admin/users/views/login.html:27
+#: client/app/modules/admin/users/views/login.html:35
+msgid "Login with"
+msgstr "התחברות עם"
+
+#: client/app/modules/admin/users/views/login.html:9
+msgid "login with facebook"
+msgstr "התחברות עם פייסבוק"
+
+#: client/app/modules/admin/users/views/login.html:28
+msgid "Login with Facebook"
+msgstr "התחברות עם פייסבוק"
+
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:21
+msgid "Logout"
+msgstr "התנתקות :("
+
+#: client/app/modules/common/widgets/bot/views/bot.html:2
+msgid "Looking for Something Else?"
+msgstr "לא מצאת את הדיון שחיפשת?"
+
+#: client/app/modules/admin/posts/views/form.html:50
+msgid "Main Image"
+msgstr "תמונה לעמוד דיון"
+
+#: client/app/modules/common/widgets/recommend-to-friend/controllers/recommend-to-friend.ctrl.js:43
+#: client/app/modules/core/services/core.service.js:15
+msgid "Make Your Impact"
+msgstr "הדרך שלך להשפיע על מה שחשוב לך"
+
+#: client/app/modules/public/main/views/main.html:17
+msgid "Make your impact on"
+msgstr "הדרך שלך להשפיע על"
+
+#: client/app/modules/common/export-to-calendar/controllers/export-to-calendar.ctrl.js:11
+#: client/app/modules/public/dashboard/controllers/dashboard.ctrl.js:25
+msgid "Meeting Cancelled"
+msgstr "הדיון בוטל"
+
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:97
+msgid "Meeting Date"
+msgstr "תאריך"
+
+#: client/app/modules/public/dashboard/controllers/dashboard.ctrl.js:82
+msgid "Men"
+msgstr "גברים"
+
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:90
+#: client/app/modules/admin/posts/services/posts.service.js:170
+#: client/app/modules/admin/posts/views/list.html:27
+msgid "Migration Status"
+msgstr "סטטוס עריכה"
+
+#: client/app/modules/common/count-down/controllers/count-down.ctrl.js:41
+msgid "Minutes"
+msgstr "דקות"
+
+#: client/app/modules/admin/mks/views/main.html:2
+msgid "MKs"
+msgstr ""
+
+#: client/app/modules/public/post/views/more-posts.html:1
+msgid "more posts that interests you"
+msgstr "דיונים נוספים שיעניינו אותך"
+
+#: client/app/modules/common/site-navigation/views/site-navigation.html:15
+msgid "My Subjects"
+msgstr "הנושאים שלי"
+
+#: client/app/modules/admin/categories/services/categories.service.js:70
+#: client/app/modules/admin/committees/services/committees.service.js:61
+msgid "Name"
+msgstr ""
+
+#: client/app/modules/public/post/controllers/post.ctrl.js:28
+msgid "New"
+msgstr "חדש"
+
+#: client/app/modules/public/user-settings/controllers/user-settings.ctrl.js:17
+msgid "New discussion added to one of your subjects."
+msgstr "דיון חדש באחד הנושאים שלך."
+
+#: client/app/modules/common/top-nav-bar/controllers/top-nav-bar.ctrl.js:35
+msgid "New post published in"
+msgstr "דיון חדש פורסם בנושא"
+
+#: client/app/modules/core/controllers/admin-base.ctrl.js:141
+#: client/app/modules/core/controllers/admin-base.ctrl.js:35
+msgid "New Users"
+msgstr "משתמשים חדשים"
+
+#: client/app/modules/admin/users/controllers/login.ctrl.js:46
+msgid "Nice email address!"
+msgstr ""
+
+#: client/app/modules/public/about/controllers/about.ctrl.js:21
+msgid "Nir Zohar – Co founder & Chairman"
+msgstr "ניר זוהר - מייסד ויו״ר הדירקטוריון"
+
+#: client/app/modules/public/about/controllers/about.ctrl.js:22
+msgid ""
+"Nir, the first investor in the company is also chairman of the board, and "
+"contributes his vast experience in high tech as the president of WIX.com Ltd."
+"<br/>Nir has been with Wix since 2007 and he’s been the driving force behind "
+"the successful scaling of the company's operations from a small start-up "
+"into an international company serving tens of millions of users. Nir "
+"spearheads all efforts to develop and implement Wix' strategic plans geared "
+"towards accommodating the company's growth objectives and business goals.<br/"
+"> On his day off you can catch him reading, spending time with his kids or "
+"avidly following the NBA scores."
+msgstr ""
+"ניר, המשקיע הראשון בחברה, עוד כשהייתה בגדר רעיון בלבד, עומד בראש הדירקטוריון "
+"שלה, ותורם לה מניסיונו העשיר\n"
+"                        בעולם ההיי-טק, כנשיא ענקית האינטרנט WIX, סיפור הצלחה "
+"ישראלי ששוויו מוערך בלמעלה ממיליארד דולר.\n"
+"                        <br><br>\n"
+"                        במקביל להיותו נשיא WIX, ניר משמש גם כסמנכ”ל התפעול "
+"של החברה. הוא הצטרף אליה ב-2007, ומאז הוביל בהצלחה את\n"
+"                        תהליך צמיחתה של החברה מסטארט-אפ קטן, לחברת ענק עם "
+"עסקים חובקי-עולם, המשרתת עשרות מיליוני משתמשים מכל קצוות\n"
+"                        הגלובוס. לפני כן, שימש בתפקידים שונים בסוכנות "
+"היהודית ובתנועת הצופים. את שירותו הצבאי סיים בדרגת רב-סרן,\n"
+"                        בוגר קורס חובלים וקצין בספינות הטילים של חיל הים.\n"
+"                        <br><br>\n"
+"                        ניר, בן 38, גר בעיר הולדתו תל אביב, עם אשתו ושני "
+"ילדיו. את זמנו הוא מעדיף להעביר בקריאה, בילוי עם המשפחה\n"
+"                        וכמובן צפייה אדוקה במשחקי NBA.\n"
+" "
+
+#: client/app/modules/admin/users/views/login.html:48
+msgid "Not Registered?"
+msgstr "עדיין לא נרשמת?"
+
+#: client/app/modules/public/user-settings/services/user-settings.service.js:89
+msgid "Occupation"
+msgstr "מקצוע"
+
+#: client/app/modules/core/services/core.service.js:48
+msgid "OK"
+msgstr "אישור"
+
+#: client/app/modules/public/user-settings/controllers/user-settings.ctrl.js:16
+msgid "One of your comments was replied."
+msgstr "מישהו הגיב על עמדתך."
+
+#: client/app/modules/public/dashboard/views/dashboard.html:17
+msgid "Open Discussion Page"
+msgstr "כניסה לעמוד הדיון"
+
+#: client/app/modules/admin/users/views/login.html:12
+#: client/app/modules/admin/users/views/login.html:31
+#: client/app/modules/admin/users/views/register.html:11
+msgid "or"
+msgstr "או"
+
+#: client/app/modules/public/dashboard/controllers/dashboard.ctrl.js:72
+msgid "Other"
+msgstr "אחר"
+
+#: client/app/modules/public/bot/views/bot.html:8
+msgid "Our Bot is Here to Help"
+msgstr " בדיוק בשביל זה הבוט שלנו פה."
+
+#: client/app/modules/public/categories-selection/views/categories-selection.html:11
+msgid "out of"
+msgstr "מתוך"
+
+#: client/app/modules/public/dashboard/controllers/dashboard.ctrl.js:192
+#: client/app/modules/public/post/views/post.html:51
+msgid "Participants"
+msgstr "משתתפים"
+
+#: client/app/modules/common/widgets/todo-list/controllers/todo-list.ctrl.js:66
+msgid "Participate in a Discussion"
+msgstr "השתתפות בדיון"
+
+#: client/app/modules/admin/users/controllers/login.ctrl.js:52
+#: client/app/modules/admin/users/controllers/login.ctrl.js:56
+#: client/app/modules/admin/users/controllers/register.ctrl.js:77
+#: client/app/modules/admin/users/controllers/register.ctrl.js:82
+#: client/app/modules/public/reset-password/views/reset-password.html:15
+msgid "Password"
+msgstr "סיסמה"
+
+#: client/app/modules/admin/posts/services/posts.service.js:187
+msgid "Permalink"
+msgstr "סלאג"
+
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:104
+msgid "Please approve the registration, E-mail has been sent to your inbox."
+msgstr "בבקשה אשר/י את ההרשמה, מכתב נשלח לתיבת הדוא\"ל שלך."
+
+#: client/app/modules/public/reset-password/views/reset-password.html:11
+msgid "Please Choose a Password:"
+msgstr "בחירת סיסמה:"
+
+#: client/app/modules/public/reset-password/controllers/reset-password.ctrl.js:83
+msgid "Please make sure you have entered a valid mail."
+msgstr "לא ניתן להשלים את הפעולה, אנא וודא שכתובת הדוא\"ל שהזנת תקינה."
+
+#: client/app/modules/admin/users/views/login.html:21
+#: client/app/modules/admin/users/views/login.html:4
+msgid "Please Sign-in to Continue"
+msgstr ""
+"רק שניה...\n"
+"קודם צריך להתחבר :-)"
+
+#: client/app/modules/admin/posts/views/form.html:60
+msgid "Poll Section"
+msgstr "סקר"
+
+#: client/app/modules/core/controllers/admin-base.ctrl.js:142
+#: client/app/modules/core/controllers/admin-base.ctrl.js:39
+msgid "Polls Votes"
+msgstr "הצבעות בסקרים"
+
+#: client/app/modules/public/category/controllers/category.ctrl.js:67
+#: client/app/modules/public/main/controllers/main.ctrl.js:25
+msgid "Popular"
+msgstr "פופולריים"
+
+#: client/app/modules/public/post/views/post.html:131
+msgid "Popularity"
+msgstr "פופולריות"
+
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:105
+msgid "Post Analysis"
+msgstr "ניתוח דיונים"
+
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:73
+msgid "Post Offical Title"
+msgstr "כותרת רשמית"
+
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:60
+#: client/app/modules/admin/posts/views/list.html:14
+msgid "Post Title"
+msgstr "כותרת דיון"
+
+#: client/app/modules/admin/posts/config/posts.config.js:6
+#: client/app/modules/admin/posts/views/list.html:4
+msgid "Posts"
+msgstr "דיונים"
+
+#: client/app/modules/public/bot/views/bot.html:9
+msgid "posts that might interest you"
+msgstr "דיונים במיוחד בשבילך"
+
+#: client/app/modules/admin/posts/views/analyze.html:178
+#: client/app/modules/admin/posts/views/form.html:99
+msgid "Preview"
+msgstr "תצוגה מקדימה"
+
+#: client/app/modules/public/category/controllers/category.ctrl.js:72
+#: client/app/modules/public/main/controllers/main.ctrl.js:30
+msgid "Previous Discussions"
+msgstr "דיונים שהתקיימו"
+
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:16
+#: client/app/modules/core/views/elements/navbar.html:40
+msgid "Profile"
+msgstr "הפרופיל שלי"
+
+#: client/app/modules/admin/files/views/upload.html:19
+msgid "Progress"
+msgstr ""
+
+#: client/app/modules/public/post/controllers/post.ctrl.js:43
+msgid "Public Brainstorming"
+msgstr "סיעור מוחות"
+
+#: client/app/modules/public/post/controllers/post.ctrl.js:50
+msgid "Public Data Analysis"
+msgstr "ניתוח מידע"
+
+#: client/app/modules/public/post/views/post.html:6
+msgid "Public Discussion Ended"
+msgstr "הדיון התקיים"
+
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:18
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:29
+#: client/app/modules/admin/posts/services/posts.service.js:160
+msgid "Published"
+msgstr "פורסם"
+
+#: client/app/modules/admin/faqs/services/faqs.service.js:59
+#: client/app/modules/admin/posts/views/form.html:72
+msgid "Question"
+msgstr "שאלה"
+
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:6
+msgid "Register"
+msgstr "הרשמה"
+
+#: client/app/modules/admin/posts/views/form.html:40
+msgid "Related Posts"
+msgstr "תתי דיונים "
+
+#: client/app/modules/common/top-nav-bar/controllers/top-nav-bar.ctrl.js:21
+msgid "replied on your comment in"
+msgstr "הגיב על עמדתך בדיון"
+
+#: client/app/modules/admin/categories/views/form.html:22
+#: client/app/modules/admin/committees/views/form.html:29
+#: client/app/modules/admin/faqs/views/form.html:21
+#: client/app/modules/admin/mks/views/form.html:22
+#: client/app/modules/admin/sandbox/views/forms.html:19
+#: client/app/modules/admin/settings/views/form.html:19
+#: client/app/modules/admin/users/views/form.html:41
+#: client/app/modules/admin/users/views/profile.html:16
+msgid "Reset"
+msgstr "ביטול"
+
+#: client/app/modules/public/reset-password/views/reset-password.html:48
+#: client/app/modules/public/reset-password/views/reset-password.html:59
+msgid "Reset password"
+msgstr "איפוס סיסמה"
+
+#: client/app/modules/public/reset-password/controllers/reset-password.ctrl.js:10
+#: client/app/modules/public/reset-password/views/reset-password.html:28
+#: client/app/modules/public/reset-password/views/reset-password.html:7
+msgid "Reset Password"
+msgstr "איפוס סיסמה"
+
+#: client/app/modules/public/reset-password/views/reset-password.html:51
+msgid "Reset password email was sent"
+msgstr "דוא\"ל לאיפוס הסיסמה נשלח לתיבת הדוא\"ל שלך. "
+
+#: client/app/modules/public/reset-password/views/reset-password.html:62
+msgid "Reset password process complete"
+msgstr "הסיסמה הוחלפה בהצלחה."
+
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:86
+msgid "Reset Settings"
+msgstr "איפוס הגדרות"
+
+#: client/app/modules/admin/users/config/users.routes.js:114
+#: client/app/modules/admin/users/views/view.html:16
+msgid "Roles"
+msgstr "סוג"
+
+#: client/app/modules/admin/posts/views/form.html:94
+#: client/app/modules/public/user-settings/views/user-settings.html:61
+msgid "Save"
+msgstr "שמור"
+
+#: client/app/modules/admin/posts/views/list.html:15
+msgid "Search Post.."
+msgstr "חפש דיון.."
+
+#: client/app/modules/public/post/views/post.html:178
+#: client/app/modules/public/post/views/post.html:97
+msgid "Search Tags or Type a New One"
+msgstr "הוסיפו תיוגים"
+
+#: client/app/modules/admin/users/views/list.html:13
+msgid "Search User (by ID, name or email)"
+msgstr "חיפוש לפי מזהה, שם או מייל"
+
+#: client/app/modules/admin/users/views/list.html:14
+msgid "Search User.."
+msgstr "חיפוש משתמש.."
+
+#: client/app/modules/public/bot/views/bot.html:7
+msgid "Searching for Specific Discussion?"
+msgstr " רוצה לראות את כל הדיונים הצפויים בוועדות הכנסת?"
+
+#: client/app/modules/common/count-down/controllers/count-down.ctrl.js:42
+msgid "Seconds"
+msgstr "שניות"
+
+#: client/app/modules/public/main/controllers/main.ctrl.js:87
+msgid "security"
+msgstr "הביטחון"
+
+#: client/app/modules/common/widgets/comments-list/views/comments-list.html:27
+#: client/app/modules/common/widgets/followers-box/views/followers-box.html:12
+msgid "see more"
+msgstr "ראה עוד"
+
+#: client/app/modules/admin/users/views/form.html:23
+msgid "Select a Committee"
+msgstr "בחירת ועדה"
+
+#: client/app/modules/public/categories-selection/views/categories-selection.html:8
+msgid "Select at least 3 subjects you find interesting.."
+msgstr "עכשיו רק נשאר לך לבחור לפחות 3 נושאים שמעניינים אותך..."
+
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:113
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:18
+msgid "Select Subjects"
+msgstr "בחירת נושאים"
+
+#: client/app/modules/public/dashboard/views/dashboard.html:82
+msgid "send"
+msgstr "פרסום תגובה"
+
+#: client/app/modules/public/post/views/post.html:122
+#: client/app/modules/public/post/views/post.html:242
+#: client/app/modules/public/post/views/post.html:288
+#: client/app/modules/public/reset-password/views/reset-password.html:21
+#: client/app/modules/public/reset-password/views/reset-password.html:41
+msgid "Send"
+msgstr "שלח"
+
+#: client/app/modules/admin/users/views/form.html:31
+msgid "Send invitation"
+msgstr "שליחת מייל הצטרפות למערכת"
+
+#: client/app/modules/admin/posts/views/analyze.html:73
+msgid "Sentiments Average"
+msgstr "ממוצע ניתוח רגשות"
+
+#: client/app/modules/admin/settings/services/setting.service.js:43
+msgid "Setting deleted"
+msgstr ""
+
+#: client/app/modules/admin/settings/services/setting.service.js:21
+msgid "Setting saved"
+msgstr ""
+
+#: client/app/modules/admin/settings/views/main.html:2
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:17
+msgid "Settings"
+msgstr "הגדרות"
+
+#: client/app/modules/public/post/views/post.html:229
+#: client/app/modules/public/post/views/post.html:314
+msgid "Share"
+msgstr "שתף"
+
+#: client/app/modules/public/post/views/post.html:324
+msgid "Show All Comments"
+msgstr "הצג את כל התגובות"
+
+#: client/app/modules/admin/posts/views/list.html:44
+msgid "Show Cancelled Only"
+msgstr "הצג דיונים שבוטלו"
+
+#: client/app/modules/core/views/admin/home.html:6
+msgid "Show Stats"
+msgstr "תצוגה"
+
+#: client/app/modules/admin/users/views/login.html:43
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:7
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:8
+msgid "Sign in"
+msgstr "התחברות"
+
+#: client/app/modules/core/views/elements/navbar.html:43
+msgid "Sign out"
+msgstr ""
+
+#: client/app/modules/admin/users/views/login.html:48
+msgid "Sign Up"
+msgstr "הצטרפות"
+
+#: client/app/modules/admin/users/views/register.html:20
+msgid "Signup"
+msgstr "הרשמה"
+
+#: client/app/modules/admin/files/views/upload.html:18
+msgid "Size"
+msgstr "גודל"
+
+#: client/app/modules/admin/categories/services/categories.service.js:78
+#: client/app/modules/admin/committees/services/committees.service.js:72
+msgid "Slug"
+msgstr "סלאג"
+
+#: client/app/modules/public/post/views/post.html:130
+msgid "Sort By"
+msgstr "סדר לפי"
+
+#: client/app/modules/public/dashboard/views/dashboard.html:23
+msgid "Statistics"
+msgstr "סטטיסטיקות"
+
+#: client/app/modules/admin/files/views/upload.html:20
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:79
+#: client/app/modules/admin/posts/services/posts.service.js:153
+#: client/app/modules/admin/posts/views/list.html:20
+msgid "Status"
+msgstr "סטטוס"
+
+#: client/app/modules/public/categories-selection/views/categories-selection.html:14
+msgid "Subjects"
+msgstr "נושאים"
+
+#: client/app/modules/public/categories-selection/controllers/categories-selection.ctrl.js:9
+msgid "Subjects Selection"
+msgstr "בחירת נושאים"
+
+#: client/app/modules/admin/browser/views/models.items.add.html:11
+#: client/app/modules/admin/browser/views/models.items.edit.html:12
+#: client/app/modules/admin/categories/views/form.html:20
+#: client/app/modules/admin/committees/views/form.html:27
+#: client/app/modules/admin/faqs/views/form.html:19
+#: client/app/modules/admin/mks/views/form.html:20
+#: client/app/modules/admin/sandbox/views/forms.html:94
+#: client/app/modules/admin/settings/views/form.html:17
+#: client/app/modules/admin/users/views/form.html:39
+#: client/app/modules/admin/users/views/profile.html:14
+msgid "Submit"
+msgstr "שמור"
+
+#: client/app/modules/public/subscriptions/views/subscriptions.html:8
+msgid "Subscritions error message"
+msgstr "המערכת לא הצליחה להשלים את הפעולה, בבקשה נסה שוב."
+
+#: client/app/modules/public/subscriptions/views/subscriptions.html:5
+msgid "Subscritions success message"
+msgstr "הגדרות הדוא\"ל שלך שונו בהצלחה."
+
+#: client/app/modules/admin/posts/services/posts.service.js:137
+msgid "Subtitle"
+msgstr "כותרת משנה"
+
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:83
+msgid "Switch Contrast"
+msgstr "החלפת ניגודיות"
+
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:80
+msgid "Switch Font Size"
+msgstr "הגדלת / הקטנת גופן"
+
+#: client/app/modules/public/dashboard/controllers/dashboard.ctrl.js:60
+msgid "Tel-Aviv"
+msgstr "תל-אביב"
+
+#: client/app/modules/admin/users/views/register.html:24
+msgid "Terms and Conditions"
+msgstr "תנאי השימוש והפרטיות"
+
+#: client/app/modules/common/site-navigation/controllers/site-navigation.ctrl.js:58
+msgid "Terms and Privacy Policy"
+msgstr "תנאי שימוש ופרטיות"
+
+#: client/app/modules/public/bot/controllers/bot.ctrl.js:10
+msgid "The Bot"
+msgstr "הבוט"
+
+#: client/app/modules/public/main/controllers/main.ctrl.js:95
+msgid "the environment"
+msgstr "איכות הסביבה"
+
+#: client/app/modules/public/main/controllers/main.ctrl.js:99
+msgid "the housing market"
+msgstr "שוק הדיור"
+
+#: client/app/modules/public/post/controllers/post.ctrl.js:60
+msgid ""
+"The products of the public discussion will be presented, and will include "
+"the conclusions and the recommendations for action"
+msgstr ""
+"התוצרים של תהליך השיתוף יפורסמו, ויכללו סיכום קצר של כל המסקנות שעלו מהדיון "
+"הציבורי ואת ההחלטות וההמלצות לפעולה"
+
+#: client/app/modules/common/widgets/recommend-to-friend/views/recommend-to-friend.html:2
+msgid ""
+"The subject has {{ctrl.followersCount}} followers. Know people who care "
+"about {{category.name}}? Let them know."
+msgstr ""
+"הנושא הזה חשוב ל-{{ctrl.followersCount}} משתמשים. יש לך עוד חברים שאכפת להם "
+"מ{{category.name}}? שיבואו גם!"
+
+#: client/app/modules/public/about/views/about.html:13
+msgid "The Team"
+msgstr "הצוות"
+
+#: client/app/modules/admin/categories/views/list.html:25
+msgid "There are no Categories"
+msgstr ""
+
+#: client/app/modules/admin/committees/views/list.html:29
+msgid "There are no Committees"
+msgstr ""
+
+#: client/app/modules/admin/faqs/views/list.html:27
+msgid "There are no Faqs"
+msgstr ""
+
+#: client/app/modules/admin/files/views/list.html:26
+#: client/app/modules/admin/files/views/upload.html:56
+msgid "There are no files"
+msgstr ""
+
+#: client/app/modules/admin/mks/views/list.html:34
+msgid "There are no MKs"
+msgstr ""
+
+#: client/app/modules/admin/settings/views/list.html:27
+msgid "There are no settings"
+msgstr ""
+
+#: client/app/modules/common/export-to-calendar/controllers/export-to-calendar.ctrl.js:30
+msgid "This event was added to calendar via ePart."
+msgstr ""
+
+#: client/app/modules/public/user-settings/services/user-settings.service.js:50
+msgid "This post could no be saved:"
+msgstr "השמירה נכשלה:"
+
+#: client/app/modules/admin/settings/services/setting.service.js:29
+msgid "This setting could no be saved:"
+msgstr ""
+
+#: client/app/modules/common/count-down/views/count-down.html:2
+msgid "Time to Make a Difference"
+msgstr "הזמן שלך להשפיע"
+
+#: client/app/modules/admin/posts/services/posts.service.js:126
+msgid "Title"
+msgstr "כותרת"
+
+#: client/app/modules/admin/posts/views/list.html:39
+msgid "To Date"
+msgstr "לתאריך"
+
+#: client/app/modules/public/qa/views/qa.html:29
+msgid "to find out more about ePart."
+msgstr "ונשמח לחזור אליכם עם עוד מידע על ePart."
+
+#: client/app/modules/core/views/elements/navbar.html:3
+msgid "Toggle navigation"
+msgstr ""
+
+#: client/app/modules/public/main/views/main.html:34
+msgid "Top Contributing Decision Makers"
+msgstr "מקבלי ההחלטות הפעילים ביותר"
+
+#: client/app/modules/common/widgets/community-list/views/community-list.html:2
+msgid "Top Contributors"
+msgstr "דירוג המשפיעים"
+
+#: client/app/modules/public/category/controllers/category.ctrl.js:68
+#: client/app/modules/public/main/controllers/main.ctrl.js:26
+msgid "Top ranked posts"
+msgstr "על מה כולם מדברים?"
+
+#: client/app/modules/public/main/controllers/main.ctrl.js:91
+msgid "transportation"
+msgstr "הבטיחות בדרכים"
+
+#: client/app/modules/public/bot/views/bot.html:30
+msgid "Try Again"
+msgstr "התחל מהתחלה"
+
+#: client/app/modules/public/post/views/post.html:232
+#: client/app/modules/public/post/views/post.html:316
+msgid "Tweet"
+msgstr "צייץ"
+
+#: client/app/modules/common/widgets/recommend-to-friend/views/recommend-to-friend.html:5
+msgid "Twitter"
+msgstr "טוויטר"
+
+#: client/app/modules/admin/posts/controllers/posts.analize.ctrl.js:27
+msgid "Uncategorized"
+msgstr "תגיות ללא נושא"
+
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:77
+msgid "Underline Links"
+msgstr "הדגשת קישורים"
+
+#: client/app/modules/public/post/views/post.html:187
+#: client/app/modules/public/post/views/post.html:276
+msgid "Update Comment"
+msgstr "עדכון תגובה"
+
+#: client/app/modules/public/dashboard/views/dashboard.html:166
+msgid "update committees"
+msgstr "עדכון ועדות"
+
+#: client/app/modules/public/profile/views/profile.html:13
+msgid "update details"
+msgstr "עדכון פרטים"
+
+#: client/app/modules/public/post/views/post.html:106
+msgid "Upload a File"
+msgstr "העלאת קובץ"
+
+#: client/app/modules/admin/files/views/upload.html:5
+msgid "Upload files"
+msgstr "העלאת קבצים"
+
+#: client/app/modules/common/widgets/todo-list/controllers/todo-list.ctrl.js:50
+msgid "Upload Profile Picture"
+msgstr "העלאת תמונת פרופיל"
+
+#: client/app/modules/admin/users/config/users.routes.js:151
+#: client/app/modules/admin/users/config/users.routes.js:204
+#: client/app/modules/admin/users/config/users.routes.js:56
+#: client/app/modules/admin/users/config/users.routes.js:65
+msgid "User"
+msgstr "משתמש רגיל"
+
+#: client/app/modules/admin/users/config/users.routes.js:228
+#: client/app/modules/public/user-settings/controllers/user-settings.ctrl.js:91
+msgid "User details saved."
+msgstr "הפרטים נשמרו בהצלחה."
+
+#: client/app/modules/admin/users/views/form.html:13
+#: client/app/modules/admin/users/views/list.html:19
+msgid "User Role"
+msgstr "סוג המשתמש"
+
+#: client/app/modules/public/user-settings/controllers/user-settings.ctrl.js:11
+msgid "User Settings"
+msgstr "הגדרות חשבון"
+
+#: client/app/modules/admin/users/config/users.routes.js:181
+msgid "User Was Created."
+msgstr "המשתמש נוצר במערכת."
+
+#: client/app/modules/admin/users/config/users.config.js:5
+#: client/app/modules/admin/users/views/list.html:4
+msgid "Users"
+msgstr "משתמשים"
+
+#: client/app/modules/public/dashboard/views/dashboard.html:147
+msgid "Users Stats"
+msgstr "התפלגות משתתפים"
+
+#: client/app/modules/admin/settings/services/setting.service.js:70
+msgid "Value"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/analyze.html:181
+#: client/app/modules/admin/posts/views/form.html:102
+msgid "View Post"
+msgstr "הצג עמוד דיון"
+
+#: client/app/modules/common/widgets/todo-list/controllers/todo-list.ctrl.js:72
+msgid "Vote in a Poll"
+msgstr "הצבעה בסקר"
+
+#: client/app/modules/public/dashboard/controllers/dashboard.ctrl.js:166
+msgid "Votes"
+msgstr "הצבעות"
+
+#: client/app/modules/public/reset-password/views/reset-password.html:31
+msgid "Welcome mk"
+msgstr "ברוכים הבאים!"
+
+#: client/app/modules/public/categories-selection/views/categories-selection.html:7
+msgid "Welcome to ePart!"
+msgstr ""
+
+#: client/app/modules/public/bot/views/bot.html:13
+msgid "What Subjects interest you?"
+msgstr "מה מעניין אותך?"
+
+#: client/app/modules/public/main/controllers/main.ctrl.js:83
+msgid "what you care about"
+msgstr "מה שחשוב לך"
+
+#: client/app/modules/public/post/views/post.html:92
+msgid "What`s Your Opinion?"
+msgstr "מה יש לך להגיד על זה?"
+
+#: client/app/modules/common/widgets/about/views/about.html:3
+msgid "Who we are?"
+msgstr "מי אנחנו?"
+
+#: client/app/modules/public/dashboard/controllers/dashboard.ctrl.js:78
+msgid "Women"
+msgstr "נשים"
+
+#: client/app/modules/public/qa/views/qa.html:27
+msgid "Write us"
+msgstr "כתבו לנו"
+
+#: client/app/modules/public/about/controllers/about.ctrl.js:31
+msgid "Yossi Hayut – Co founder & CEO"
+msgstr "יוסי חיות - מייסד ומנכ\"ל"
+
+#: client/app/modules/public/about/controllers/about.ctrl.js:32
+msgid ""
+"Yossi is a social entrepreneur and a public interest lawyer. He is the "
+"founder and CEO of ePart. <br/>Previously, Yossi founded the clinical legal "
+"education program that provides pro-bono assistance to Holocaust survivors "
+"at Tel Aviv University’s Faculty of Law. He was also an instructor in the "
+"Economic Justice clinic, specializing in social business and microfinance "
+"loans for women in poverty, also at Tel Aviv University. Yossi was awarded "
+"the \"Medal of Light\" on behalf of the Foundation for the Benefit of "
+"Holocaust Victims and President of Israel, for his unique contribution to "
+"Holocaust survivors rights and his involvement in writing the Holocaust "
+"Survivors National Assistance Program. He holds an M.A. in public leadership "
+"from Tel Aviv University and he lives in near the yarkon park with his wife "
+"and daughters, Alona and Galia."
+msgstr ""
+"יוסי הוא יזם חברתי, ועורך דין לשעבר. הוא הקים את ePart מתוך החוויה שלו כעורך "
+"דין שמסייע לאוכלוסיות מוחלשות.\n"
+"            במהלך פעילותו גילה שהאזרחים יכולים להשפיע ולשנות דרך ועדות "
+"הכנסת, ומתוך הרצון שלו להפוך את המעורבות האזרחית\n"
+"            לקלה ונגישה לכולם, הקים את הפלטפורמה של ePart. במסגרת תפקידו, "
+"יוסי אחראי על הפיכת המוצר מרעיון ומשרבוט על\n"
+"            נייר לחוויה שמשרתת אלפי משתמשים מעורבים ומשפיעים בישראל. הוא "
+"אחראי על בניית המוצר וניהול פעילות החברה על כל\n"
+"            היבטיה.\n"
+"            <br><br>\n"
+"            בטרם ייסד את ePart, הקים יוסי את הקליניקה המעניקה סיוע משפטי פרו-"
+"בונו לקשישים ולניצולי שואה, והנחה סטודנטים\n"
+"            בקליניקה ליזמות עסקית ולצדק כלכלי המסייעת לנשים החיות בעוני "
+"להקים עסקים זעירים. שתי הקליניקות פעלו בפקולטה\n"
+"            למשפטים באוניברסיטת תל אביב. לפני כן עבד יוסי בחינוך הא-פורמלי, "
+"כרכז הדרכה ומרכז שבט צופים בהנהגת תל\n"
+"            אביב-יפו.\n"
+"            <br><br>\n"
+"            יוסי, בן 36, גר בתל אביב עם אשתו ועם בנותיו. רצה הגורל והוא אוהד "
+"אדוק של הפועל תל אביב, ובשאר זמנו הוא רוכב\n"
+"            על סוסים (וטרם ויתר על חלומו להפוך למדריך רכיבה טיפולית), ושומע "
+"מוזיקה של אריק איינשטיין."
+
+#: client/app/modules/public/about/controllers/about.ctrl.js:43
+msgid ""
+"Yotam is the head of our technology team. He joined us a few months ago to "
+"help us build our new web platform. Yotam has been a full-stack developer in "
+"the last five years, in which he was a team leader in My6sense, a startup in "
+"the Ad-Tech industry, and a volunteering developer at Helpi, a startup "
+"dedicated to increasing social involvement within the community.<br/>Yotam "
+"has Bsc in computer science from the Hebrew University of Jerusalem and a "
+"Master`s degree in Philosophy from Tel-Aviv University."
+msgstr ""
+"יותם, מפתח שהצטרף אלינו לפני כמה חודשים, שעובד על פיתוח האתר החדש שלנו, "
+"לרבות צד השרת וצד הלקוח. יותם נמצא\n"
+"            בתחום כבר למעלה מחמש שנים, ובשנים האחרונות היה ראש צוות בחברת "
+"My6Sense, שמפתחת כלים לטובת תעשיית הפרסום\n"
+"            באינטרנט. בשנה האחרונה, הוא גם מתנדב בסטארט-אפ חברתי נוסף, שנקרא "
+"GetInvolved, ומפתח פלטפורמות שנועדו להקל על\n"
+"            אנשים להצטרף לפעילויות התנדבותיות. יותם הוא גם בעל תואר ראשון "
+"במדעי המחשב מהאוניברסיטה העברית, והוא בקרוב\n"
+"            יסיים את התואר השני בפילוסופיה, באוניברסיטת תל אביב.\n"
+"       "
+
+#: client/app/modules/public/about/controllers/about.ctrl.js:42
+msgid "Yotam Shalev – Full Stack Developer"
+msgstr "יותם שלו - מתכנת"
+
+#: client/app/modules/admin/files/views/upload.html:6
+msgid "You can just drag them in this window!"
+msgstr "(אפשר גם לגרור תמונות אל תוך החלון)"
+
+#: client/app/modules/public/categories-selection/views/categories-selection.html:11
+#: client/app/modules/public/categories-selection/views/categories-selection.html:14
+msgid "You chose"
+msgstr "בחרת"
+
+#: client/app/modules/common/widgets/login-box/views/login-box.html:3
+msgid "You Got Plenty of Options to Make a Change"
+msgstr "יש לך עוד הרבה אפשרויות להשפיע…"
+
+#: client/app/modules/public/user-settings/controllers/user-settings.ctrl.js:18
+msgid "You have a new follower."
+msgstr "משתמש חדש החל לעקוב אחריך."
+
+#: client/app/modules/admin/users/controllers/login.ctrl.js:44
+msgid "You need an email address"
+msgstr ""
+
+#: client/app/modules/common/widgets/todo-list/views/todo-list.html:3
+msgid "Your Checklist"
+msgstr "צ'ק ליסט"
+
+#: client/app/modules/admin/users/views/profile.html:24
+msgid "Your Gravatar"
+msgstr ""
+
+#: client/app/modules/admin/users/controllers/register.ctrl.js:96
+msgid "Your passwords need to match"
+msgstr ""
+
+#: client/app/modules/public/user-settings/services/user-settings.service.js:47
+msgid "Your post is safe with us!"
+msgstr "הדיון נשמר בהצלחה."
+
+#: client/app/modules/admin/settings/services/setting.service.js:44
+msgid "Your setting is deleted!"
+msgstr ""
+
+#: client/app/modules/admin/settings/services/setting.service.js:51
+msgid "Your setting is not deleted!"
+msgstr ""
+
+#: client/app/modules/admin/settings/services/setting.service.js:22
+msgid "Your setting is safe with us!"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/form.html:56
+msgid "Youtube Video ID"
+msgstr "וידאו מיוטיוב (ID)"
+
+#~ msgid "The Community"
+#~ msgstr "דירוג המשפיעים"
+
+#~ msgid "Education"
+#~ msgstr "החינוך"
+
+#~ msgid "Make Your Impact On"
+#~ msgstr "הדרך שלך להשפיע על"
+
+#~ msgid "Security"
+#~ msgstr "הביטחון"
+
+#~ msgid "The Environment"
+#~ msgstr "איכות הסביבה"
+
+#~ msgid "The Housing Market"
+#~ msgstr "שוק הדיור"
+
+#~ msgid "Transportation"
+#~ msgstr "הבטיחות בדרכים"
+
+#~ msgid "What You Care About"
+#~ msgstr "מה שחשוב לך"
+
+#~ msgid "Make Your Impact."
+#~ msgstr "הדרך שלך להשפיע על מה שחשוב לך"
+
+#~ msgid "Your Place to Change."
+#~ msgstr "הדרך שלך להשפיע על מה שחשוב לך"
+
+#~ msgid "Your Place to Change"
+#~ msgstr "הדרך שלך להשפיע על"
+
+#~ msgid "mk"
+#~ msgstr "ח״כ"
+
+#~ msgid "Manage Post Tags"
+#~ msgstr "ניהול תגיות דיון"
+
+#~ msgid "Search User by ID, Name or Email)"
+#~ msgstr "חיפוש לפי מזהה, שם או מייל"
+
+#~ msgid "Update Posts From Knesset"
+#~ msgstr "למשיכת דיונים מאתר הכנסת"
+
+#~ msgid "comments"
+#~ msgstr "תגובות"
+
+#~ msgid "followers"
+#~ msgstr "עוקבים"
+
+#~ msgid "followings"
+#~ msgstr "עוקב/ת"
+
+#~ msgid "votes"
+#~ msgstr "הצבעות"
+
+#~ msgid "the post is closed"
+#~ msgstr "הדיון התקיים"
+
+#~ msgid "Post Statistics"
+#~ msgstr "סטטיסטיקות"
+
+#~ msgid "Go to Post Page"
+#~ msgstr "כניסה לעמוד הדיון"
+
+#~ msgid "Select a Post"
+#~ msgstr "דיון"
+
+#~ msgid "to find out more."
+#~ msgstr "ונשמח לחזור אליכם עם עוד מידע."
+
+#~ msgid "Intereseted!"
+#~ msgstr "חשוב לי!"
+
+#~ msgid "is following you"
+#~ msgstr "הצטרף לעוקבים שלך."
+
+#~ msgid "New post published"
+#~ msgstr "דיון חדש פורסם בנושא"
+
+#~ msgid "replied on your comment"
+#~ msgstr "הגיב על עמדתך בדיון"
+
+#~ msgid "select subjects"
+#~ msgstr "כל הנושאים"
+
+#~ msgid "Enter"
+#~ msgstr "כניסה"
+
+#~ msgid "register"
+#~ msgstr "הרשמה"
+
+#~ msgid "choose subjects"
+#~ msgstr "בחירת נושאים"
+
+#~ msgid "homepage"
+#~ msgstr "דף הבית"
+
+#~ msgid "profile"
+#~ msgstr "הפרופיל שלי"
+
+#~ msgid "settings"
+#~ msgstr "הגדרות"
+
+#~ msgid "occupation example"
+#~ msgstr "לדוגמה: מורה בתיכון איילון חולון"
+
+#~ msgid "A new post was published on your subjects."
+#~ msgstr "דיון חדש באחד הנושאים שלך"
+
+#~ msgid "Someone follows you."
+#~ msgstr "משתמש חדש החל לעקוב אחריך"
+
+#~ msgid "Your comment was replied."
+#~ msgstr "מישהו הגיב על עמדתך"
+
+#~ msgid "todo title"
+#~ msgstr "צ’ק ליסט"
+
+#~ msgid "continue"
+#~ msgstr "המשך"
+
+#~ msgid "lets choose subjects"
+#~ msgstr "עכשיו רק נשאר לך לבחור לפחות 3 נושאים שמעניינים אותך..."
+
+#~ msgid "welcome greeting"
+#~ msgstr "כיף שהצטרפת!"
+
+#~ msgid "you choose"
+#~ msgstr "בחרת"
+
+#~ msgid "not yet registered"
+#~ msgstr "עדיין לא נרשמת?"
+
+#~ msgid "Forgot Password"
+#~ msgstr "שכחת את הסיסמה?"
+
+#~ msgid "homepage main cta"
+#~ msgstr "הצטרפות"
+
+#~ msgid "facebook"
+#~ msgstr "פייסבוק"
+
+#~ msgid "login box text"
+#~ msgstr ""
+#~ "דיונים חשובים קורים כאן כרגע ואזרחים רבים לוקחים בהם חלק. שמרנו גם לך "
+#~ "מקום ליד שולחן דיוני ועדות הכנסת. קדימה להשפיע."
+
+#~ msgid "login box title"
+#~ msgstr "יש לך עוד הרבה אפשרויות להשפיע…"
+
+#~ msgid "twitter"
+#~ msgstr "טוויטר"
+
+#~ msgid "already a member?"
+#~ msgstr "כבר נרשמת?"
+
+#~ msgid "login"
+#~ msgstr "התחברות"
+
+#~ msgid "agree to terms"
+#~ msgstr "לחיצה על ‘הרשמה’ מהווה הסכמה ל"
+
+#~ msgid "Or"
+#~ msgstr "או"
+
+#~ msgid "signup"
+#~ msgstr "הרשמה"
+
+#~ msgid "Terms and Privacy"
+#~ msgstr "תנאי שימוש ופרטיות"
+
+#~ msgid "join with"
+#~ msgstr "הצטרפות באמצעות"
+
+#~ msgid "Login with facebook"
+#~ msgstr "התחברות עם פייסבוק"
+
+#~ msgid "Title - terms of use"
+#~ msgstr "ePart - תנאי שימוש ופרטיות"
+
+#~ msgid "Title - user settings"
+#~ msgstr "הגדרות חשבון"
+
+#~ msgid "Title - Subscriptions Edit"
+#~ msgstr "עריכת הגדרות דוא\"ל"
+
+#~ msgid "Title - password reset"
+#~ msgstr "איפוס סיסמה"
+
+#~ msgid "Title - faq"
+#~ msgstr "ePart - שאלות ותשובות"
+
+#~ msgid "Title - *default*"
+#~ msgstr "ePart"
+
+#~ msgid "Title - privacy"
+#~ msgstr "ePart - מדיניות פרטיות"
+
+#~ msgid "Title - dashboard"
+#~ msgstr "מערכת ניהול דיונים"
+
+#~ msgid "Title - categories selection"
+#~ msgstr "בחירת נושאים"
+
+#~ msgid "Title - bot"
+#~ msgstr "הבוט"
+
+#~ msgid "Title - about"
+#~ msgstr "קצת על ePart"
+
+#~ msgid "comment of"
+#~ msgstr "התגובה של"
+
+#~ msgid "delete"
+#~ msgstr "מחיקה"
+
+#~ msgid "edit"
+#~ msgstr "עריכה"
+
+#~ msgid "send comment"
+#~ msgstr "תגובה"
+
+#~ msgid "share"
+#~ msgstr "שיתוף"
+
+#~ msgid "tweet"
+#~ msgstr "ציוץ"
+
+#~ msgid "date"
+#~ msgstr "תאריך"
+
+#~ msgid "popularity"
+#~ msgstr "פופולריות"
+
+#~ msgid "sort by"
+#~ msgstr "סדר לפי"
+
+#~ msgid "conversation"
+#~ msgstr "דיון"
+
+#~ msgid "one more"
+#~ msgstr "נוסף"
+
+#~ msgid "upload file"
+#~ msgstr "העלאת קובץ"
+
+#~ msgid "whats your opinion?"
+#~ msgstr "מה יש לך להגיד על זה?"
+
+#~ msgid "Conclusions Description"
+#~ msgstr ""
+#~ "התוצרים של תהליך השיתוף יפורסמו, ויכללו סיכום קצר של כל המסקנות שעלו "
+#~ "מהדיון הציבורי ואת ההחלטות וההמלצות לפעולה."
+
+#~ msgid "Conclusions Timeline Step"
+#~ msgstr "פרסום מסקנות והחלטות"
+
+#~ msgid "Data Analysis Description"
+#~ msgstr ""
+#~ "בשלב זה, אנחנו ננתח את המידע שעלה בסיעור המוחות הציבורי כדי לגבש מסקנות "
+#~ "והחלטות."
+
+#~ msgid "Public Brainstorming Description"
+#~ msgstr "העלאת רעיונות והצעות המתבססות על הידע והניסיון של המשתתפים."
+
+#~ msgid "your time to make a charm"
+#~ msgstr "הזמן שלך להשפיע"
+
+#~ msgid "choose 3 categories to follow"
+#~ msgstr "בחירת 3 נושאים למעקב"
+
+#~ msgid "enter your full name"
+#~ msgstr "הכנסת שם מלא בעברית"
+
+#~ msgid "send 1 comment"
+#~ msgstr "השתתפות בדיון"
+
+#~ msgid "update your city"
+#~ msgstr "עדכון עיר מגורים"
+
+#~ msgid "upload profile picture"
+#~ msgstr "העלאת תמונת פרופיל"
+
+#~ msgid "vote in 1 poll"
+#~ msgstr "הצבעה בסקר"
+
+#~ msgid "change photo"
+#~ msgstr "החלפת תמונה"
+
+#~ msgid "photo"
+#~ msgstr "תמונה"
+
+#~ msgid "city of living"
+#~ msgstr "עיר מגורים"
+
+#~ msgid "occupation"
+#~ msgstr "מקצוע"
+
+#~ msgid "Discussions"
+#~ msgstr "דיונים בהם השתתפתי"
+
+#~ msgid "important for me!"
+#~ msgstr "חשוב לי!"
+
+#~ msgid "important for you?"
+#~ msgstr "חשוב לך?"
+
+#~ msgid "Posts i participated in"
+#~ msgstr "דיונים בהם השתתפתי"
+
+#~ msgid "Archive Posts"
+#~ msgstr "דיונים שהתקיימו"
+
+#~ msgid "involved mks"
+#~ msgstr "חברי כנסת מעורבים בנושא"
+
+#~ msgid "start all over again"
+#~ msgstr "התחל מהתחלה"
+
+#~ msgid "i found"
+#~ msgstr "מצאתי"
+
+#~ msgid "im intrested at"
+#~ msgstr "אני מתעניין ב"
+
+#~ msgid "lets work!"
+#~ msgstr "קדימה לעבודה!"
+
+#~ msgid "posts that might intresting you"
+#~ msgstr "דיונים במיוחד בשבילך"
+
+#~ msgid "bot question"
+#~ msgstr "מה מעניין אותך?"
+
+#~ msgid "bot subtitle"
+#~ msgstr "בדיוק בשביל זה הבוט שלנו פה."
+
+#~ msgid "bot title"
+#~ msgstr "רוצה לראות את כל הדיונים הצפויים בוועדות הכנסת?"
+
+#~ msgid "the community"
+#~ msgstr "דירוג המשפיעים"
+
+#~ msgid "Description - *default*"
+#~ msgstr "הדרך שלך להשפיע על מה שחשוב לך"
+
+#~ msgid "Qa"
+#~ msgstr "שאלות ותשובות"
+
+#~ msgid "All Categories"
+#~ msgstr "נושאים חמים"
+
+#~ msgid "My Categories"
+#~ msgstr "הנושאים שלי"
+
+#~ msgid "bot widget subtitle"
+#~ msgstr "חיפוש מתקדם"
+
+#~ msgid "bot widget title"
+#~ msgstr "לא מצאת את הדיון שחיפשת?"
+
+#~ msgid "top contributing mks"
+#~ msgstr "דירוג הח\"כים המעורבים"
+
+#~ msgid "homepage headline prefix"
+#~ msgstr "הדרך שלך להשפיע על"
+
+#~ msgid "Insert new Action Item"
+#~ msgstr "הוספת החלטה ליישום"
+
+#~ msgid "Poll"
+#~ msgstr "סקר"
+
+#~ msgid "Remove Poll"
+#~ msgstr "הסר סקר"
+
+#~ msgid "Vote No"
+#~ msgstr "נגד"
+
+#~ msgid "Vote Yes"
+#~ msgstr "בעד"
+
+#~ msgid "What is your opinion?"
+#~ msgstr "מה דעתך על הצעת החוק?"
+
+#~ msgid "good afternoon"
+#~ msgstr "צהריים טובים"
+
+#~ msgid "good evening"
+#~ msgstr "ערב טוב"
+
+#~ msgid "good morning"
+#~ msgstr "בוקר טוב"
+
+#~ msgid "good night"
+#~ msgstr "לילה טוב"
+
+#~ msgid "Conclusions"
+#~ msgstr "מסקנות"
+
+#~ msgid "Add an Action Item"
+#~ msgstr "הוספת החלטה ליישום"
+
+#~ msgid "Notifications Sending"
+#~ msgstr "נוטיפיקציות"
+
+#~ msgid "last week"
+#~ msgstr "שבוע קודם"
+
+#~ msgid "next week"
+#~ msgstr "שבוע הבא"
+
+#~ msgid "Discussion Summary"
+#~ msgstr "סיכום דיון"
+
+#~ msgid "Select Related Tags"
+#~ msgstr "על מה כתבת?"
+
+#~ msgid "logo image"
+#~ msgstr "לוגו החברה"
+
+#~ msgid "committee members"
+#~ msgstr "חברי הוועדה"
+
+#~ msgid "Add a Summary Point"
+#~ msgstr "הוספת שורה תחתונה"
+
+#~ msgid "Insert new Summary Point"
+#~ msgstr "הוספת שורה תחתונה"
+
+#~ msgid "Summary Points"
+#~ msgstr "סיכום הדיון"
+
+#~ msgid "Select a User Role"
+#~ msgstr "בחר את סוג המשתמש"
+
+#~ msgid "Choose User Roles"
+#~ msgstr "בחר סוג משתמש"
+
+#~ msgid "conclusions"
+#~ msgstr "מסקנות"
+
+#~ msgid "Add a Consequence"
+#~ msgstr "הוספת מסקנה חדשה"
+
+#~ msgid "Consequences"
+#~ msgstr "מסקנות"
+
+#~ msgid "Consequences For Implementation"
+#~ msgstr "מסקנות ליישום"
+
+#~ msgid "Insert new Consequence"
+#~ msgstr "הוספת מסקנה לדיון"
+
+#~ msgid "hot polls"
+#~ msgstr "סקרים חמים"
+
+#~ msgid "last comments"
+#~ msgstr "תגובות אחרונות"
+
+#~ msgid "all posts"
+#~ msgstr "כל הוועדות"
+
+#~ msgid "month"
+#~ msgstr "חודש"
+
+#~ msgid "view type"
+#~ msgstr "תצוגת"
+
+#~ msgid "week"
+#~ msgstr "שבוע"
+
+#~ msgid "add committees"
+#~ msgstr "רוצה להוסיף ועדות נוספות למעקב?"
+
+#~ msgid "add committees cta"
+#~ msgstr "עדכון ועדות"
+
+#~ msgid "close"
+#~ msgstr "סגור"
+
+#~ msgid "epart communities"
+#~ msgstr "כל הנושאים"
+
+#~ msgid "monday"
+#~ msgstr "שני"
+
+#~ msgid "Posts Messages"
+#~ msgstr "דיונים"
+
+#~ msgid "show all"
+#~ msgstr "ראה עוד"
+
+#~ msgid "sunday"
+#~ msgstr "ראשון"
+
+#~ msgid "thursday"
+#~ msgstr "חמישי"
+
+#~ msgid "tuesday"
+#~ msgstr "שלישי"
+
+#~ msgid "wednesday"
+#~ msgstr "רביעי"
+
+#~ msgid "weekend"
+#~ msgstr "סופ״ש"
+
+#~ msgid "Upvotes"
+#~ msgstr "הצבעות "
+
+#~ msgid "Error"
+#~ msgstr "שגיאה"
+
+#~ msgid "Welcome!"
+#~ msgstr "ברוך הבא!"
+
+#~ msgid "Regional Councils"
+#~ msgstr "רשויות מקומיות"
+
+#~ msgid "Terms"
+#~ msgstr "תנאי שימוש"
+
+#~ msgid "Privacy"
+#~ msgstr "הצהרת  פרטיות"
+
+#~ msgid ""
+#~ "The subject has {{followers}} followers. Know people who care about "
+#~ "{{category}}? Let them know."
+#~ msgstr ""
+#~ "ל {{followers}} איש חשוב נושא זה. יש לך עוד חברים שאכפת להם "
+#~ "מ{{category}}? שיבואו גם."
+
+#~ msgid ""
+#~ "The subject has {{followersCount}} followers. Know people who care about "
+#~ "{{categoryName}}? Let them know."
+#~ msgstr ""
+#~ "ל {{followersCount}} איש חשוב נושא זה. יש לך עוד חברים שאכפת להם "
+#~ "מ{{categoryName}}? שיבואו גם."
+
+#~ msgid "share with him"
+#~ msgstr "שיבואו גם."
+
+#~ msgid ""
+#~ "The subject has {{followersCount}} followers. Do you know people who care "
+#~ "about {{categoryName}}? {{'share with him' | translate }}"
+#~ msgstr "{{followersCount}} עוקבים אחרי "
+
+#~ msgid ""
+#~ "The subject has {{followersCount}} followers. Do you know people who care "
+#~ "about {{category}}? {{'share with him' | translate }}"
+#~ msgstr ""
+#~ "    ל {{followersCount}} איש חשוב נושא זה. יש לך עוד חברים שאכפת להם "
+#~ "מ{{category}}?"
+
+#~ msgid "know someone"
+#~ msgstr "ל 2000 איש חשוב נושא זה. יש לך עוד חברים שאכפת להם מ"
+
+#~ msgid "bot widget cta"
+#~ msgstr " נסה עכשיו!"
+
+#~ msgid "from"
+#~ msgstr "מתוך"
+
+#~ msgid "write your comment"
+#~ msgstr "כתוב את תגובתך"
+
+#~ msgid "connect with"
+#~ msgstr "התחבר עם"
+
+#~ msgid "connect with facebook"
+#~ msgstr "התחבר עם פייסבוק"
+
+#~ msgid "write whatever"
+#~ msgstr "כתבו את שעל לבכם…"
+
+#~ msgid "talk with us"
+#~ msgstr "דברו איתנו"
+
+#~ msgid "upvote"
+#~ msgstr "הצבע"
+
+#~ msgid "Main Page Title"
+#~ msgstr "עמוד הבית"
+
+#~ msgid "follow after"
+#~ msgstr "עקוב אחרי"
+
+#~ msgid "following after"
+#~ msgstr "עוקב אחרי"
+
+#~ msgid "Voted against"
+#~ msgstr "נגד"
+
+#~ msgid "Voted for"
+#~ msgstr "בעד"
+
+#~ msgid "hello"
+#~ msgstr "שלום"
+
+#~ msgid "have an account?"
+#~ msgstr "כבר נרשמת?"
+
+#~ msgid "already a member?'"
+#~ msgstr "כבר נרשמת?"
+
+#~ msgid "More Categories"
+#~ msgstr "עוד נושאים"
+
+#~ msgid "all subjects"
+#~ msgstr "כל הנושאים"
+
+#~ msgid "Today"
+#~ msgstr "היום"

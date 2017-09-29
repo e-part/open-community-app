@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "content": "post1",
+    "title": "post_title",
+    "status": "DRAFT",
+    "customerId": 1
+  },
+  {
+    "id": 2,
+    "content": "post2",
+    "title": "post_title",
+    "status": "PUBLISHED",
+    "customerId": 1
+  },
+  {
+    "id": 3,
+    "content": "post3",
+    "title": "post_title",
+    "status": "PUBLISHED",
+    "customerId": 1
+  },
+  {
+    "id": 4,
+    "content": "post4",
+    "title": "post_title",
+    "status": "PUBLISHED",
+    "customerId": 2
+  },
+  {
+    "id": 5,
+    "content": "post3",
+    "title": "post_title",
+    "status": "PUBLISHED",
+    "customerId": 1,
+    "reviewStatus" : "DENIED"
+  }
+]

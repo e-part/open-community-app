@@ -1,0 +1,25 @@
+<form name="form" class="epart-admin-form">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <a href="" ui-sref="^.list" class="btn btn-xs btn-default"><i class="fa" ng-class="{'fa-arrow-left' : appDirection === 'ltr', 'fa-arrow-right' : appDirection === 'rtl'}"></i></a>
+      <span ng-show="!ctrl.category.id" translate>Add a new category</span>
+      <span ng-show="ctrl.category.id" translate>Edit category</span>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-12">
+
+          <formly-form model="ctrl.category" fields="ctrl.formFields" options="ctrl.formOptions"></formly-form>
+          <media-upload-input label="'Image'" update-model="ctrl.category" update-property="'imageUrl'" ></media-upload-input>
+
+        </div>
+      </div>
+    </div>
+    <div class="panel-footer">
+      <button type="submit" class="btn btn-primary btn-success" ng-click="ctrl.submit()" ng-disabled="form.$invalid">
+       {{'Submit' | translate}}
+      </button>
+      <button type="button" class="btn btn-default" ng-click="ctrl.formOptions.resetModel()">{{ 'Reset' | translate }} </button>
+    </div>
+  </div>
+</form>

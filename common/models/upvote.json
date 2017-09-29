@@ -1,0 +1,60 @@
+{
+  "name": "Upvote",
+  "base": "AppModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "injectOptionsFromRemoteContext": true,
+  "mixins": {
+    "Multitenancy": {
+      "addCustomerToRemotingContext" : true,
+      "enforceCustomerField" : true
+    }
+  },
+  "properties": {
+  },
+  "validations": [],
+  "relations": {
+    "comment": {
+      "type": "belongsTo",
+      "model": "comment"
+    },
+    "user": {
+      "type": "belongsTo",
+      "model": "user"
+    },
+    "customer": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": "customerId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "create"
+    }
+  ],
+  "methods": {}
+}

@@ -1,0 +1,87 @@
+{
+  "facebook-login": {
+    "provider": "facebook",
+    "module": "passport-facebook",
+    "clientID": "XXX",
+    "clientSecret": "XXX",
+    "callbackURL": "http://localhost:3000/api/auth/facebook/callback",
+    "authPath": "/api/auth/facebook",
+    "callbackPath": "/api/auth/facebook/callback",
+    "successRedirect": "/api/auth/account",
+    "failureRedirect": "/api/auth/error",
+    "profileFields": [
+      "id",
+      "email",
+      "gender",
+      "is_verified",
+      "languages",
+      "picture.type(large)",
+      "name",
+      "verified",
+      "friends",
+      "birthday",
+      "location"
+    ],
+    "scope": [
+      "email","user_location","user_birthday"
+    ]
+  },
+
+  "twitter-login": {
+    "provider": "twitter",
+    "authScheme": "oauth",
+    "module": "passport-twitter",
+    "callbackURL": "http://localhost:3000/api/auth/twitter/callback",
+    "authPath": "/api/auth/twitter",
+    "callbackPath": "/api/auth/twitter/callback",
+    "successRedirect": "/api/auth/account",
+    "failureRedirect": "/api/auth/error",
+    "consumerKey": "XXX",
+    "consumerSecret": "XXX",
+    "includeEmail": true
+  },
+  "facebook-mobile": {
+    "provider": "facebook-mobile",
+    "module": "passport-facebook-token",
+    "strategy": "FacebookTokenStrategy",
+    "clientID": "XXX",
+    "clientSecret": "XXX",
+    "callbackPath": "/api/auth/facebook/token",
+    "failureFlash": true,
+    "session": false,
+    "json": true,
+    "profileFields": [
+      "id",
+      "email",
+      "gender",
+      "is_verified",
+      "languages",
+      "picture.type(large)",
+      "name",
+      "verified",
+      "friends",
+      "birthday",
+      "location"
+
+    ],
+    "scope": [
+      "email","user_location","user_birthday"
+    ]
+  },
+  "twitter-mobile": {
+    "provider": "twitter",
+    "authScheme": "oauth",
+    "strategy": "TwitterTokenStrategy",
+    "module": "passport-twitter-token",
+    "callbackURL": "http://localhost:3000/api/auth/twitter/callback",
+    "authPath": "/api/auth/twitter",
+    "callbackPath": "/api/auth/twitter/token",
+    "successRedirect": "/api/auth/account",
+    "failureRedirect": "/api/auth/error",
+    "consumerKey": "XXX",
+    "consumerSecret": "XXX",
+    "json" :true,
+    "session": false,
+    "includeEmail": true
+  }
+}

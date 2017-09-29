@@ -1,0 +1,34 @@
+/*
+$layout-breakpoint-xs: 600px !default;
+*/
+$layout-breakpoint-sm: 768px !default;
+$layout-breakpoint-md: 992px !default;
+$layout-breakpoint-lg: 1200px !default;
+
+@mixin media($min, $max) {
+  @media (min-width: #{$min}) and (max-width: #{$max - 1px}) {
+    @content;
+  }
+}
+
+@mixin media-min($min) {
+  @media (min-width: #{$min}) {
+    @content;
+  }
+}
+
+@mixin media-max($max) {
+  @media (max-width: #{$max - 1px}) {
+    @content;
+  }
+}
+
+/*
+!* Small devices (tablets, 768px and up) *!
+@media (min-width: @screen-sm-min) { ... }
+
+!* Medium devices (desktops, 992px and up) *!
+@media (min-width: @screen-md-min) { ... }
+
+!* Large devices (large desktops, 1200px and up) *!
+@media (min-width: @screen-lg-min) { ... }*/

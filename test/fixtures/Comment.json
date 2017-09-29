@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "content": "comment1",
+    "creatorId" : 1,
+    "customerId": 1
+
+  },
+  {
+    "id": 2,
+    "content": "comment2",
+    "creatorId" : 2,
+    "customerId": 1
+  }
+]

@@ -1,0 +1,73 @@
+<div class="page-content-container user-profile clearfix">
+  <div class="hidden-xs col-sm-3 col-lg-2 nav-side-bar" role="main">
+    <site-navigation></site-navigation>
+  </div>
+  <div class="col-xs-12 col-sm-9 col-lg-10 content-feed" role="main">
+		<header class="profile-header clearfix">
+			<cl-photo image-alt="user profile" image-src="{{ctrl.user.imageUrl}}" image-class="profile-image" image-width="160" image-height="160" image-crop="thumb" image-gravity="faces" id="image_user_settings" image-zoom="0.8"></cl-photo>
+      <div class="profile-details">
+				<h1>{{ctrl.userFullName}}</h1>
+        <h4>{{ctrl.user.occupation}} {{(ctrl.user.occupation && ctrl.user.city) ? '|' : ''}} {{ ctrl.user.city}}</h4>
+				<div ng-if="ctrl.sessionData.currentUser.id === ctrl.user.id">
+          <br/>
+					<a ui-sref="app.public.user-settings"><i class="fa fa-pencil"></i> &nbsp;{{'update details' | translate }}</a>
+				</div>
+	        </div>
+			<div class="follow-container">
+				<button ng-if="ctrl.sessionData.currentUser && ctrl.sessionData.currentUser.id != ctrl.user.id" ng-click="sendGaEvent('profile page','מעקב'); ctrl.followOrUnfollowUser()" class="follow-button btn" ng-class="{followed:ctrl.isUserfollowed}">
+					<span ng-if="!ctrl.isUserfollowed"><i class="material-icons">person_add</i> {{ 'follow' | translate }}</span>
+					<span ng-if="ctrl.isUserfollowed"><i class="fa fa-check"></i> {{ 'following' | translate }}</span>
+				</button>
+			</div>
+		</header>
+
+		<ul class="profile-page-tabs" ng-class="{'hide-created-posts':!ctrl.showUserCreatedPosts}">
+      <li ng-if="ctrl.showUserCreatedPosts" ng-click="sendGaEvent('profile page','Tab clicked: my Discussions'); ctrl.visibleSection='myPosts'"
+          ng-class="{active:ctrl.visibleSection=='myPosts'}">
+        <div class="counter-value">{{ctrl.myPostsCount}}</div>
+        <div class="counter-title">{{'My Posts' |  translate }}</div>
+      </li>
+			<li ng-click="sendGaEvent('profile page','Tab clicked: posts'); ctrl.visibleSection='posts'" ng-class="{active:ctrl.visibleSection=='posts'}">
+				<div class="counter-value">{{ctrl.feedPostsCount}}</div>
+				<div class="counter-title">{{'Discussions Participation' |  translate }}</div>
+			</li>
+      <li ng-click="sendGaEvent('profile page','Tab clicked: followers');ctrl.visibleSection='followers'" ng-class="{active:ctrl.visibleSection=='followers'}">
+				<div class="counter-value">{{ctrl.userFollowers}}</div>
+				<div class="counter-title">{{'Followers' | translate }}</div>
+			</li><li ng-click="sendGaEvent('profile page','Tab clicked: folowees');ctrl.visibleSection='followees'" ng-class="{active:ctrl.visibleSection=='followees'}">
+				<div class="counter-value">{{ctrl.userFollowees}}</div>
+				<div class="counter-title">{{'Following' | translate }}</div>
+			</li>
+		</ul>
+		<section class="user-posts profile-content content-feed" ng-show="ctrl.visibleSection=='posts'">
+			<content-feed feed-posts="ctrl.feedPosts"></content-feed>
+		</section>
+    <section class="user-posts profile-content content-feed" ng-show="ctrl.visibleSection=='myPosts'">
+      <content-feed feed-posts="ctrl.myPosts" editable="ctrl.isPageBelongsToUser"></content-feed>
+    </section>
+		<section class="user-followers profile-content" ng-show="ctrl.visibleSection=='followers'">
+			<ul class="members-list clearfix">
+				<li ng-repeat="member in ctrl.user.followers" class="clearfix member-item">
+				  <a ui-sref="app.public.profile({id: member.id})" class="clearfix">
+				  	<cl-photo image-class="member-img" image-src="{{member.imageUrl}}" image-width="50" image-height="50" image-gravity="faces" image-crop="thumb" image-alt="user profile" image-zoom="0.8"></cl-photo>
+				  	<div class="member-details">
+				    	<span class="member-name">{{member.firstName}} {{member.lastName}}</span>
+				  	</div>
+				  </a>
+				</li>
+			</ul>
+		</section>
+		<section class="user-followees profile-content" ng-show="ctrl.visibleSection=='followees'">
+			<ul class="members-list clearfix">
+				<li ng-repeat="member in ctrl.user.followees" class="clearfix member-item">
+				  <a ui-sref="app.public.profile({id: member.id})" class="clearfix">
+				  	<cl-photo image-class="member-img" image-src="{{member.imageUrl}}" image-width="50" image-height="50" image-gravity="faces" image-crop="thumb" image-alt="user profile" image-zoom="0.8"></cl-photo>
+				  	<div class="member-details">
+				    	<span class="member-name">{{member.firstName}} {{member.lastName}}</span>
+				  	</div>
+				  </a>
+				</li>
+			</ul>
+		</section>
+	</div>
+</div>

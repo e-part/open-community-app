@@ -1,0 +1,158 @@
+{
+  "name": "Meta",
+  "plural": "Meta",
+  "base": "Model",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "property": "getStats",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "property": "getStats",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "property": "DTsearch",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {
+    "getModels": {
+      "isStatic": true,
+      "accepts": [],
+      "returns": {
+        "arg": "result",
+        "type": "array",
+        "root": true
+      },
+      "description": "Get all Models",
+      "http": {
+        "path": "/",
+        "verb": "get"
+      }
+    },
+    "getModelById": {
+      "isStatic": true,
+      "accepts": {
+        "arg": "name",
+        "type": "any",
+        "description": "Model name",
+        "required": true
+      },
+      "returns": {
+        "arg": "result",
+        "type": "object",
+        "root": true
+      },
+      "description": "Get a Model by name",
+      "http": {
+        "path": "/:name",
+        "verb": "get"
+      }
+    },
+    "getCrawlerMetaPage": {
+      "isStatic": true,
+      "accepts": [
+        {
+          "arg": "req",
+          "type": "object",
+          "http": {
+            "source": "req"
+          }
+        },        {
+          "arg": "res",
+          "type": "object",
+          "http": {
+            "source": "res"
+          }
+        },
+        {
+        "arg": "url",
+          "type": "string",
+          "description": "the url suffix, for example, in a post request, should be /post/post-name",
+          "required": true
+        }
+      ],
+      "returns": {
+        "arg": "result",
+        "type": "string",
+        "root": true
+      },
+      "description": "Get a static html page with meta tags for crawlers",
+      "http": {
+        "path": "/getCrawlerMetaPage",
+        "verb": "get"
+      }
+    },
+    "getStats": {
+      "isStatic": true,
+      "accepts": [
+        {
+          "arg": "model",
+          "type": "string",
+          "description": "Model to query",
+          "required": true
+        },
+        {
+          "arg": "groupingField",
+          "type": "string",
+          "description": "The field to perform grouping by",
+          "required": true
+        },
+        {
+          "arg": "resolution",
+          "type": "string",
+          "description": "The time resolution to query ( DAILY | WEEKLY | MONTHLY )",
+          "required": true
+        },
+        {
+          "arg": "from",
+          "type": "date",
+          "description": "from date",
+          "required": false
+        },
+        {
+          "arg": "to",
+          "type": "date",
+          "description": "to date",
+          "required": false
+        }
+      ],
+      "returns": {
+        "arg": "result",
+        "type": "array",
+        "root": true
+      },
+      "description": "Get a static html page with meta tags for crawlers",
+      "http": {
+        "path": "/stats",
+        "verb": "get"
+      }
+    }
+  }
+}

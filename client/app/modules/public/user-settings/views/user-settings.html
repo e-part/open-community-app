@@ -1,0 +1,78 @@
+<div class="page-content-container user-settings clearfix">
+  <div class="hidden-xs col-sm-3 col-lg-2 nav-side-bar" role="main">
+    <site-navigation></site-navigation>
+  </div>
+  <div class="col-xs-12 col-sm-9 col-lg-10 content-feed" role="main">
+    <header class="profile-header clearfix">
+
+      <div class="profile-image">
+        <div>
+          <div class="photo-wrapper" ng-mouseover="showChangePhoto=true" ng-mouseout="showChangePhoto=false">
+            <cl-photo image-alt="user profile" image-src="{{ctrl.user.imageUrl}}"
+                      image-class="user-avatar" image-width="160" image-height="160"
+                      image-crop="thumb" image-gravity="faces" id="image_user_settings" image-zoom="0.8"></cl-photo>
+            <div class="change-photo" ng-click="ctrl.openImageUpload()" ng-show="showChangePhoto || ctrl.uploading">
+              <div ng-if="!ctrl.uploading">{{'Change Image' | translate}}</div>
+              <div class="progress">
+                  <div class="progress-bar" ng-style="{ 'width': ctrl.uploadeProgress + '%' }"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <cloudinary-upload progress-callback="ctrl.uploadProgressCallback(data)" success-callback="ctrl.uploadSuccessCallback(data)"></cloudinary-upload>
+      </div>
+
+      <div class="profile-details">
+        <h1>{{ctrl.userFullName}}</h1>
+      </div>
+    </header>
+    <section class="user-settings-form-wrapper clearfix">
+      <div class="col-xs-12 col-sm-8 settings-form">
+        <form name="form" class="user-settings-form">
+          <formly-form model="ctrl.user" fields="ctrl.formFields" options="ctrl.formOptions"></formly-form>
+
+          <div class="form-group cities-autocomplete-wrapper">
+            <label for="city">{{'Hometown' |  translate }}</label>
+            <input type="text" name="city" id="city" ng-model="ctrl.user.city" class="form-control"
+                   ng-keyup="ctrl.filterCities(ctrl.user.city,$event)" autocomplete="off"
+                   ng-keydown="ctrl.navigateCities($event)">
+            <ul ng-show="ctrl.filteringCities" class="cities-autocomplete-list">
+              <li ng-repeat="city in ctrl.citiesInput.mathedCities"
+                  ng-click="ctrl.user.city = city; ctrl.filteringCities = false">{{city}}
+              </li>
+            </ul>
+          </div>
+
+          <div class="clearfix">
+            <div class="col-sm-8 col-xs-12 inline-frm">
+              <h4>{{'Email Notifications' |  translate }}</h4>
+              <div ng-repeat="notifSetting in ctrl.subscriptions.EMAIL">
+                <label for="email_{{notifSetting.key}}">{{notifSetting.label}}</label>
+                <input type="checkbox" name="email_{{notifSetting.key}}" id="email_{{notifSetting.key}}" ng-model="notifSetting.checked" class="form-checkbox">
+              </div>
+              <h4 ng-if="ctrl.subscriptions.DESKTOP.length">{{'Desktop Notifications' |  translate }}</h4>
+              <div ng-repeat="notifSetting in ctrl.subscriptions.DESKTOP">
+                <label for="desktop_{{notifSetting.key}}">{{notifSetting.label}}</label>
+                <input type="checkbox" name="desktop_{{notifSetting.key}}" id="desktop_{{notifSetting.key}}" ng-model="notifSetting.checked" class="form-checkbox">
+              </div>
+            </div>
+          </div>
+
+          <div class="button-wrapper">
+            <button type="submit" class="btn btn-primary btn-success" ng-click="ctrl.submit()" ng-disabled="form.$invalid">
+              {{ 'Save' | translate }}
+            </button>
+          </div>
+          <div ng-if="ctrl.formErrorMsg" class="form-errors-container">{{ctrl.formErrorMsg.general}}.</div>
+
+        </form>
+      </div>
+      <div class="col-xs-12 col-sm-4 settings-social">
+      </div>
+
+    </section>
+
+  </div>
+
+</div>
+

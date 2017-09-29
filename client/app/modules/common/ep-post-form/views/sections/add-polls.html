@@ -1,0 +1,38 @@
+<h3 class="form-title">
+  <div>{{formSection.title}}</div>
+</h3>
+<div class="form-row row polls-section clear-both" ng-show="!poll.archived"
+     ng-repeat="poll in ctrl.post.polls track by $index">
+  <div class="actions-box" ng-click="ctrl.removePoll($index)">
+    <i class="fa fa-trash-o" aria-hidden="true"></i>
+  </div>
+  <div class="col-xs-12 col-md-6 form-cell left-side-cell">
+    <div class="input-cont">
+      <label for="pollQuestion" translate>Poll Question</label>
+                <textarea id="pollQuestion" type="text" class="input-field"
+                          ng-model="poll.question"></textarea>
+
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-md-6 form-cell">
+    <div class="poll-answers-cont">
+      <div class="input-cont poll-answer" ng-repeat="answer in poll.answers">
+
+        <input type="text" class="input-field" id="answer_{{answer.answerType}}"
+               placeholder=" + Add an option" ng-model="answer.answer" ng-class="answer.color"
+               ng-model="ctrl.post.meetingLocation"/>
+      </div>
+      <button ng-hide="poll.answers.length >= ctrl.MAX_POLL_ANSWERS" class="btn btn-primary btn-success"
+              ng-click="poll.answers.push({answer :'',color : ctrl.pollAnswersColors[poll.answers.length] })" translate>
+        <i class="fa fa-plus" aria-hidden="true"></i>
+      </button>
+    </div>
+
+  </div>
+</div>
+<div class="form-row row clear-both">
+  <button class="btn btn-primary btn-success form-section-create-btn" ng-click="ctrl.addPoll()">
+    <i class="fa fa-plus" aria-hidden="true"></i> &nbsp;{{'Add a new poll' | translate}}
+  </button>
+</div>

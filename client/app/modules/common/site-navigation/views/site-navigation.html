@@ -1,0 +1,71 @@
+<div class="side-widget site-nav">
+
+
+  <div class="site-nav-links" role="navigation">
+    <!-- Main site links -->
+
+    <ul>
+      <li class="no-padding-right" ng-repeat="li in ctrl.primaryLinks">
+        <a ui-sref="{{li.state}}" ng-disabled="li.disabled" ng-if="!li.hide"
+           class="primary-link" ng-class="{active : ctrl.$state.is(li.state)}">{{li.text | translate}}<span
+          ng-if="li.comingSoon"> <i class="coming-soon">{{'Coming Soon' | translate }}</i></span></a>
+      </li>
+      <li class="no-padding-right">
+        <a ui-sref="app.public.profile({id: ctrl.sessionData.currentUser.id})" ng-if="ctrl.sessionData.currentUser"
+           class="primary-link" ng-class="{active : ctrl.$state.is('app.public.profile')}">
+          {{ctrl.hidePostCreationButtons ? 'Profile' :'Edit/Update Posts' | translate}}</a>
+      </li>
+    </ul>
+    <div ng-if="!ctrl.hidePostCreationButtons">
+      <a  ng-click="ctrl.openNewDiscussion()"
+         href="#" class="btn call-to-action-btn discussion-btn" translate>Create a Discussion</a>
+
+      <a ng-click="ctrl.openNewProject()"
+         href="#" class="btn call-to-action-btn project-btn" translate>Create a Project</a>
+
+      <br/>
+      <br/>
+    </div>
+
+    <!-- User Categories -->
+    <div ng-if="ctrl.sessionData.currentUser" class="section-title">{{'My Subjects' | translate }}</div>
+
+    <ul class="categories-list my-categories" ng-if="ctrl.sessionData.currentUser">
+      <li ng-repeat="category in ctrl.sessionData.currentUser.categories">
+        <a ui-sref="app.public.category({slug: category.slug, id: category.id})" class="primary-link"
+           ng-class="{active: ctrl.$stateParams.slug === category.slug }">{{category.name}}</a>
+      </li>
+      <li><a ui-sref="app.public.categories-selection" class="primary-link"
+             ng-class="{active: ctrl.$state.current.name === 'app.public.categories-selection' }">{{'+ Add Subjects' |
+        translate }}</a></li>
+    </ul>
+
+    <!-- Active Posts -->
+    <div class="section-title margin-top" ng-show="ctrl.userActivePosts.length">{{'My Active Posts' | translate }}</div>
+
+    <ul class="categories-list" ng-show="ctrl.userActivePosts.length">
+      <li ng-repeat="post in ctrl.userActivePosts | limitTo: 8">
+        <a class="primary-link" ui-sref="app.public.post({permaLink: post.permaLink})">{{post.title}}</a>
+      </li>
+    </ul>
+
+    <!-- All Categories -->
+    <div class="section-title margin-top" ng-show="!ctrl.sessionData.currentUser">{{'Explore Subjects' | translate }}</div>
+
+    <ul ng-show="!ctrl.sessionData.currentUser" class="categories-list" ng-show="ctrl.categoriesList.length">
+      <li ng-repeat="category in ctrl.categoriesList | limitTo: 8">
+        <a class="primary-link" ui-sref="app.public.category({slug: category.slug, id: category.id})">{{category.name}}</a>
+      </li>
+    </ul>
+
+    <br/>
+    <!-- Other site links -->
+    <ul class="other-links-list">
+      <li ng-repeat="li in ctrl.secondaryLinks">
+        <a ng-hide="li.hide" ng-href="{{li.link}}"
+           class="secondary-link" ng-class="{active : ctrl.$state.is(li.state)}">{{li.text}}</a>
+      </li>
+    </ul>
+
+  </div>
+</div>

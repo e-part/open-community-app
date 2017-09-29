@@ -1,0 +1,38 @@
+<div class="panel panel-default admin-list">
+  <div class="panel-heading">
+    <div class="panel-title-text">
+      {{ 'My Discussions' | translate }}
+    </div>
+    <span class="btn-group">
+      <a href="" class="btn btn-xs btn-success" ui-sref="^.add()">
+        <i class="fa fa-plus"></i> {{ 'Create a Discussion' | translate }}
+      </a>
+    </span>
+  </div>
+  <div class="search-bar">
+    <div class="list-search-box">
+      <label class="list-search-box-label" for="titleSearch" translate>Discussion Title</label>
+      <input id="titleSearch" placeholder="{{'Search Post..' | translate}} " type="text" ng-model="ctrl.freeTextFilterValue"
+             ng-change="ctrl.filterChanged( 'title', ctrl.freeTextFilterValue,['id', 'title','officialTitle'])"/>
+
+    </div>
+
+    <div class="list-search-box">
+      <label class="list-search-box-label" for="fromDateSearch" translate>From Date</label>
+      <input id="fromDateSearch" class="list-search-box" placeholder="From Date" type="date" ng-model="ctrl.filters.fromDate"
+             ng-change="ctrl.filterChanged('toDate',ctrl.filters.fromDate,['endDate'], 'dateGt')"/>
+    </div>
+
+    <div class="list-search-box">
+      <label class="list-search-box-label" for="toDateSearch" translate>To Date</label>
+      <input id="toDateSearch" class="list-search-box" placeholder="To Date" type="date" ng-model="ctrl.filters.toDate"
+             ng-change="ctrl.filterChanged('fromDate', ctrl.filters.toDate,['endDate'], 'dateLt')"/>
+    </div>
+
+  </div>
+  <div>
+    <div class="grid-container" ui-grid="ctrl.gridOptions" ui-grid-auto-resize ui-grid-pagination ui-grid-resize-columns dir="{{appDirection}}"></div>
+
+  </div>
+
+</div>

@@ -1,0 +1,248 @@
+<!-- DISCUSSION SECTION -->
+<form ng-submit="ctrl.submitComment()" class="clearfix new-comment-form">
+  <cl-photo image-alt="my profile picture" image-src="{{ctrl.sessionData.currentUser.imageUrl}}"
+            image-class="profile-img-small-round" image-width="50" image-height="50" image-crop="thumb"
+            image-gravity="faces" image-zoom="0.8"></cl-photo>
+
+  <div class="parent-comment-form-container">
+    <div class="textarea-container">
+      				<textarea ng-click="ctrl.expandForm = true; ctrl.showLoginBox();"
+                        placeholder="{{'What\'s Your Opinion?' | translate }}"
+                        ng-model="ctrl.newComment" ng-class="{'expanded': ctrl.expandForm == true}"></textarea>
+    </div>
+    <div class="pick-comment-tags" ng-show="ctrl.expandForm" >
+      <ui-select class="tags-selection" multiple tagging="ctrl.newTagAdded" ng-model="ctrl.selectedTags" title="{{'Choose Related Tags' | translate}}">
+        <ui-select-match placeholder="{{'Search Tags or Type a New One' | translate}}"><b>#</b>{{$item.content}}</ui-select-match>
+        <ui-select-choices repeat="tag in ctrl.suggestedTags | orderBy: '-id' | propsFilter: {content: $select.search}">
+          <div class="tag-text" ng-if="!tag.isTag" ng-bind-html="'<b>#</b>' + tag.content | highlight: $select.search"></div>
+          <div class="tag-text" ng-if="tag.isTag" ng-bind-html="'<b>#</b>' + tag.content +' <small>('+ ctrl.texts.new + ')</small>'| highlight: $select.search"></div>
+        </ui-select-choices>
+      </ui-select>
+
+    </div>
+    <div ng-show="ctrl.expandForm" class="add-file">
+      <label for="file_field"><i class="material-icons">attachment</i>{{'Upload a File' | translate }}</label>
+      <div ng-show="ctrl.uploader.isHTML5" class="progress-wrapper">
+        <div class="progress" ng-show="ctrl.uploading">
+          <div class="progress-bar" role="progressbar"
+               ng-style="{ 'width': ctrl.uploader.queue[0].progress + '%' }"></div>
+        </div>
+      </div>
+      <input nv-file-select type="file" uploader="ctrl.uploader" name="file" id="file_field">
+      <div ng-show="ctrl.commentFiles.length" class="display-file-name">
+        <div ng-repeat="file in ctrl.commentFiles">
+          <i class="material-icons done">done</i> {{file.fileName}} <i class="material-icons clear"
+                                                                       ng-click="ctrl.commentFiles.splice($index,1)">clear</i>
+        </div>
+      </div>
+    </div>
+    <button ng-click="sendGaEvent('post page','שליחת תגובה');" type="submit" ng-disabled="!ctrl.newComment"
+            ng-show="ctrl.expandForm" class="btn btn-xs btn-success">{{'Send' | translate }}
+    </button>
+  </div>
+</form>
+<div class="con-header clearfix discussion-header">
+  <a name="discussionTop"></a>
+  <h4>{{'Discussion' | translate }}</h4>
+				<span class="sort-by">
+					{{'Sort By' | translate }}: <a href="#" ng-click="ctrl.updatePostsOrder('-upvotesCount')"
+                                         ng-class="{'active':  ctrl.orderComments == '-upvotesCount'}">{{'Popularity' | translate }}</a> |
+          <a href="#" ng-click="ctrl.updatePostsOrder('-createdAt')"
+             ng-class="{'active':  ctrl.orderComments == '-createdAt'}">{{'Date' | translate }}</a>
+				</span>
+</div>
+<div ng-show="ctrl.tagToFilterBy" class="con-header clearfix tags-selected-header">
+  <h4> #{{ctrl.tagToFilterBy.content}}
+  </h4>
+  <i class="material-icons" ng-click="ctrl.clearSelectedTag()">clear</i>
+
+</div>
+
+
+<!-- MAIN COMMENTS THREAD -->
+<ul class="messages-container">
+  <li class="clearfix comment" ng-repeat="comment in ctrl.commentsToView"
+      data-comment-id="{{comment.id}}"
+      ng-init="$last && ctrl.scrollToComment()">
+    <div class="message-photo-wrapper">
+      <a ui-sref="app.public.profile({id: comment.creator.id})">
+        <cl-photo image-alt="user profile" image-src="{{comment.creator.imageUrl}}"
+                  image-class="profile-img-small-round" image-width="50" image-height="50" image-crop="thumb"
+                  image-gravity="faces" image-zoom="0.8"></cl-photo>
+
+        <img ng-if="ctrl.isMK(comment.creator)" alt="" class="org-icon" src="../images/britain-flag.png" />
+
+      </a>
+      <div class="thump-up-wrapper"
+           ng-click="sendGaEvent('post page','upvote לתגובה'); ctrl.submitUpVote(comment,comment.voted)">
+        <i class="fa fa-chevron-up" ng-class="{'voted': comment.voted}"></i>
+        <div class="thumb-counter">{{comment.upvotesCount}}</div>
+      </div>
+    </div>
+    <div class="message-content">
+      <div class="message-details">
+        <p class="message-writer">
+          <a ui-sref="app.public.profile({id: comment.creator.id})">
+            {{comment.creator.firstName + ' ' + comment.creator.lastName}}
+          </a>
+        </p>
+        <p class="user-occupation" ng-if="comment.creator.occupation"> {{comment.creator.occupation}}</p>
+        <p class="message-time">{{comment.createdAt | formatLocaleDate:true}}</p>
+      </div>
+      <form ng-if="ctrl.showEditForm === comment.id" ng-submit="ctrl.editComment(comment)" class="clearfix">
+        <textarea ng-model="comment.content"></textarea>
+        <div class="pick-comment-tags">
+          <ui-select class="tags-selection" multiple tagging="ctrl.newTagAdded" ng-model="comment.tags" title="{{'Choose Related Tags' | translate}}">
+            <ui-select-match placeholder="{{'Search Tags or Type a New One' | translate}}"><b>#</b>{{$item.content}}</ui-select-match>
+            <ui-select-choices repeat="tag in ctrl.suggestedTags | orderBy: '-id' | propsFilter: {content: $select.search}">
+              <div class="tag-text" ng-if="!tag.isTag" ng-bind-html="'<b>#</b>' + tag.content | highlight: $select.search"></div>
+              <div class="tag-text" ng-if="tag.isTag" ng-bind-html="'<b>#</b>' + tag.content +' <small>('+ ctrl.texts.new + ')</small>'| highlight: $select.search"></div>
+            </ui-select-choices>
+          </ui-select>
+
+        </div>
+        <button class="btn btn-xs btn-success" type="submit" ng-disabled="!comment.content"
+                ng-click="sendGaEvent('post page','הצבעת תגובה לתגובה');">{{'Update Comment' | translate }}
+        </button>
+        <button class="btn btn-xs" ng-click="ctrl.cancelEditing(comment)">{{'Cancel' | translate }}</button>
+      </form>
+      <p ng-bind-html="comment.content | linky:'_blank'" ng-if="ctrl.showEditForm !== comment.id"
+         class="message-text">
+      </p>
+      <ul class="comment-tags-list">
+        <a ng-repeat="tag in comment.tags" href="#"
+           ng-click="ctrl.filterCommentsByTag(tag)"
+           class="tag-text comment-tag" ng-class="{'selected': tag.content === ctrl.tagToFilterBy.content}"><b>#</b>{{tag.content}}</a>
+      </ul>
+      <ul class="comment-files-list">
+        <li ng-repeat="file in comment.files">
+          <img ng-if="ctrl.checkFileExtention(file,'pic')" src="{{file}}" alt="attached image">
+          <a ng-if="ctrl.checkFileExtention(file,'doc')" href="{{file}}" target="_blank"><i
+            class="material-icons">attachment</i> {{ctrl.showFileName(file,$index)}}</a>
+        </li>
+      </ul>
+      <div class="message-actions">
+        <a ng-if="ctrl.sessionData.currentUser && ctrl.sessionData.currentUser.id === comment.creatorId"
+           ng-click="ctrl.openCommentForEdit(comment)"><i class="fa fa-pencil"></i> {{'Edit' | translate}}</a>
+        <a ng-if="(!comment.children || !comment.children.length) && ctrl.sessionData.currentUser  && ctrl.sessionData.currentUser.id === comment.creatorId"
+           ng-click="ctrl.deleteComment(comment, ctrl.commentsToView )"><i class="fa fa-trash"></i> {{'Delete' | translate}}</a>
+        <a href="#" ng-click="ctrl.showForm = comment.id;
+               ctrl.newChildComment = '@' + comment.creator.firstName + ' ' + comment.creator.lastName + '@ ';
+               ctrl.showEditForm = null">
+          <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+               width="247.000000pt" height="194.000000pt" viewBox="0 0 247.000000 194.000000"
+               preserveAspectRatio="xMidYMid meet">
+            <g transform="translate(0.000000,194.000000) scale(0.100000,-0.100000)" stroke="none">
+              <path d="M0 1185 l0 -755 220 0 c121 0 220 -1 220 -3 0 -2 -32 -94 -70 -206
+									-39 -112 -69 -206 -66 -208 2 -3 130 90 283 206 l279 211 792 0 792 0 0 755 0
+									755 -1225 0 -1225 0 0 -755z m2345 483 c3 -90 5 -381 3 -648 l-3 -485 -764 -3
+									-763 -2 -146 -111 c-81 -61 -148 -107 -149 -102 -2 5 12 55 31 111 l35 102
+									-157 0 c-86 0 -194 3 -239 7 l-83 6 0 643 0 644 1114 0 1114 0 7 -162z"></path>
+            </g>
+          </svg>
+          {{'Comment' | translate }}
+        </a>
+        <a href="{{ctrl.generateCommentShareUrl('facebook',comment)}}"
+           ng-click="sendGaEvent('post page','שיתוף תגובה בפייסבוק'); ctrl.FBshare($event,comment)"
+           target="_blank" class="facebook-share"><i class="fa fa-facebook-f"></i> {{'Share' | translate }}</a>
+        <a href="{{ctrl.generateCommentShareUrl('twitter',comment)}}"
+           ng-click="sendGaEvent('post page','שיתוף תגובה בטוויטר'); openSharePopup($event)" target="_blank"
+           class="twitter-share"><i class="fa fa-twitter"></i> {{'Tweet' | translate }}</a>
+      </div>
+      <form ng-if="ctrl.showForm == comment.id" ng-submit="ctrl.submitComment(comment.id, comment.id)" class="clearfix">
+        <cl-photo image-alt="user profile" image-src="{{ctrl.sessionData.currentUser.imageUrl}}"
+                  image-class="profile-img-small-round" image-width="50" image-height="50" image-crop="thumb"
+                  image-gravity="faces" image-zoom="0.8"></cl-photo>
+        <div class="textarea-container">
+          <textarea ng-model="ctrl.newChildComment"></textarea>
+        </div>
+        <button class="btn btn-xs btn-success" type="submit" ng-disabled="!ctrl.newChildComment"
+                ng-click="sendGaEvent('post page','הצבעת תגובה לתגובה');">{{'Send' | translate }}
+        </button>
+      </form>
+
+      <!-- CHILDREN COMMENTS THREAD -->
+
+      <ul class="message-comments">
+        <li class="clearfix comment-to-comment" ng-repeat="child in comment.children  | orderBy:'createdAt' | limitTo:comment.childCommentsLimit"
+            data-comment-id="{{child.id}}">
+          <div class="message-photo-wrapper">
+            <a ui-sref="app.public.profile({id: child.creator.id})">
+              <cl-photo image-alt="user profile" image-src="{{child.creator.imageUrl}}"
+                        image-class="profile-img-small-round" image-width="50" image-height="50"
+                        image-crop="thumb" image-gravity="faces" image-zoom="0.8"></cl-photo>
+              <img ng-if="ctrl.isMK(child.creator)" alt="" class="org-icon" src="../images/britain-flag.png" />
+
+            </a>
+          </div>
+          <div class="message-content">
+            <div class="message-details">
+              <p class="message-writer">
+                <a ui-sref="app.public.profile({id: child.creator.id})">
+                  {{child.creator.firstName + ' ' + child.creator.lastName}}
+                </a>
+              </p>
+              <p class="user-occupation" ng-if="child.creator.occupation"> {{child.creator.occupation}}</p>
+              <p class="message-time">{{child.createdAt | formatLocaleDate:true}}</p>
+            </div>
+
+            <p class="message-text" ng-bind-html="child.content | linky:'_blank' | annotateHighlight"
+               ng-if="ctrl.showEditForm !== child.id"></p>
+            <form ng-if="ctrl.showEditForm === child.id" ng-submit="ctrl.editComment(child)" class="clearfix">
+              <textarea ng-model="child.content"></textarea>
+              <button class="btn btn-xs btn-success" type="submit" ng-disabled="!child.content"
+                      ng-click="sendGaEvent('post page','הצבעת תגובה לתגובה');">{{'Update Comment' | translate }}
+              </button>
+              <button class="btn btn-xs" ng-click="ctrl.cancelEditing(child)">{{'Cancel' | translate }}</button>
+            </form>
+            <form ng-if="ctrl.showForm == child.id" ng-submit="ctrl.submitComment(comment.id, child.id)" class="clearfix">
+              <cl-photo image-alt="user profile" image-src="{{ctrl.sessionData.currentUser.imageUrl}}"
+                        image-class="profile-img-small-round" image-width="50" image-height="50" image-crop="thumb"
+                        image-gravity="faces" image-zoom="0.8"></cl-photo>
+              <div class="textarea-container">
+                <textarea ng-model="ctrl.newChildComment"></textarea>
+              </div>
+              <button class="btn btn-xs btn-success" type="submit" ng-disabled="!ctrl.newChildComment"
+                      ng-click="sendGaEvent('post page','הצבעת תגובה לתגובה');">{{'Send' | translate }}
+              </button>
+            </form>
+            <div class="message-actions">
+              <a ng-if="ctrl.sessionData.currentUser && ctrl.sessionData.currentUser.id === child.creatorId"
+                 ng-click="ctrl.openCommentForEdit(child)"><i class="fa fa-pencil"></i> {{'Edit' | translate}}</a>
+              <a ng-if="ctrl.sessionData.currentUser  && ctrl.sessionData.currentUser.id === child.creatorId"
+                 ng-click="ctrl.deleteComment(child, comment.children)"><i class="fa fa-trash"></i> {{'Delete' | translate}}</a>
+              <a href="#" ng-click="ctrl.showForm = child.id;
+                    ctrl.newChildComment = '@' + child.creator.firstName + ' ' + child.creator.lastName + '@ ';
+                     ctrl.showEditForm = null" >
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                     width="247.000000pt" height="194.000000pt" viewBox="0 0 247.000000 194.000000"
+                     preserveAspectRatio="xMidYMid meet">
+                  <g transform="translate(0.000000,194.000000) scale(0.100000,-0.100000)" stroke="none">
+                    <path d="M0 1185 l0 -755 220 0 c121 0 220 -1 220 -3 0 -2 -32 -94 -70 -206
+									-39 -112 -69 -206 -66 -208 2 -3 130 90 283 206 l279 211 792 0 792 0 0 755 0
+									755 -1225 0 -1225 0 0 -755z m2345 483 c3 -90 5 -381 3 -648 l-3 -485 -764 -3
+									-763 -2 -146 -111 c-81 -61 -148 -107 -149 -102 -2 5 12 55 31 111 l35 102
+									-157 0 c-86 0 -194 3 -239 7 l-83 6 0 643 0 644 1114 0 1114 0 7 -162z"></path>
+                  </g>
+                </svg>
+                {{'Comment' | translate }}
+              </a>
+
+              <a href="{{ctrl.generateCommentShareUrl('facebook',child)}}" ng-click="ctrl.FBshare($event,child)"
+                 target="_blank" class="facebook-share"><i class="fa fa-facebook-f"></i> {{'Share' | translate }}</a>
+              <a href="{{ctrl.generateCommentShareUrl('twitter',child)}}" ng-click="openSharePopup($event)"
+                 target="_blank" class="twitter-share"><i class="fa fa-twitter"></i> {{'Tweet' | translate }}</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="expand-comments" ng-show="comment.children && comment.children.length" ng-init="comment.childCommentsLimit = 2">
+        <a ng-show="!comment.showAllChildren && comment.children.length > comment.childCommentsLimit" href="#" ng-click="comment.showAllChildren = !comment.showAllChildren; comment.childCommentsLimit = null">
+          <i ng-show="!comment.showChildren" class="fa fa-angle-down"></i>
+          {{'Show All Comments' | translate}} ({{comment.children.length}})
+        </a>
+      </div>
+
+    </div>
+  </li>
+</ul>

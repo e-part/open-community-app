@@ -1,0 +1,117 @@
+.login-wrapper {
+  padding: 40px 50px;
+
+  .form-box {
+    width: auto;
+
+    .login-footer {
+      margin-top: 20px;
+      .login-footer-link {
+        &:first-child {
+          float: right;
+        }
+        &:last-child {
+          float: left;
+        }
+      }
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .add-padding {
+      padding: 15px 0;
+    }
+
+    .add-padding-top {
+      padding-top: 10px;
+    }
+
+    .add-margin-top {
+      margin-top: 10px;
+    }
+
+    .font-bigger {
+      font-size: 16px;
+    }
+
+    .btn {
+      font-size: 18px;
+      padding: 15px 0;
+      display: block;
+    }
+
+    .social-buttons {
+      .social-login {
+        display: block;
+
+        &:first-child {
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+/*    ::-webkit-input-placeholder { !* WebKit browsers *!
+      direction: rtl;
+      text-align: right;
+    }
+    :-moz-placeholder { !* Mozilla Firefox 4 to 18 *!
+      direction: rtl;
+      text-align: right;
+    }
+    ::-moz-placeholder { !* Mozilla Firefox 19+ but I'm not sure about working *!
+      direction: rtl;
+      text-align: right;
+    }
+    :-ms-input-placeholder { !* Internet Explorer 10+ *!
+      direction: rtl;
+      text-align: right;
+    }*/
+
+    input {
+      /*height: 47px;*/
+      height: auto;
+      font-size: 18px;
+      padding: 14px 5px;
+      direction: rtl;
+      text-align: right;
+      width: 100%;
+      .app-ltr & {
+        direction: ltr;
+        text-align: left;
+      }
+/*      background: $white !important;
+      background-color: $white !important;*/
+
+/*      &#firstName, &#lastName {
+        text-align: right;
+        direction: rtl;
+      }*/
+
+/*      &:-webkit-autofill {
+        background: $white !important;
+        background-color: $white !important;
+      }
+      &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px white inset;
+      }*/
+    }
+  }
+  &#mainLogin {
+
+  }
+  &#login {
+
+  }
+  &#register {
+
+  }
+}
+
+@include media-max($layout-breakpoint-sm) {
+  .login-wrapper {
+    padding: 40px 20px;
+  }
+}

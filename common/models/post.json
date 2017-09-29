@@ -1,0 +1,265 @@
+{
+  "name": "Post",
+  "plural": "posts",
+  "base": "AppModel",
+  "properties": {
+    "title": {
+      "type": "string",
+      "mysql": {
+        "dataType": "TEXT"
+      },
+      "required": true
+    },
+    "subtitle": {
+      "type": "string",
+      "mysql": {
+        "dataType": "TEXT"
+      },
+      "required": false
+    },
+    "content": {
+      "type": "string",
+      "mysql": {
+        "dataType": "TEXT"
+      },
+      "meta": {
+        "formType": "textarea"
+      }
+    },
+    "mainImage": {
+      "type": "string",
+      "required": false
+    },
+    "featuredImage": {
+      "type": "string",
+      "required": false
+    },
+    "fbImage": {
+      "type": "string",
+      "required": false
+    },
+    "permaLink": {
+      "type": "string",
+      "required": false
+    },
+    "status": {
+      "type": "string",
+      "required": false,
+      "default": "DRAFT"
+    },
+    "keywords": {
+      "type": [
+        "string"
+      ],
+      "required": false
+    },
+    "notificationsSent": {
+      "type": "boolean",
+      "required": false,
+      "default" : false
+    },
+    "imageCaption": {
+      "type": "string",
+      "required": false
+    },
+    "officialTitle": {
+      "type": "string",
+      "required": false
+    },
+    "officialMeetingId": {
+      "type": "number",
+      "required": false
+    },
+    "officialCommitteeId": {
+      "type": "number",
+      "required": false
+    },
+    "isCancelled": {
+      "type": "boolean",
+      "default" : false
+    },
+    "migrationStatus": {
+      "type": "string",
+      "required": false
+    },
+    "isParent" : {
+      "type" : "boolean",
+      "required": false,
+      "default" : false
+    },
+    "youtubeVideoId" : {
+      "type": "string",
+      "required": false
+    },
+    "ownerSummary": {
+      "type": "string",
+      "required": false
+    },
+    "endDate": {
+      "type": "date",
+      "required": false
+    },
+    "type": {
+      "type": "string",
+      "required": true,
+      "default": "DISCUSSION"
+    },
+    "minimumRequiredHours": {
+      "type": "number",
+      "required": false
+    },
+    "reviewStatus": {
+      "type": "string",
+      "required": false,
+      "default": "APPROVED"
+    }
+
+  },
+  "options": {
+    "validateUpsert": true
+  },
+  "injectOptionsFromRemoteContext": true,
+  "mixins": {
+    "Counts": true,
+    "Multitenancy": {
+      "addCustomerToRemotingContext" : true,
+      "enforceCustomerField" : true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "owner": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "ownerId"
+
+    },
+    "meetings": {
+      "type": "hasMany",
+      "model": "Meeting",
+      "foreignKey": "postId"
+    },
+    "categories": {
+      "type": "hasAndBelongsToMany",
+      "model": "Category",
+      "foreignKey": ""
+    },
+    "committees": {
+      "type": "hasAndBelongsToMany",
+      "model": "Committee",
+      "foreignKey": ""
+    },
+    "mks": {
+      "type": "hasAndBelongsToMany",
+      "model": "user"
+    },
+    "comments": {
+      "type": "hasMany",
+      "model": "Comment"
+    },
+    "messages": {
+      "type": "hasMany",
+      "model": "Message"
+    },
+    "polls": {
+      "type": "hasMany",
+      "model": "Poll"
+    },
+    "predefinedTags": {
+      "type": "hasAndBelongsToMany",
+      "model": "Tag"
+    },
+    "conclusions": {
+      "type": "hasMany",
+      "model": "Conclusion"
+    },
+    "timePledges": {
+      "type": "hasMany",
+      "model": "TimePledge"
+    },
+    "itemRequests": {
+      "type": "hasMany",
+      "model": "ItemRequest"
+    },
+    "user": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "ownerId"
+    },
+    "customer": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": "customerId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "mk",
+      "permission": "ALLOW"
+    },
+    {
+      "property": "sendNotifications",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "property": "getTopPostsByUser",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "property": "migratePosts",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "property": "create",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "property": "upsert",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "property": "updateAttributes",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "__create__timePledges"
+    }
+
+  ],
+  "methods": {}
+}

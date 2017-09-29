@@ -1,0 +1,115 @@
+<h3 class="form-title">{{formSection.title}}</h3>
+
+<div class="form-row row">
+  <div class="col-xs-12 col-md-6 form-cell left-side-cell">
+    <div class="input-cont required">
+      <label for="title" translate>Title</label>
+      <input id="title" class="input-field" ng-model="ctrl.post.title"
+             ng-change="ctrl.updatePermalink(ctrl.post.title)" type="text" required
+             placeholder="{{formSection.texts.titlePlaceholder}}"/>
+    </div>
+    <div ng-if="ctrl.post.type === ctrl.POST_TYPES.PROJECT" class="input-cont required">
+      <label for="minimumRequiredHours" translate>Required Volunteering Hours</label>
+      <input id="minimumRequiredHours" class="input-field" ng-model="ctrl.post.minimumRequiredHours" type="number" step="1" required
+             placeholder="{{'The total of hours needed to complete the project' | translate}}"/>
+
+    </div>
+    <div class="input-cont">
+      <label for="subtitle" translate>Subtitle</label>
+      <input id="subtitle" class="input-field" ng-model="ctrl.post.subtitle" type="text"
+             placeholder="{{formSection.texts.subtitlePlaceholder}}"/>
+
+    </div>
+
+    <div class="input-cont">
+      <label for="categories" translate>Subjects</label>
+      <ui-select id="categories" multiple ng-model="ctrl.post.categories"
+                 title="{{formSection.texts.subtitlePlaceholder}}">
+        <ui-select-match placeholder="{{formSection.texts.subjectsPlaceholder}}">{{$item.name}}
+        </ui-select-match>
+        <ui-select-choices repeat="category in ctrl.categories | propsFilter: {name: $select.search}">
+          <div ng-bind-html="category.name | highlight: $select.search"></div>
+        </ui-select-choices>
+      </ui-select>
+    </div>
+
+    <div ng-if="ctrl.options.inAdvancedEditMode" class="input-cont">
+      <label for="committees" translate>Committees</label>
+      <ui-select id="committees" multiple ng-model="ctrl.post.committees"
+                 title="{{'Select a committee' | translate}}">
+        <ui-select-match placeholder="{{'Select a committee' | translate}}">{{$item.name}}
+        </ui-select-match>
+        <ui-select-choices repeat="committee in ctrl.committees | propsFilter: {name: $select.search}">
+          <div ng-bind-html="committee.name | highlight: $select.search"></div>
+        </ui-select-choices>
+      </ui-select>
+    </div>
+
+    <div class="input-cont">
+      <label for="endDate" translate>End Date</label>
+      <p class="input-group datepicker-field">
+        <input id="endDate" type="text" class="form-control" uib-datepicker-popup="shortDate"
+               ng-model="ctrl.post.endDate" is-open="dt1.opened"
+               ng-required="true" close-text="Close"/>
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-default" ng-click="dt1.opened = true"><i
+                        class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+      </p>
+    </div>
+    <div class="input-cont required" ng-if="ctrl.options.inAdvancedEditMode">
+      <label for="permaLink" translate>Short Title (No Spaces)</label>
+      <input id="permaLink" class="input-field" ng-model="ctrl.post.permaLink" type="text" required
+             placeholder="{{'Example: my-short-title-text' | translate}}"/>
+
+    </div>
+    <div class="input-cont">
+      <label ng-if="ctrl.inEditMode" for="ownerSummary" translate>Discussion Conclusion</label>
+                <textarea ng-if="ctrl.inEditMode" placeholder="Write your conclusions from the public discussion"
+                          class="input-field" id="ownerSummary"
+                          ng-model="ctrl.post.ownerSummary"></textarea>
+    </div>
+
+  </div>
+
+  <div class="section-sep">
+  </div>
+
+  <div class="col-xs-12 col-md-6 form-cell">
+    <div ng-if="ctrl.options.inAdvancedEditMode" class="input-cont required">
+      <label for="reviewStatus" translate>Review Status</label>
+      <select id="reviewStatus"
+
+              class="input-field" ng-options="option.value as option.name for option in ctrl.reviewStatuses"
+              ng-model="ctrl.post.reviewStatus"></select>
+
+    </div>
+    <div class="input-cont required">
+      <label for="status" translate>Status</label>
+      <select id="status"
+
+              class="input-field" ng-options="option.value as option.name for option in ctrl.statuses"
+              ng-model="ctrl.post.status"></select>
+    </div>
+
+    <div class="input-cont">
+      <upload-box label="'Header Image (16x9)' | translate" update-model="ctrl.post"
+                  update-property="'mainImage'"
+                  description="formSection.texts.mainImagePlaceholder"></upload-box>
+    </div>
+
+    <div class="input-cont">
+      <upload-box class="square" label="'Feed Image (1x1)' | translate" update-model="ctrl.post"
+                  update-property="'featuredImage'"
+                  description="formSection.texts.feedImagePlaceholder"></upload-box>
+    </div>
+    <div class="input-cont">
+
+    </div>
+    <label for="youtubeVideoId" translate>Youtube Video URL</label>
+    <input type="text" placeholder="{{'Example: https://www.youtube.com/watch?v=0sFvFVkeGVg' | translate}}"
+           class="input-field" id="youtubeVideoId" ng-model="ctrl.post.youtubeVideoId"/>
+
+
+  </div>
+</div>

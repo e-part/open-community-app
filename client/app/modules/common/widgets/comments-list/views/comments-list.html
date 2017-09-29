@@ -1,0 +1,29 @@
+<aside class="side-widget-list side-widget">
+  <h4>{{title}}</h4>
+  <ul>
+    <li class="comment-item" ng-repeat="comment in ctrl.comments | limitTo: ctrl.listLimit" class="clearfix">
+      <div class="member-details">
+        <a class="member-img" ui-sref="app.public.profile({id: comment.creator.id})" ng-class="{'mk-comment-photo':ctrl.isMK(comment.creator)}">
+          <cl-photo image-src="{{comment.creator.imageUrl}}" image-width="50" image-height="50"  image-gravity="faces" image-crop="thumb" image-zoom="0.8" image-alt="user profile"></cl-photo>
+          <img ng-if="ctrl.isMK(comment.creator)" alt="" class="org-icon" src="../images/britain-flag.png" />
+
+        </a>
+        <div class="member-details-titles">
+          <a ui-sref="app.public.profile({id: comment.creator.id})" class="member-name">{{comment.creator.firstName}} {{comment.creator.lastName}}</a>
+          <span class="comment-date">{{comment.updatedAt | formatLocaleDate:true}}</span>
+        </div>
+      </div>
+      <div class="comment-details">
+        <a ui-sref="app.public.post({permaLink: comment.post.permaLink, comment_id: comment.id})" class="content-excerpt">
+          "{{comment.content | add3dots:160:true}}"
+        </a>
+      </div>
+      <div class="comment-meta"><b>{{'From' | translate}}: </b> {{comment.post.title}}
+        <!-- <a ui-sref="app.public.post({permaLink: comment.post.permaLink})" class="discussion-title">{{comment.post.title}}</a> -->
+      </div>
+    </li>
+  </ul>
+<!--  <div class="see-more-wrapper">
+    <a href="#" class="see-more">{{'see more' | translate }}</a>
+  </div>-->
+</aside>

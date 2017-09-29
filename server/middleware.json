@@ -1,0 +1,33 @@
+{
+  "initial:before": {
+    "loopback#favicon": {}
+  },
+  "initial": {
+    "loopback-context#per-request": {},
+
+    "compression": {},
+    "cors": {
+      "params": {
+        "origin": true,
+        "credentials": true,
+        "maxAge": 86400
+      }
+    }
+  },
+  "session": {},
+  "auth": {},
+  "parse": {},
+  "routes": {
+    "loopback#rest": {
+      "paths": [
+        "${restApiRoot}"
+      ]
+    }
+  },
+  "final": {
+    "loopback#urlNotFound": {}
+  },
+  "final:after": {
+    "loopback#errorHandler": {}
+  }
+}

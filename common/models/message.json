@@ -1,0 +1,53 @@
+{
+  "name": "Message",
+  "plural": "messages",
+  "base": "AppModel",
+  "properties": {
+    "content": {
+      "type": "string",
+      "required": true,
+      "mysql": {
+        "dataType": "TEXT"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {
+    "creator": {
+      "type": "belongsTo",
+      "model": "user"
+    },
+    "post": {
+      "type": "belongsTo",
+      "model": "Post"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "create"
+    }
+
+  ],
+  "methods": {}
+}

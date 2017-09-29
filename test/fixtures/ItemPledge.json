@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "userId": 1,
+    "itemRequestId": 1,
+    "quantity": 1,
+    "customerId" : 1
+  },
+  {
+    "id": 2,
+    "userId": 2,
+    "itemRequestId": 1,
+    "quantity": 1,
+    "customerId" : 1
+  },
+  {
+    "id": 3,
+    "userId": 2,
+    "itemRequestId": 3,
+    "quantity": 1,
+    "customerId" : 2
+  }
+]

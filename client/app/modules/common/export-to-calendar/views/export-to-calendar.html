@@ -1,0 +1,9 @@
+<span ng-if="page === 'post'" ng-click="ctrl.init()" ng-class="{'add-line-through' : ctrl.post.isCancelled}"
+      ng-attr-title="{{ctrl.post.isCancelled ? ctrl.meetingCancelledText : ''}}">
+	<i class="fa fa-calendar-plus-o"></i> {{ctrl.post.endDate | formatLocaleDate:false:true}}
+  <span class="add-to-calendar-tt">({{ ctrl.post.isCancelled ? ctrl.meetingCancelledText : ctrl.addToCalendarText}})</span>
+</span>
+
+<span ng-if="page === 'feed'">
+	<i class="fa fa-calendar-plus-o" ng-click="ctrl.init()"></i>
+</span>

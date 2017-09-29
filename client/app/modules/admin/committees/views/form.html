@@ -1,0 +1,32 @@
+<form name="form">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <a href="" ui-sref="^.list" class="btn btn-xs btn-default"><i class="fa" ng-class="{'fa-arrow-left' : appDirection === 'ltr', 'fa-arrow-right' : appDirection === 'rtl'}"></i></a>
+      <span ng-show="!ctrl.committee.id" translate>Add a new committee</span>
+      <span ng-show="ctrl.committee.id" translate>Edit committee</span>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-12">
+
+          <formly-form model="ctrl.committee" fields="ctrl.formFields" options="ctrl.formOptions"></formly-form>
+<!--
+          <input type="text" ng-model="ctrl.committee.name"
+-->
+          <ui-select id="mksSelect" multiple  ng-model="ctrl.committee.mks" title="Choose a Knesset member">
+            <ui-select-match placeholder="Select a Knesset Member">{{$item.firstName}} {{$item.lastName}}</ui-select-match>
+            <ui-select-choices repeat="mk in ctrl.mks | propsFilter: {firstName: $select.search, lastName: $select.search}">
+              <div ng-bind-html="mk.firstName + ' ' + mk.lastName  | highlight: $select.search"></div>
+            </ui-select-choices>
+          </ui-select>
+        </div>
+      </div>
+    </div>
+    <div class="panel-footer">
+      <button type="submit" class="btn btn-primary btn-success" ng-click="ctrl.submit()" ng-disabled="form.$invalid">
+       {{'Submit' | translate}}
+      </button>
+      <button type="button" class="btn btn-default" ng-click="ctrl.formOptions.resetModel()">{{ 'Reset' | translate }} </button>
+    </div>
+  </div>
+</form>

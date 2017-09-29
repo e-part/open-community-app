@@ -1,0 +1,13 @@
+<aside class="side-widget-list side-widget">
+  <h4>{{'Top Contributors' | translate }}</h4>
+  <ul>
+    <li ng-repeat="member in communityMembers | limitTo: ctrl.listLimit" class="clearfix member-item">
+      <a class="member-img" ui-sref="app.public.profile({id: member.id})">
+      	<cl-photo image-src="{{member.imageUrl}}" image-width="50" image-height="50" image-gravity="faces" image-crop="thumb" image-zoom="0.8" image-alt="user profile"></cl-photo>
+      </a>
+      <div class="member-details">
+        <a ui-sref="app.public.profile({id: member.id})" class="member-name">{{member.firstName}} {{member.lastName}}</a>
+      </div>
+    </li>
+  </ul>
+</aside>

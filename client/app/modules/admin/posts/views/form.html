@@ -1,0 +1,103 @@
+<ep-post-form
+  post="ctrl.post"
+  user-role="ctrl.executingUserRole"
+  execution-mode="ctrl.executionMode"
+  options="ctrl.formOptions"></ep-post-form>
+
+<!--<form name="postForm" class="epart-admin-form admin-post-form">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <a href="" ui-sref="^.list" class="btn btn-xs btn-default"><i class="fa" ng-class="{'fa-arrow-left' : appDirection === 'ltr', 'fa-arrow-right' : appDirection === 'rtl'}"></i></a>
+      <span ng-show="!ctrl.post.id" translate>Add a new post</span>
+      <span ng-show="ctrl.post.id" translate>Edit post</span>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-12">
+&lt;!&ndash;
+          <ui-codemirror ui-codemirror-opts="ctrl.editorOptions" ng-model="ctrl.post.content"></ui-codemirror>
+&ndash;&gt;
+          <formly-form model="ctrl.post" fields="ctrl.formFields" options="ctrl.formOptions"></formly-form>
+
+          <label for="categories" translate>Categories</label>
+          <ui-select id="categories" multiple  ng-model="ctrl.post.categories" title="Choose a category">
+            <ui-select-match placeholder="Select a category">{{$item.name}}</ui-select-match>
+            <ui-select-choices repeat="category in ctrl.categories | propsFilter: {name: $select.search}">
+              <div ng-bind-html="category.name | highlight: $select.search"></div>
+            </ui-select-choices>
+          </ui-select>
+
+          <label for="endDate" translate>End Date</label>
+          <p class="input-group datepicker-field">
+            <input id="endDate" type="text" class="form-control" uib-datepicker-popup="shortDate"
+                   ng-model="ctrl.post.endDate" is-open="dt1.opened"
+                   ng-required="true" close-text="Close"/>
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-default" ng-click="dt1.opened = true"><i
+                        class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+          </p>
+          <br/>
+          <textarea ui-tinymce="ctrl.tinymceOptions" ng-model="ctrl.post.content"></textarea>
+          <br/>
+          <media-upload-input label="'Main Image' | translate" update-model="ctrl.post" update-property="'mainImage'" ></media-upload-input>
+          <media-upload-input label="'Featured Image' | translate" update-model="ctrl.post" update-property="'featuredImage'" ></media-upload-input>
+          <media-upload-input label="'Facebook Image' | translate" update-model="ctrl.post" update-property="'fbImage'" ></media-upload-input>
+          <label for="imageCaption" translate>Image Caption</label>
+          <input type="text" class="form-input-box" id="imageCaption" ng-model="ctrl.post.imageCaption"/>
+
+          <label for="youtubeVideoId" translate>Youtube Video ID</label>
+          <input type="text" placeholder="{{'Example: gocwRvLhDf8' | translate}}" class="form-input-box" id="youtubeVideoId" ng-model="ctrl.post.youtubeVideoId"/>
+          &lt;!&ndash; Poll Section &ndash;&gt;
+          <div class="form-section poll-section">
+            <h4>{{'Poll Section' | translate }}</h4>
+            <div class="section-action-buttons">
+              <button class="btn btn-primary btn-success" ng-click="ctrl.addPoll()" translate>Add a Poll</button>
+&lt;!&ndash;
+              <button ng-if="!ctrl.inEditMode" class="btn btn-default" ng-disabled="!ctrl.post.polls.length" ng-click="ctrl.removePoll()" translate>Remove Poll</button>
+&ndash;&gt;
+            </div>
+
+            <div ng-show="!poll.archived" ng-repeat="poll in ctrl.post.polls track by $index" class="poll-item">
+              <div class="actions-box">
+                <i class="fa fa-trash-o" aria-hidden="true" ng-click="ctrl.removePoll($index)"></i>
+              </div>
+              <label for="pollQuestion" translate >Question</label>
+              <input id="pollQuestion" class="form-input-box" type="text" ng-model="poll.question"/>
+              <div ng-repeat="answer in poll.answers">
+                <label for="answer_{{answer.answerType}}">{{'Answer' | translate}} {{$index+1}}:</label>
+                <div class="poll-answer">
+                  <input id="answer_{{answer.answerType}}" class="form-input-box" type="text" placeholder="{{answer.answerType}}" ng-model="answer.answer" ng-class="answer.color" />
+                  <i ng-show="poll.answers.length > 2" class="fa fa-trash-o" aria-hidden="true" ng-click="ctrl.removeAnswer(poll, $index)" ></i>
+                </div>
+
+              </div>
+              <button ng-hide="poll.answers.length >= ctrl.MAX_POLL_ANSWERS" class="btn btn-primary btn-success"
+                      ng-click="poll.answers.push({answer :'',color : ctrl.pollAnswersColors[poll.answers.length] })" translate>
+                <i class="fa fa-plus" aria-hidden="true"></i>
+              </button>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="panel-footer">
+      <button type="submit" class="btn btn-primary btn-success" ng-click="ctrl.submit()" ng-disabled="postForm.$invalid" translate>
+        Save
+      </button>
+      <a ng-if="ctrl.inEditMode && !postForm.$dirty" ui-sref="app.public.post({permaLink:ctrl.post.permaLink})" target="_blank">
+        <button type="button" class="btn btn-default">
+          <span ng-show="ctrl.post.status !== 'PUBLISHED'" translate>
+            Preview
+          </span>
+          <span ng-show="ctrl.post.status === 'PUBLISHED'" translate>
+            View Post
+          </span>
+        </button>
+      </a>
+
+    </div>
+  </div>
+</form>-->

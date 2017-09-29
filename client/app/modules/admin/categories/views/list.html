@@ -1,0 +1,35 @@
+<div class="admin-list">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      {{ 'Categories' | translate }}
+    <span class="btn-group">
+      <a href="" class="btn btn-xs btn-success" ui-sref="^.add()">
+        <i class="fa fa-plus"></i>
+      </a>
+    </span>
+    </div>
+
+    <div class='list-group'>
+      <div ng-repeat="item in ctrl.categories" class="list-group-item">
+        <h4 class="list-group-item-heading">
+          <a href="" ui-sref="^.edit({id: item.id})">{{item.name}}</a>
+        </h4>
+        <div class="box-body">
+          <div class="row">
+          </div>
+        </div>
+
+      </div>
+
+      <div ng-show="!ctrl.categories.length" class="list-group-item">
+        <h4 class="list-group-item-heading" translate>
+          There are no Categories
+        </h4>
+
+        <p class="list-group-item-text" translate>Click <a href="" ui-sref="^.add">here</a> to add a Category!</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+

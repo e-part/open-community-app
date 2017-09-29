@@ -1,0 +1,30 @@
+@import "../variables";
+@import "../responsive";
+@import "base-overrides";
+
+.nashville {
+  /*  $primary-color: #67b86b;
+    $dark-primary-color: #4b904f;
+    $hover-primary-color: #77cc7b;*/
+  $negative-color: #ffffff;
+  $negative-color-hover: #eeeeee;
+  @include theme($primary-color, $dark-primary-color, $hover-primary-color, $negative-color, $negative-color-hover);
+
+  #top-nav-bar {
+    .nav-bar-content {
+      .logo-cont {
+        .logo-img {
+          background-image: url('../../images/clients/nashville/logo.png');
+        }
+      }
+      .header-links {
+        .separator {
+          &.get-domain-link {
+            display: none;
+          }
+        }
+      }
+
+    }
+  }
+}

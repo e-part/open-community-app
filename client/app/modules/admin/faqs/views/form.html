@@ -1,0 +1,24 @@
+<form name="form" class="epart-admin-form admin-post-form" >
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <a href="" ui-sref="^.list" class="btn btn-xs btn-default"><i class="fa" ng-class="{'fa-arrow-left' : appDirection === 'ltr', 'fa-arrow-right' : appDirection === 'rtl'}"></i></a>
+      <span ng-show="!ctrl.faq.id" translate>Add a new Faq</span>
+      <span ng-show="ctrl.faq.id" translate>Edit Faq</span>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-12">
+
+          <formly-form model="ctrl.faq" fields="ctrl.formFields" options="ctrl.formOptions"></formly-form>
+
+        </div>
+      </div>
+    </div>
+    <div class="panel-footer">
+      <button type="submit" class="btn btn-primary btn-success" ng-click="ctrl.submit()" ng-disabled="form.$invalid">
+       {{'Submit' | translate}}
+      </button>
+      <button type="button" class="btn btn-default" ng-click="ctrl.formOptions.resetModel()">{{ 'Reset' | translate }} </button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,189 @@
+<form name="postForm" class="analysis-screen epart-admin-form admin-post-form">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <a href="" ui-sref="^.list" class="btn btn-xs btn-default"><i class="fa"
+                                                                    ng-class="{'fa-arrow-left' : appDirection === 'ltr', 'fa-arrow-right' : appDirection === 'rtl'}"></i></a>
+    </div>
+    <div class="panel-body">
+      <div class="col-md-12">
+        <div class="section-container comments-analysis-container">
+          <div class="tags-management">
+            <h3>{{'Discussion Analysis' | translate }} - {{ctrl.post.title}}</h3>
+            <div class="categories-container ">
+              <div class="select-category-label">{{'Categories' | translate}}:</div>
+              <div class="category-header-link"
+                   ng-repeat="category in ctrl.post.categoryTags"
+                   dnd-draggable="category"
+                   dnd-moved="category.splice($index, 1)"
+                   dnd-effect-allowed="move" ng-init="(category.selected = true)"
+                   ng-class="{'float-right' : appDirection === 'rtl', 'float-left' : appDirection === 'ltr'}">
+                <div class="tag category-header-tag" ng-class="{'selected' : category.selected}"
+                     ng-click="ctrl.selectCategoryTag(category)">
+                  <div class="tag-text">{{category.content}}</div>
+                  <i ng-if="!category.isOtherCategory" class="material-icons" ng-click="ctrl.removeCategory(category)">clear</i>
+
+                </div>
+                <br/>
+              </div>
+              <button class="add-tag-button" ng-show="!ctrl.createNewTagOpened" ng-click="ctrl.createNewTagOpened = true">
+                <i class="fa fa-plus" aria-hidden="true"></i></button>
+              <input class=" add-tag-input" ng-show="ctrl.createNewTagOpened"
+                     enter-pressed="ctrl.addCategoryTag(ctrl.newCategoryTag)"
+                     ng-class="{'float-right' : appDirection === 'rtl', 'float-left' : appDirection === 'ltr'}"
+                     type="text" ng-model="ctrl.newCategoryTag.content"/>
+            </div>
+            <br/>
+            <div class="tags-container clearfix">
+              <div ng-repeat="category in ctrl.post.categoryTags" ng-show="category.selected"
+                   class="selected-category-container"
+                   dnd-list="category.children"
+                   dnd-drop="ctrl.tagDropped(event, index, item, external, type, category)">
+                <div class="selected-category-text ">{{category.content}}:</div>
+                <div>
+                  <div ng-repeat="tag in category.children"
+                       dnd-draggable="tag"
+                       dnd-effect-allowed="move"
+                       dnd-moved="ctrl.tagMoved(category.children, $index, category)"
+                       class="selected-category-tags">
+                    <div class="tag search-line-tag"
+                         ng-class="{'selected' : tag.selected}" ng-init=" (tag.selected = true)"
+                         ng-click="ctrl.selectTag(tag)">
+                      <div class="tag-text">{{tag.content}}</div>
+                      <i class="material-icons"
+                         ng-click="ctrl.removeTagFromCategory(category, tag); $event.stopPropagation();">clear</i>
+                    </div>
+                  </div>
+                </div>
+                <button class="add-tag-button" ng-show="!category.createNewTagOpened && !category.isOtherCategory"
+                        ng-click="category.createNewTagOpened = true"><i class="fa fa-plus" aria-hidden="true"></i>
+                </button>
+                <input class=" add-tag-input" ng-show="category.createNewTagOpened"
+                       enter-pressed="ctrl.addTagToCategory(category,category.newTag )"
+                       ng-class="{'float-right' : appDirection === 'rtl', 'float-left' : appDirection === 'ltr'}"
+                       type="text" ng-model="category.newTag.content"/>
+              </div>
+
+            </div>
+          </div>
+          <div class="comments-header">
+            <div class="view-comments-label">
+              {{'Comments Found' | translate}} ({{ctrl.displayedComments.length}}):
+            </div>
+            <div class="sentiments-average">
+              <span>{{'Sentiments Average' | translate}}:</span>
+
+              <div class="sentiment-indicator">
+                <input type="range" min="-1" max="1" value="{{ctrl.averageSentimentScore || 0}}" class="range" disabled />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 comments-container" ng-show="ctrl.displayedComments.length">
+              <div ng-repeat="comment in ctrl.displayedComments" class="comment-inner col-xs-12 col-sm-6"
+                   ng-class="{'float-right' : appDirection === 'rtl', 'float-left' : appDirection === 'ltr'}">
+                <div class="card comment-card">
+                  <div class="author-section">
+                    <span style="float: right;">{{comment.creator.firstName + ' ' + comment.creator.lastName}}</span>
+                    <span>{{comment.createdAt | formatLocaleDate:true}}  </span>
+                  </div>
+                  <div class="content-section">
+                    <div>
+                      {{comment.content}}
+                    </div>
+                    <div class="sentiment-indicator">
+                      <input type="range" min="-1" max="1" value="{{comment.sentimentScore || 0}}" class="range" disabled />
+                    </div>
+
+                  </div>
+                  <div class="meta-section">
+                    <div class="tags">
+                      <div ng-repeat="tag in comment.tags" class="tag comment-tag">
+                        <div class="tag-text">{{tag.content}}</div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+        <div class="section-container analysis-summary">
+          <div class="">
+            <h3>{{'Discussion Conclusion' | translate }}</h3>
+            <div class="action-btn">
+              <button class="btn btn-primary btn-success"
+                      ng-click="ctrl.post.conclusions.unshift({ text : '',decisions : [], editMode: true})" >
+                <i class="fa fa-plus-square attached" aria-hidden="true"></i>{{ 'Add a Conclusion' | translate}}
+              </button>
+            </div>
+            <div class="conclusion-container" ng-show="ctrl.post.conclusions.length"
+                 ng-repeat="conclusion in ctrl.post.conclusions track by $index"  ng-class="{'view-mode' : !conclusion.editMode}">
+              <div class="conclusion-actions-box">
+                <i ng-show="conclusion.editMode" class="fa fa-save" aria-hidden="true" ng-click="ctrl.saveConclusion(conclusion);">&nbsp;</i>
+                <i ng-show="!conclusion.editMode" class="fa fa-pencil" aria-hidden="true" ng-click="conclusion.editMode = !conclusion.editMode">&nbsp;</i>
+                <i class="fa fa-trash-o" aria-hidden="true" ng-click="ctrl.removeConclusion(conclusion, $index)"></i>
+              </div>
+              <div ng-show="!conclusion.editMode" class="item-text">
+                {{conclusion.text}}
+              </div>
+              <div class="edit-input-box large" ng-show="conclusion.editMode" >
+                <textarea class="form-input-box" placeholder="{{'Conclusion Text' | translate}}"
+                       ng-class="{'float-right' : appDirection === 'rtl', 'float-left' : appDirection === 'ltr'}"
+                          ng-model="conclusion.text"></textarea>
+              </div>
+              <media-upload-input label="'Conclusion Icon' | translate" ng-show="conclusion.editMode" update-model="conclusion" update-property="'iconUrl'" ></media-upload-input>
+
+              <!-- Action Items -->
+              <div class="actions-section">
+                <div class="actions-section-title">{{'Action Items' | translate }}</div>
+                <div class="action-btn" ng-show="conclusion.editMode">
+                  <button class="btn btn-primary btn-success"
+                          ng-click="conclusion.decisions.push({ text : ''})"><i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <ul ng-show="conclusion.editMode">
+                  <li class="edit-input-box"
+                      ng-repeat="decision in conclusion.decisions track by $index">
+                    <textarea class="form-input-box"
+                           ng-class="{'float-right' : appDirection === 'rtl', 'float-left' : appDirection === 'ltr'}"
+                           ng-model="decision.text"></textarea>
+                    <div class="action-buttons">
+                      <i class="fa fa-trash-o" aria-hidden="true" ng-click="conclusion.decisions.splice($index,1)"></i>
+                    </div>
+                  </li>
+                </ul>
+                <ul ng-show="!conclusion.editMode">
+                  <li class="action-item"
+                      ng-repeat="decision in conclusion.decisions track by $index">
+                    <div >{{decision.text}}</div>
+                  </li>
+                </ul>
+
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <div class="panel-footer">
+      <a ng-if="ctrl.inEditMode" ui-sref="app.public.post({permaLink:ctrl.post.permaLink})" target="_blank">
+        <button type="button" class="btn btn-default">
+          <span ng-show="ctrl.post.status !== 'PUBLISHED'" translate>
+            Preview
+          </span>
+          <span ng-show="ctrl.post.status === 'PUBLISHED'" translate>
+            View Post
+          </span>
+        </button>
+      </a>
+
+    </div>
+  </div>
+</form>

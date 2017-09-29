@@ -1,0 +1,60 @@
+{
+  "local": {
+    "provider": "local",
+    "module": "passport-local",
+    "usernameField": "username",
+    "passwordField": "password",
+    "authPath": "/auth/local",
+    "successRedirect": "/auth/account",
+    "failureRedirect": "/local"
+  },
+  "facebook-login": {
+    "provider": "facebook",
+    "module": "passport-facebook",
+    "clientID": "XXX",
+    "clientSecret": "XXX",
+    "callbackURL": "http://localhost:3000/api/auth/facebook/callback",
+    "authPath": "/api/auth/facebook",
+    "callbackPath": "/api/auth/facebook/callback",
+    "successRedirect": "/api/auth/account",
+    "failureRedirect" : "/api/auth/error",
+    "scope": ["email"],
+    "profileFields": ["id", "email", "gender", "is_verified", "languages", "picture.type(large)", "name", "verified","friends"]
+  },
+  "google-login": {
+    "provider": "google",
+    "module": "passport-google-oauth",
+    "strategy": "OAuth2Strategy",
+    "clientID": "{google-client-id-1}",
+    "clientSecret": "{google-client-secret-1}",
+    "callbackURL": "http://localhost:3000/auth/google/callback",
+    "authPath": "/auth/google",
+    "callbackPath": "/auth/google/callback",
+    "successRedirect": "/auth/account",
+    "scope": ["email", "profile"]
+  },
+  "twitter-login": {
+      "provider": "twitter",
+      "authScheme": "oauth",
+      "module": "passport-twitter",
+      "callbackURL": "http://localhost:3000/auth/twitter/callback",
+      "authPath": "/auth/twitter",
+      "callbackPath": "/auth/twitter/callback",
+      "successRedirect": "/auth/account",
+      "consumerKey": "{twitter-consumer-key}",
+      "consumerSecret": "{twitter-consumer-secret}",
+      "includeEmail": true
+  },
+  "facebook-mobile" : {
+    "provider": "facebook-token",
+    "module": "passport-facebook-token",
+    "strategy": "FacebookTokenStrategy",
+    "clientID": "XXX",
+    "clientSecret": "XXX",
+    "callbackPath": "api/auth/facebook-token/callback",
+    "session" : false,
+    "json":true,
+    "profileFields": ["id", "email", "gender", "is_verified", "languages", "picture.type(large)", "name", "verified","friends"],
+    "scope": ["email"]
+  }
+}

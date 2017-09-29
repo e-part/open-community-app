@@ -1,0 +1,25 @@
+<div class="conclusions-section">
+  <section class="clearfix">
+    <div class="clearfix">
+      <h3 class="section-title">{{'Discussion Conclusions and Decisions' | translate }}</h3>
+    </div>
+    <div class="conclusions-container">
+      <ul class="conclusions-list">
+        <li ng-repeat="conclusion in ctrl.post.conclusions" class="conclusion-item">
+          <img ng-if="conclusion.iconUrl" ng-src="{{conclusion.iconUrl}}" />
+          <div class="conclusion-text">{{conclusion.text}}</div>
+          <ul class="decisions-list">
+            <li ng-repeat="decision in conclusion.decisions track by $index" class="decision-item">
+              <span class="number">{{$index+1  + '.'}}</span>
+              <div class="decision-text">
+                <span>{{decision.text}}</span>
+
+              </div>
+            </li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+</div>

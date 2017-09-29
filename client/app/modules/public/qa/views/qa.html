@@ -1,0 +1,35 @@
+<div class="page-content-container clearfix">
+  <div class="hidden-xs col-sm-2 nav-side-bar">
+    <site-navigation></site-navigation>
+  </div>
+	<div class="col-sm-10 col-xs-12 static-pages" role="main">
+		<section class="main-static-section clearfix faq-page">
+			<ul class="qa-box" ng-init="visibleQuestion=[]">
+				<li ng-repeat="f in ctrl.faqs">
+					<div class="question" ng-click="visibleQuestion[$index]=!visibleQuestion[$index]">
+						<i class="material-icons" ng-show="!visibleQuestion[$index]">chevron_left</i>
+						<i class="material-icons" ng-show="visibleQuestion[$index]">expand_more</i>
+						{{f.question}}
+					</div>
+					<div class="answer" ng-show="visibleQuestion[$index]==true">
+						{{f.answer}}
+					</div>
+				</li>
+			</ul>
+			<aside>
+				<h4>{{ 'ePart - Learning Tool' | translate}}</h4>
+				<p>
+          {{'ePart platform can be used as a learning tool for both teachers and students.' | translate}}
+					<br>
+			</p>
+				<p class="blue">
+          <a class="underline" href="mailto:info@epart.co.il">
+            {{'Write us' | translate}}
+          </a>
+          {{'to find out more about ePart.' | translate}}
+        </p>
+			</aside>
+		</section>
+	</div>
+
+</div>

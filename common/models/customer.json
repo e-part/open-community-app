@@ -1,0 +1,60 @@
+
+{
+  "name": "Customer",
+  "base": "AppModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+
+  "properties": {
+    "domain": {
+      "type": "string",
+      "required": true
+    },
+    "clientID": {
+      "type": "string",
+      "required": true
+    },
+    "clientSecret": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "className": {
+      "type": "string",
+      "required": false
+    },
+    "attributes": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

@@ -1,0 +1,57 @@
+{
+  "name": "Meeting",
+  "plural": "meetings",
+  "base": "AppModel",
+  "injectOptionsFromRemoteContext": true,
+  "mixins": {
+    "Multitenancy": {
+      "addCustomerToRemotingContext" : true,
+      "enforceCustomerField" : true
+    }
+  },
+  "properties": {
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "customer": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": "customerId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

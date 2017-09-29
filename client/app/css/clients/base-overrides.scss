@@ -1,0 +1,255 @@
+@import "../variables";
+@import "../mixins";
+@import "../responsive";
+
+@mixin theme($primary-color,  $dark-primary-color, $hover-primary-color, $negative-color, $negative-color-hover) {
+
+
+  .skin-blue .left-side {
+    background-color: $primary-color;
+  }
+  .skin-blue .sidebar > .sidebar-menu > li.active > a {
+    background: $hover-primary-color;
+  }
+  a {
+    color: $dark-primary-color;
+    &.btn {
+      &:hover {
+        color: $negative-color-hover;
+      }
+    }
+
+    &:focus {
+      color: $primary-color;
+    }
+  }
+
+  .btn {
+    color: #ffffff;
+    &.btn-epart {
+      background: $primary-color;
+    }
+    &.btn-success {
+      background: $primary-color;
+    }
+    &.btn-following {
+      background: $primary-color;
+      border: 1px solid $primary-color;
+    }
+    &.dt-btn {
+      background-color: $primary-color;
+    }
+  }
+
+  .primary-text-color {
+    color: $primary-color;
+  }
+
+  .mk-comment-photo {
+    i {
+      background: $primary-color;
+    }
+  }
+
+  .category-tag {
+    color: $primary-color;
+    box-shadow: 0px 0px 1px 1px $primary-color;
+
+    &:hover {
+      background: $primary-color;
+      color: $negative-color;
+    }
+  }
+
+  .panel-default > .panel-heading {
+    background-color: $primary-color;
+    a {
+      &.btn {
+        &:hover {
+          color: $dark-primary-color;
+        }
+      }
+    }
+  }
+
+  .admin-list {
+    .grid-container .ui-grid-top-panel {
+      background-color: $primary-color;
+    }
+  }
+  /*
+    Components
+  */
+  .admin-dashboard {
+    .left-side {
+      background-color: $primary-color;
+      .sidebar .sidebar-menu > li {
+        &.active {
+          background-color: $dark-primary-color;
+        }
+
+      }
+    }
+  }
+  .categories-selection {
+    .categories-selection-list {
+      li {
+        & > div.selected {
+          box-shadow: 0 0 5px 2px $primary-color;
+        }
+      }
+    }
+  }
+
+  .content-feed {
+    .section-title {
+      color: $primary-color;
+    }
+    .content-feed-title {
+      color: $primary-color;
+    }
+    .feed-list {
+      .feed-post-item {
+        .content-display {
+          .post-type-indication {
+            background-color: $primary-color;
+          }
+        }
+
+        &:hover {
+          .content-display {
+            h3 {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #top-nav-bar {
+    .nav-bar-content {
+      .header-links {
+        background-color: $primary-color;
+        a.register-btn {
+          background-color: $primary-color;
+          &:hover {
+            background-color: $hover-primary-color;
+          }
+        }
+      }
+
+      .right-side-cont {
+        float: right;
+
+      }
+
+      .middle-cont {
+
+      }
+
+      .logo-cont {
+        .logo-img {
+          background-image: url('../../images/transparent.gif');
+        }
+      }
+    }
+  }
+
+  .site-nav {
+    .call-to-action-btn {
+      &:hover {
+        background-color: $primary-color;
+      }
+    }
+    .site-nav-links a.active {
+      color: $primary-color;
+    }
+  }
+
+  .epart-admin-form {
+    &.user-post-form {
+      .form-content {
+        .form-title {
+          color: $primary-color;
+        }
+        .form-panel-body {
+          .form-row {
+            border-left: 3px solid $primary-color;
+            &.no-borders {
+              border-left: 3px solid $primary-color;
+            }
+            .form-cell {
+              .form-section-title {
+                color: $primary-color;
+              }
+              .timepicker {
+                .btn {
+                  color : $primary-color;
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+    .btn-primary {
+      &:hover {
+        background: $hover-primary-color;
+      }
+    }
+
+  }
+
+  .user-profile {
+    header {
+      &.profile-header {
+        background-image: url('../../images/transparent.gif');
+        background-color: $primary-color;
+      }
+    }
+    .profile-page-tabs {
+      li {
+        color: $primary-color;
+        &.active {
+          border-bottom: 2px solid $primary-color;
+        }
+      }
+    }
+    .profile-content {
+      ul.members-list li:hover {
+        background: $hover-primary-color;
+      }
+    }
+  }
+
+  .post-page {
+    .side-widgets-container {
+      .stats-widget {
+        .content .item-container .count {
+          color: $primary-color;
+        }
+      }
+      .more-posts {
+        ul.more-posts-list li .text .title-cont a:hover {
+          color: $primary-color;
+        }
+      }
+    }
+
+  }
+
+  .user-settings {
+    header.profile-header {
+      background: $primary-color;
+    }
+
+  }
+
+  #app-footer {
+    background-color: $primary-color;
+
+  }
+
+}

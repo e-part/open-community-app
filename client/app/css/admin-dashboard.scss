@@ -1,0 +1,19 @@
+@import "variables";
+.admin-dashboard {
+  .left-side {
+    background-color: $primary-color;
+    a {
+      color: #ffffff;
+      &:hover {
+        color:#eeeeee;
+      }
+    }
+    .sidebar .sidebar-menu > li {
+      &.active {
+        background-color: $dark-primary-color;
+      }
+
+    }
+  }
+}
+

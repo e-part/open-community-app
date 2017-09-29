@@ -1,0 +1,78 @@
+{
+  "name": "loopback-angular-admin",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "1.5.5",
+    "bootstrap": "3.3.2",
+    "angular-resource": "1.5.5",
+    "angular-cookies": "1.5.5",
+    "angular-route": "1.5.5",
+    "angular-sanitize": "1.5.5",
+    "angular-touch": "1.5.5",
+    "angular-ui-router": "0.2.18",
+    "font-awesome": "4.3.0",
+    "angular-formly": "6.24.23",
+    "angular-formly-templates-bootstrap": "6.0.0",
+    "api-check": "7.5.0",
+    "angular-file-upload": "v1.1.5",
+    "angular-filter": "0.5.2",
+    "angular-sweetalert": "1.0.3",
+    "angular-gravatar": "0.2.2",
+    "ionicons": "2.0.0",
+    "angular-bootstrap-nav-tree": "*",
+    "angular-ui-codemirror": "bower",
+    "angular-markdown-directive": "0.3.0",
+    "angular-elastic": "2.4.2",
+    "angular-autoFields-bootstrap": "2.1.6",
+    "angular-gettext": "2.0.0",
+    "angular-translate-loader-static-files": "2.6.0",
+    "angular-translate": "2.11.0",
+    "angular-translate-loader-url": "2.6.0",
+    "flag-icon-css": "0.6.4",
+    "angular-loading-bar": "0.6.0",
+    "angular-mocks": "1.5.5",
+    "angular-schema-form": "0.8.3",
+    "angular-schema-form-ui-select": "0.1.1",
+    "angular-aria": "1.5.5",
+    "ng-scrollbars": "^0.0.10",
+    "cloudinary_ng": "^1.0.0",
+    "ng-file-upload": "^12.2.13",
+    "angular-nvd3": "^1.0.9",
+    "angular-dragdrop": "^1.0.13",
+    "angular-drag-and-drop-lists": "^2.0.0",
+    "angular-tag-cloud": "^0.3.1",
+    "angular-dynamic-locale": "^0.1.32",
+    "angular-bootstrap": "^2.5.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.3.0",
+    "angular-scenario": "1.5.5"
+  },
+  "overrides": {
+    "angular-markdown-directive": {
+      "main": [
+        "markdown.js"
+      ]
+    },
+    "codemirror": {
+      "main": [
+        "lib/codemirror.css",
+        "theme/monokai.css",
+        "lib/codemirror.js",
+        "addon/mode/overlay.js",
+        "mode/gfm/gfm.js",
+        "mode/markdown/markdown.js"
+      ]
+    },
+    "showdown": {
+      "main": [
+        "compressed/showdown.js"
+      ]
+    }
+  },
+  "appPath": "client/app/",
+  "resolutions": {
+    "angular-translate": "2.11.0",
+    "angular": "1.5.5"
+  }
+}

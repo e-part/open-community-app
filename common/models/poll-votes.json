@@ -1,0 +1,51 @@
+{
+  "name": "PollVote",
+  "plural": "pollVotes",
+  "base": "AppModel",
+  "injectOptionsFromRemoteContext": true,
+  "mixins": {
+    "Multitenancy": {
+      "addCustomerToRemotingContext" : true,
+      "enforceCustomerField" : true
+    }
+  },
+  "properties": {
+  },
+  "validations": [],
+  "relations": {
+    "poll": {
+      "type": "belongsTo",
+      "model": "Poll"
+    },
+    "user": {
+      "type": "belongsTo",
+      "model": "user"
+    },
+    "customer": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": "customerId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

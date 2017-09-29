@@ -1,0 +1,1644 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+
+#: client/app/modules/admin/users/views/login.html:43
+msgid "{{'Sign in' | translate }}"
+msgstr ""
+
+#: client/app/modules/admin/users/views/register.html:19
+msgid "{{'Signup' | translate }}"
+msgstr ""
+
+#: client/app/modules/core/views/elements/media-upload-input.html:2
+msgid "{{label}}"
+msgstr ""
+
+#: client/app/modules/public/terms/controllers/terms.ctrl.js:19
+msgid "<h2>Terms of Use (&quot;Terms&quot;) </h2><p><span>Please read these Terms of Use (&quot;Terms&quot;, &quot;Terms of Use&quot;) carefully before using the https://beta.epart.co.il/website (the &quot;Service&quot;) operated by AVSHA, Inc. (&quot;us&quot;, &quot;we&quot;, or &quot;our&quot;). </span></p><p ><span>Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.</span></p><p ><span>By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service. </span></p><p><span ></span></p><h2>Termination</span><span>&nbsp;</h2><p ><span>We may terminate or suspend access to our Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</span></p><p ><span>All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability.</span></p><h2 >Links To Other Web Sites</h2><p ><span>Our Service may contain links to thirdparty web sites or services that are not owned or controlled by ePart.</span></p><p ><span>ePart has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that My Company, Inc. (change this) shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services.</span></p><p ><span>&nbsp;We strongly advise you to read the terms and conditions and privacy policies of any thirdparty web sites or services that you visit. </span></p><h2 >Governing Law</h2><p ><span>These Terms shall be governed and construed in accordance with the laws of Israel, without regard to its conflict of law provisions.</span></p><p ><span>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have between us regarding the Service.</span></p><h2>Changes </h2><p ><span>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30 &nbsp;days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</span></p><p ><span>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service. </span></p><h2 >Contact Us</span><span>&nbsp;</h2><p ><span>If you have any questions about these Terms, please contact us.</span></p>"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/form.html:82
+msgid "<i class=\"fa fa-plus\" aria-hidden=\"true\"></i>"
+msgstr ""
+
+#: client/app/modules/public/about/controllers/about.ctrl.js:52
+msgid "<p class=\"highlighted\">ePart is a civic startup which gives you, the citizen, the ability to influence the government on subjects you care about with only one click, from anywhere, anytime. </p><p> ePart makes civic engagement easy and simple – we use technology in order to deepen political participation by enabling citizens to connect continually with their elected representatives - not just once every four years, on election day.</p>"
+msgstr ""
+
+#: client/app/modules/core/services/messages.service.js:27
+#: client/app/modules/core/services/messages.service.js:28
+msgid "A general error occurred, please try again"
+msgstr ""
+
+#: client/app/modules/common/site-navigation/controllers/site-navigation.ctrl.js:50
+msgid "About"
+msgstr ""
+
+#: client/app/modules/public/about/controllers/about.ctrl.js:10
+#: client/app/modules/public/about/controllers/about.ctrl.js:12
+msgid "About ePart"
+msgstr ""
+
+#: client/app/modules/common/widgets/about/views/about.html:5
+msgid "About the team"
+msgstr ""
+
+#: client/app/modules/common/widgets/about/views/about.html:4
+msgid "About us text"
+msgstr ""
+
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:74
+msgid "Accessibility Menu"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/analyze.html:141
+msgid "Action Items"
+msgstr ""
+
+#: client/app/modules/public/dashboard/views/dashboard.html:126
+msgid "Add"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/analyze.html:119
+msgid "Add a Conclusion"
+msgstr ""
+
+#: client/app/modules/admin/categories/views/form.html:5
+msgid "Add a new category"
+msgstr ""
+
+#: client/app/modules/admin/committees/views/form.html:5
+msgid "Add a new committee"
+msgstr ""
+
+#: client/app/modules/admin/faqs/views/form.html:5
+msgid "Add a new Faq"
+msgstr ""
+
+#: client/app/modules/admin/mks/views/form.html:5
+msgid "Add a new mk"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/form.html:5
+msgid "Add a new post"
+msgstr ""
+
+#: client/app/modules/admin/settings/views/form.html:5
+msgid "Add a new setting"
+msgstr ""
+
+#: client/app/modules/admin/users/views/form.html:5
+msgid "Add a new user"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/form.html:62
+msgid "Add a Poll"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/list.html:8
+msgid "Add New Discussion"
+msgstr ""
+
+#: client/app/modules/common/export-to-calendar/controllers/export-to-calendar.ctrl.js:12
+msgid "Add to Calendar"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/form.html:32
+msgid "Additional Knesset Members"
+msgstr ""
+
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:15
+msgid "Admin Dashboard"
+msgstr ""
+
+#: client/app/modules/admin/users/config/users.routes.js:152
+#: client/app/modules/admin/users/config/users.routes.js:205
+#: client/app/modules/admin/users/config/users.routes.js:57
+#: client/app/modules/admin/users/config/users.routes.js:66
+msgid "Administrator"
+msgstr ""
+
+#: client/app/modules/common/widgets/bot/views/bot.html:3
+msgid "Advanced Search"
+msgstr ""
+
+#: client/app/modules/core/controllers/admin-base.ctrl.js:17
+msgid "All"
+msgstr ""
+
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:34
+msgid "All (ePart + Knesset)"
+msgstr ""
+
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:27
+msgid "All Statuses"
+msgstr ""
+
+#: client/app/modules/common/site-navigation/views/site-navigation.html:21
+#: client/app/modules/common/site-navigation/views/site-navigation.html:25
+#: client/app/modules/common/site-navigation/views/site-navigation.html:32
+msgid "All Subjects"
+msgstr ""
+
+#: client/app/modules/admin/users/views/register.html:28
+msgid "Already a Member?"
+msgstr ""
+
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:14
+msgid "Analysis Page"
+msgstr ""
+
+#: client/app/modules/admin/faqs/services/faqs.service.js:67
+#: client/app/modules/admin/posts/views/form.html:75
+msgid "Answer"
+msgstr ""
+
+#: client/app/modules/admin/categories/services/categories.service.js:47
+#: client/app/modules/admin/committees/services/committees.service.js:38
+#: client/app/modules/admin/faqs/services/faqs.service.js:36
+#: client/app/modules/admin/files/services/file.service.js:15
+#: client/app/modules/admin/posts/controllers/posts.analize.ctrl.js:131
+#: client/app/modules/admin/posts/controllers/posts.analize.ctrl.js:161
+#: client/app/modules/admin/posts/controllers/posts.analize.ctrl.js:268
+#: client/app/modules/admin/posts/services/posts.service.js:103
+#: client/app/modules/admin/posts/services/posts.service.js:282
+#: client/app/modules/admin/settings/services/setting.service.js:38
+#: client/app/modules/admin/users/services/user.service.js:34
+#: client/app/modules/core/helpers/FormHelper.js:23
+#: client/app/modules/core/services/meta.service.js:91
+msgid "Are you sure?"
+msgstr ""
+
+#: client/app/modules/public/reset-password/views/reset-password.html:68
+msgid "Back to Home Screen"
+msgstr ""
+
+#: client/app/modules/core/services/messages.service.js:25
+msgid "Bad input, please verify that the data is correct"
+msgstr ""
+
+#: client/app/modules/public/dashboard/controllers/dashboard.ctrl.js:68
+msgid "Beer-Sheva"
+msgstr ""
+
+#: client/app/modules/admin/files/views/upload.html:9
+msgid "Browse"
+msgstr ""
+
+#: client/app/modules/admin/browser/views/main.html:3
+msgid "Browse your data here!"
+msgstr ""
+
+#: client/app/modules/admin/browser/views/main.html:2
+msgid "Browser"
+msgstr ""
+
+#: client/app/modules/admin/users/views/register.html:24
+msgid "By clicking signup you are agreeing to the"
+msgstr ""
+
+#: client/app/modules/admin/files/views/upload.html:69
+#: client/app/modules/core/services/core.service.js:49
+#: client/app/modules/public/post/views/post.html:189
+#: client/app/modules/public/post/views/post.html:278
+msgid "Cancel"
+msgstr ""
+
+#: client/app/modules/admin/categories/config/categories.config.js:6
+#: client/app/modules/admin/categories/views/list.html:4
+#: client/app/modules/admin/categories/views/main.html:2
+#: client/app/modules/admin/posts/views/analyze.html:13
+#: client/app/modules/admin/posts/views/form.html:16
+msgid "Categories"
+msgstr ""
+
+#: client/app/modules/public/user-settings/views/user-settings.html:13
+msgid "Change Image"
+msgstr ""
+
+#: client/app/modules/admin/users/views/profile.html:28
+msgid "Change it here!"
+msgstr ""
+
+#: client/app/modules/public/post/views/post.html:177
+#: client/app/modules/public/post/views/post.html:96
+msgid "Choose Related Tags"
+msgstr ""
+
+#: client/app/modules/common/widgets/login-box/views/login-box.html:4
+msgid "Citizens are taking a step forward, Sign up and take a sit in the discussion table next to your decision makers."
+msgstr ""
+
+#: client/app/modules/admin/categories/views/list.html:29
+msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a Category!"
+msgstr ""
+
+#: client/app/modules/admin/committees/views/list.html:33
+msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a Committee!"
+msgstr ""
+
+#: client/app/modules/admin/faqs/views/list.html:31
+msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a Faq!"
+msgstr ""
+
+#: client/app/modules/admin/files/views/upload.html:60
+msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a file!"
+msgstr ""
+
+#: client/app/modules/admin/mks/views/list.html:38
+msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a MK!"
+msgstr ""
+
+#: client/app/modules/admin/settings/views/list.html:31
+msgid "Click <a href=\"\" ui-sref=\"^.add\">here</a> to add a setting!"
+msgstr ""
+
+#: client/app/modules/admin/files/views/list.html:30
+msgid "Click <a href=\"#\" ng-click=\"ctrl.addMedia()\">here</a> to add a file!"
+msgstr ""
+
+#: client/app/modules/public/post/controllers/post.ctrl.js:44
+msgid "Collect ideas from citizens"
+msgstr ""
+
+#: client/app/modules/common/site-navigation/views/site-navigation.html:8
+msgid "Coming Soon"
+msgstr ""
+
+#: client/app/modules/public/post/views/post.html:225
+#: client/app/modules/public/post/views/post.html:310
+msgid "Comment"
+msgstr ""
+
+#: client/app/modules/public/post/controllers/post.ctrl.js:485
+msgid "Comment by"
+msgstr ""
+
+#: client/app/modules/core/controllers/admin-base.ctrl.js:143
+#: client/app/modules/core/controllers/admin-base.ctrl.js:43
+#: client/app/modules/public/dashboard/controllers/dashboard.ctrl.js:186
+msgid "Comments"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/analyze.html:70
+msgid "Comments Found"
+msgstr ""
+
+#: client/app/modules/core/controllers/admin-base.ctrl.js:47
+msgid "Comments Upvotes"
+msgstr ""
+
+#: client/app/modules/admin/posts/services/posts.service.js:195
+msgid "Committee Meeting Date"
+msgstr ""
+
+#: client/app/modules/admin/posts/services/posts.service.js:202
+msgid "Committee Meeting Hour"
+msgstr ""
+
+#: client/app/modules/admin/committees/config/committees.config.js:6
+#: client/app/modules/admin/committees/views/list.html:4
+#: client/app/modules/admin/posts/views/form.html:24
+#: client/app/modules/admin/users/views/form.html:21
+msgid "Committees"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/analyze.html:137
+msgid "Conclusion Icon"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/analyze.html:133
+msgid "Conclusion Text"
+msgstr ""
+
+#: client/app/modules/public/post/controllers/post.ctrl.js:59
+msgid "Conclusions and Decisions"
+msgstr ""
+
+#: client/app/modules/public/dashboard/views/dashboard.html:112
+msgid "Conclusions For Implementation"
+msgstr ""
+
+#: client/app/modules/admin/files/views/upload.html:68
+msgid "Confirm"
+msgstr ""
+
+#: client/app/modules/admin/users/controllers/register.ctrl.js:87
+#: client/app/modules/public/reset-password/views/reset-password.html:18
+msgid "Confirm Password"
+msgstr ""
+
+#: client/app/modules/admin/users/views/login.html:23
+msgid "connect to epart"
+msgstr ""
+
+#: client/app/modules/public/categories-selection/views/categories-selection.html:16
+msgid "Continue"
+msgstr ""
+
+#: client/app/modules/admin/users/views/form.html:11
+msgid "Could not add user!"
+msgstr ""
+
+#: client/app/modules/public/reset-password/controllers/reset-password.ctrl.js:71
+msgid "Could not reset the password, please repeat the process."
+msgstr ""
+
+#: client/app/modules/core/config/core.config.js:26
+msgid "Dashboard"
+msgstr ""
+
+#: client/app/modules/core/services/core.service.js:69
+msgid "Data was saved successfully."
+msgstr ""
+
+#: client/app/modules/public/post/views/post.html:133
+msgid "Date"
+msgstr ""
+
+#: client/app/modules/common/count-down/controllers/count-down.ctrl.js:39
+msgid "Days"
+msgstr ""
+
+#: client/app/modules/admin/users/config/users.routes.js:153
+#: client/app/modules/admin/users/config/users.routes.js:206
+#: client/app/modules/admin/users/config/users.routes.js:58
+#: client/app/modules/admin/users/config/users.routes.js:67
+msgid "Decision Maker"
+msgstr ""
+
+#: client/app/modules/public/category/views/category.html:19
+msgid "Decision Makers"
+msgstr ""
+
+#: client/app/modules/public/post/views/post.html:210
+#: client/app/modules/public/post/views/post.html:295
+msgid "Delete"
+msgstr ""
+
+#: client/app/modules/admin/categories/services/categories.service.js:48
+#: client/app/modules/admin/committees/services/committees.service.js:39
+#: client/app/modules/admin/faqs/services/faqs.service.js:37
+#: client/app/modules/admin/files/services/file.service.js:16
+#: client/app/modules/admin/posts/controllers/posts.analize.ctrl.js:132
+#: client/app/modules/admin/posts/controllers/posts.analize.ctrl.js:162
+#: client/app/modules/admin/posts/controllers/posts.analize.ctrl.js:269
+#: client/app/modules/admin/posts/services/posts.service.js:104
+#: client/app/modules/admin/posts/services/posts.service.js:283
+#: client/app/modules/admin/settings/services/setting.service.js:39
+#: client/app/modules/admin/users/services/user.service.js:35
+#: client/app/modules/core/helpers/FormHelper.js:24
+#: client/app/modules/core/services/meta.service.js:92
+msgid "Deleting this cannot be undone"
+msgstr ""
+
+#: client/app/modules/public/user-settings/views/user-settings.html:51
+msgid "Desktop Notifications"
+msgstr ""
+
+#: client/app/modules/public/dashboard/views/dashboard.html:4
+#: client/app/modules/public/post/views/post.html:128
+msgid "Discussion"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/analyze.html:11
+msgid "Discussion Analysis"
+msgstr ""
+
+#: client/app/modules/public/post/views/post.html:76
+msgid "Discussion Background"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/analyze.html:115
+msgid "Discussion Conclusion"
+msgstr ""
+
+#: client/app/modules/public/post/views/partials/conclusions.html:4
+msgid "Discussion Conclusions and Decisions"
+msgstr ""
+
+#: client/app/modules/public/dashboard/controllers/dashboard.ctrl.js:11
+msgid "Discussion Management Dashboard"
+msgstr ""
+
+#: client/app/modules/public/post/views/post.html:342
+msgid "Discussion Timeline"
+msgstr ""
+
+#: client/app/modules/public/profile/views/profile.html:27
+msgid "Discussions Participation"
+msgstr ""
+
+#: client/app/modules/public/post/controllers/post.ctrl.js:232
+msgid "document"
+msgstr ""
+
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:17
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:28
+#: client/app/modules/admin/posts/services/posts.service.js:156
+msgid "Draft"
+msgstr ""
+
+#: client/app/modules/public/post/views/post.html:208
+#: client/app/modules/public/post/views/post.html:293
+msgid "Edit"
+msgstr ""
+
+#: client/app/modules/admin/categories/views/form.html:6
+msgid "Edit category"
+msgstr ""
+
+#: client/app/modules/admin/committees/views/form.html:6
+msgid "Edit committee"
+msgstr ""
+
+#: client/app/modules/admin/faqs/views/form.html:6
+msgid "Edit Faq"
+msgstr ""
+
+#: client/app/modules/admin/mks/views/form.html:6
+msgid "Edit mk"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/form.html:6
+msgid "Edit post"
+msgstr ""
+
+#: client/app/modules/admin/settings/views/form.html:6
+msgid "Edit setting"
+msgstr ""
+
+#: client/app/modules/admin/users/views/form.html:6
+msgid "Edit user"
+msgstr ""
+
+#: client/app/modules/public/main/controllers/main.ctrl.js:103
+msgid "education"
+msgstr ""
+
+#: client/app/modules/admin/mks/services/mks.service.js:45
+msgid "email"
+msgstr ""
+
+#: client/app/modules/admin/users/config/users.routes.js:108
+#: client/app/modules/admin/users/controllers/login.ctrl.js:35
+#: client/app/modules/admin/users/controllers/login.ctrl.js:40
+#: client/app/modules/admin/users/controllers/register.ctrl.js:59
+#: client/app/modules/admin/users/controllers/register.ctrl.js:68
+#: client/app/modules/admin/users/services/user.service.js:124
+#: client/app/modules/admin/users/views/login.html:35
+#: client/app/modules/admin/users/views/register.html:15
+#: client/app/modules/common/widgets/login-box/views/login-box.html:10
+#: client/app/modules/public/reset-password/views/reset-password.html:37
+#: client/app/modules/public/user-settings/services/user-settings.service.js:79
+msgid "Email"
+msgstr ""
+
+#: client/app/modules/core/services/messages.service.js:26
+msgid "Email address is incorrect"
+msgstr ""
+
+#: client/app/modules/admin/users/controllers/login.ctrl.js:45
+#: client/app/modules/admin/users/controllers/register.ctrl.js:72
+msgid "Email address needs to be valid"
+msgstr ""
+
+#: client/app/modules/public/user-settings/views/user-settings.html:46
+msgid "Email Notifications"
+msgstr ""
+
+#: client/app/modules/public/subscriptions/controllers/subscriptions.ctrl.js:15
+msgid "Email Notifications Settings"
+msgstr ""
+
+#: client/app/modules/public/reset-password/views/reset-password.html:34
+msgid "Enter official mk email:"
+msgstr ""
+
+#: client/app/modules/core/services/core.service.js:14
+#: client/app/modules/public/main/controllers/main.ctrl.js:10
+msgid "ePart"
+msgstr ""
+
+#: client/app/modules/public/qa/controllers/qa.ctrl.js:9
+msgid "ePart - FAQ"
+msgstr ""
+
+#: client/app/modules/public/qa/views/qa.html:20
+msgid "ePart - Learning Tool"
+msgstr ""
+
+#: client/app/modules/public/privacy/controllers/privacy.ctrl.js:10
+#: client/app/modules/public/terms/controllers/terms.ctrl.js:10
+msgid "ePart - Terms and Privacy Policy"
+msgstr ""
+
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:21
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:35
+#: client/app/modules/admin/posts/services/posts.service.js:173
+msgid "ePart Edited Posts"
+msgstr ""
+
+#: client/app/modules/public/qa/views/qa.html:22
+msgid "ePart platform can be used as a learning tool for both teachers and students."
+msgstr ""
+
+#: client/app/modules/admin/settings/services/setting.service.js:50
+msgid "Error deleting setting"
+msgstr ""
+
+#: client/app/modules/core/services/core.service.js:72
+msgid "Error saving data."
+msgstr ""
+
+#: client/app/modules/admin/settings/services/setting.service.js:28
+msgid "Error saving setting"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/form.html:57
+msgid "Example: gocwRvLhDf8"
+msgstr ""
+
+#: client/app/modules/public/user-settings/services/user-settings.service.js:90
+msgid "Example: Primary school teacher"
+msgstr ""
+
+#: client/app/modules/public/dashboard/views/dashboard.html:167
+msgid "exit"
+msgstr ""
+
+#: client/app/modules/public/dashboard/views/dashboard.html:34
+msgid "External Discussion"
+msgstr ""
+
+#: client/app/modules/common/widgets/recommend-to-friend/views/recommend-to-friend.html:6
+msgid "Facebook"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/form.html:52
+msgid "Facebook Image"
+msgstr ""
+
+#: client/app/modules/common/site-navigation/controllers/site-navigation.ctrl.js:54
+msgid "FAQ"
+msgstr ""
+
+#: client/app/modules/admin/faqs/config/faqs.config.js:6
+#: client/app/modules/admin/faqs/views/list.html:4
+msgid "Faqs"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/form.html:51
+msgid "Featured Image"
+msgstr ""
+
+#: client/app/modules/core/services/messages.service.js:30
+msgid "Field Already Exists"
+msgstr ""
+
+#: client/app/modules/admin/files/views/upload.html:17
+msgid "Filename"
+msgstr ""
+
+#: client/app/modules/admin/files/config/file.config.js:6
+#: client/app/modules/admin/files/views/list.html:4
+msgid "Files"
+msgstr ""
+
+#: client/app/modules/common/widgets/todo-list/controllers/todo-list.ctrl.js:60
+msgid "Fill Your Hometown"
+msgstr ""
+
+#: client/app/modules/admin/users/services/user.service.js:132
+msgid "First name"
+msgstr ""
+
+#: client/app/modules/admin/users/config/users.routes.js:90
+#: client/app/modules/admin/users/controllers/register.ctrl.js:30
+#: client/app/modules/admin/users/controllers/register.ctrl.js:35
+#: client/app/modules/public/user-settings/services/user-settings.service.js:62
+msgid "First Name"
+msgstr ""
+
+#: client/app/modules/admin/mks/services/mks.service.js:29
+msgid "firstName"
+msgstr ""
+
+#: client/app/modules/public/profile/views/profile.html:18
+msgid "follow"
+msgstr ""
+
+#: client/app/modules/common/widgets/todo-list/controllers/todo-list.ctrl.js:55
+msgid "Follow 3 Subjects"
+msgstr ""
+
+#: client/app/modules/public/profile/views/profile.html:30
+msgid "Followers"
+msgstr ""
+
+#: client/app/modules/public/profile/views/profile.html:19
+msgid "following"
+msgstr ""
+
+#: client/app/modules/public/profile/views/profile.html:33
+msgid "Following"
+msgstr ""
+
+#: client/app/modules/admin/users/views/login.html:51
+msgid "Forgot Password?"
+msgstr ""
+
+#: client/app/modules/core/services/messages.service.js:29
+msgid "Form data is incorrect"
+msgstr ""
+
+#: client/app/modules/common/widgets/comments-list/views/comments-list.html:21
+msgid "From"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/list.html:33
+msgid "From Date"
+msgstr ""
+
+#: client/app/modules/admin/users/views/login.html:14
+msgid "have an account"
+msgstr ""
+
+#: client/app/modules/common/site-navigation/controllers/site-navigation.ctrl.js:38
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:14
+msgid "Home"
+msgstr ""
+
+#: client/app/modules/public/user-settings/views/user-settings.html:33
+msgid "Hometown"
+msgstr ""
+
+#: client/app/modules/common/count-down/controllers/count-down.ctrl.js:40
+msgid "Hours"
+msgstr ""
+
+#: client/app/modules/public/bot/views/bot.html:9
+msgid "I found"
+msgstr ""
+
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:55
+#: client/app/modules/admin/users/config/users.routes.js:82
+msgid "ID"
+msgstr ""
+
+#: client/app/modules/admin/users/views/form.html:30
+msgid "Image"
+msgstr ""
+
+#: client/app/modules/public/post/views/post.html:39
+msgid "image caption"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/form.html:53
+msgid "Image Caption"
+msgstr ""
+
+#: client/app/modules/public/post/controllers/post.ctrl.js:51
+msgid "In this step, We will analyze the data and ideas gathered during the public brainstorming"
+msgstr ""
+
+#: client/app/modules/public/dashboard/views/dashboard.html:121
+msgid "Insert new Conclusion"
+msgstr ""
+
+#: client/app/modules/public/dashboard/views/dashboard.html:77
+msgid "Insert new message"
+msgstr ""
+
+#: client/app/modules/public/categories-selection/views/categories-selection.html:30
+#: client/app/modules/public/category/views/category.html:11
+msgid "Interested!"
+msgstr ""
+
+#: client/app/modules/public/categories-selection/views/categories-selection.html:29
+#: client/app/modules/public/category/views/category.html:10
+msgid "Interested?"
+msgstr ""
+
+#: client/app/modules/public/dashboard/views/dashboard.html:37
+msgid "Internal Discussion"
+msgstr ""
+
+#: client/app/modules/core/services/messages.service.js:31
+msgid "Invalid field format"
+msgstr ""
+
+#: client/app/modules/core/services/messages.service.js:32
+msgid "Invalid field value"
+msgstr ""
+
+#: client/app/modules/admin/users/config/users.routes.js:234
+msgid "Invitation Sent"
+msgstr ""
+
+#: client/app/modules/admin/users/config/users.routes.js:236
+msgid "Invitation wasn't sent."
+msgstr ""
+
+#: client/app/modules/common/top-nav-bar/controllers/top-nav-bar.ctrl.js:44
+msgid "is added to your followers"
+msgstr ""
+
+#: client/app/modules/public/dashboard/controllers/dashboard.ctrl.js:64
+msgid "Jerusalem"
+msgstr ""
+
+#: client/app/modules/admin/users/views/login.html:5
+#: client/app/modules/admin/users/views/register.html:3
+msgid "join epart"
+msgstr ""
+
+#: client/app/modules/public/main/views/main.html:18
+msgid "Join Now"
+msgstr ""
+
+#: client/app/modules/admin/users/views/register.html:15
+#: client/app/modules/admin/users/views/register.html:7
+msgid "Join with"
+msgstr ""
+
+#: client/app/modules/admin/users/views/login.html:13
+msgid "join with email"
+msgstr ""
+
+#: client/app/modules/admin/users/views/register.html:8
+msgid "Join with Facebook"
+msgstr ""
+
+#: client/app/modules/admin/settings/services/setting.service.js:78
+msgid "Key"
+msgstr ""
+
+#: client/app/modules/common/export-to-calendar/controllers/export-to-calendar.ctrl.js:26
+msgid "Knesset meeting:"
+msgstr ""
+
+#: client/app/modules/admin/posts/services/posts.service.js:145
+msgid "Knesset official title"
+msgstr ""
+
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:22
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:36
+#: client/app/modules/admin/posts/services/posts.service.js:177
+msgid "Knesset Posts"
+msgstr ""
+
+#: client/app/modules/core/controllers/admin-base.ctrl.js:28
+msgid "Last Month"
+msgstr ""
+
+#: client/app/modules/admin/users/services/user.service.js:140
+msgid "Last name"
+msgstr ""
+
+#: client/app/modules/admin/users/config/users.routes.js:99
+#: client/app/modules/admin/users/controllers/register.ctrl.js:45
+#: client/app/modules/admin/users/controllers/register.ctrl.js:50
+#: client/app/modules/public/user-settings/services/user-settings.service.js:71
+msgid "Last Name"
+msgstr ""
+
+#: client/app/modules/core/controllers/admin-base.ctrl.js:22
+msgid "Last Week"
+msgstr ""
+
+#: client/app/modules/admin/mks/services/mks.service.js:37
+msgid "lastName"
+msgstr ""
+
+#: client/app/modules/public/main/views/main.html:35
+msgid "Latest Comments"
+msgstr ""
+
+#: client/app/modules/public/bot/views/bot.html:17
+msgid "Let`s Go!"
+msgstr ""
+
+#: client/app/modules/public/reset-password/views/reset-password.html:65
+msgid "Logging in.."
+msgstr ""
+
+#: client/app/modules/admin/users/views/register.html:28
+msgid "Login"
+msgstr ""
+
+#: client/app/modules/core/services/messages.service.js:24
+msgid "Login failed, Please try again"
+msgstr ""
+
+#: client/app/modules/admin/users/views/login.html:8
+msgid "login with"
+msgstr ""
+
+#: client/app/modules/admin/users/views/login.html:27
+#: client/app/modules/admin/users/views/login.html:35
+msgid "Login with"
+msgstr ""
+
+#: client/app/modules/admin/users/views/login.html:9
+msgid "login with facebook"
+msgstr ""
+
+#: client/app/modules/admin/users/views/login.html:28
+msgid "Login with Facebook"
+msgstr ""
+
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:21
+msgid "Logout"
+msgstr ""
+
+#: client/app/modules/common/widgets/bot/views/bot.html:2
+msgid "Looking for Something Else?"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/form.html:50
+msgid "Main Image"
+msgstr ""
+
+#: client/app/modules/common/widgets/recommend-to-friend/controllers/recommend-to-friend.ctrl.js:43
+#: client/app/modules/core/services/core.service.js:15
+msgid "Make Your Impact"
+msgstr ""
+
+#: client/app/modules/public/main/views/main.html:17
+msgid "Make your impact on"
+msgstr ""
+
+#: client/app/modules/common/export-to-calendar/controllers/export-to-calendar.ctrl.js:11
+#: client/app/modules/public/dashboard/controllers/dashboard.ctrl.js:25
+msgid "Meeting Cancelled"
+msgstr ""
+
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:97
+msgid "Meeting Date"
+msgstr ""
+
+#: client/app/modules/public/dashboard/controllers/dashboard.ctrl.js:82
+msgid "Men"
+msgstr ""
+
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:90
+#: client/app/modules/admin/posts/services/posts.service.js:170
+#: client/app/modules/admin/posts/views/list.html:27
+msgid "Migration Status"
+msgstr ""
+
+#: client/app/modules/common/count-down/controllers/count-down.ctrl.js:41
+msgid "Minutes"
+msgstr ""
+
+#: client/app/modules/admin/mks/views/main.html:2
+msgid "MKs"
+msgstr ""
+
+#: client/app/modules/public/post/views/more-posts.html:1
+msgid "more posts that interests you"
+msgstr ""
+
+#: client/app/modules/common/site-navigation/views/site-navigation.html:15
+msgid "My Subjects"
+msgstr ""
+
+#: client/app/modules/admin/categories/services/categories.service.js:70
+#: client/app/modules/admin/committees/services/committees.service.js:61
+msgid "Name"
+msgstr ""
+
+#: client/app/modules/public/post/controllers/post.ctrl.js:28
+msgid "New"
+msgstr ""
+
+#: client/app/modules/public/user-settings/controllers/user-settings.ctrl.js:17
+msgid "New discussion added to one of your subjects."
+msgstr ""
+
+#: client/app/modules/common/top-nav-bar/controllers/top-nav-bar.ctrl.js:35
+msgid "New post published in"
+msgstr ""
+
+#: client/app/modules/core/controllers/admin-base.ctrl.js:141
+#: client/app/modules/core/controllers/admin-base.ctrl.js:35
+msgid "New Users"
+msgstr ""
+
+#: client/app/modules/admin/users/controllers/login.ctrl.js:46
+msgid "Nice email address!"
+msgstr ""
+
+#: client/app/modules/public/about/controllers/about.ctrl.js:21
+msgid "Nir Zohar – Co founder & Chairman"
+msgstr ""
+
+#: client/app/modules/public/about/controllers/about.ctrl.js:22
+msgid "Nir, the first investor in the company is also chairman of the board, and contributes his vast experience in high tech as the president of WIX.com Ltd.<br/>Nir has been with Wix since 2007 and he’s been the driving force behind the successful scaling of the company's operations from a small start-up into an international company serving tens of millions of users. Nir spearheads all efforts to develop and implement Wix' strategic plans geared towards accommodating the company's growth objectives and business goals.<br/> On his day off you can catch him reading, spending time with his kids or avidly following the NBA scores."
+msgstr ""
+
+#: client/app/modules/admin/users/views/login.html:48
+msgid "Not Registered?"
+msgstr ""
+
+#: client/app/modules/public/user-settings/services/user-settings.service.js:89
+msgid "Occupation"
+msgstr ""
+
+#: client/app/modules/core/services/core.service.js:48
+msgid "OK"
+msgstr ""
+
+#: client/app/modules/public/user-settings/controllers/user-settings.ctrl.js:16
+msgid "One of your comments was replied."
+msgstr ""
+
+#: client/app/modules/public/dashboard/views/dashboard.html:17
+msgid "Open Discussion Page"
+msgstr ""
+
+#: client/app/modules/admin/users/views/login.html:12
+#: client/app/modules/admin/users/views/login.html:31
+#: client/app/modules/admin/users/views/register.html:11
+msgid "or"
+msgstr ""
+
+#: client/app/modules/public/dashboard/controllers/dashboard.ctrl.js:72
+msgid "Other"
+msgstr ""
+
+#: client/app/modules/public/bot/views/bot.html:8
+msgid "Our Bot is Here to Help"
+msgstr ""
+
+#: client/app/modules/public/categories-selection/views/categories-selection.html:11
+msgid "out of"
+msgstr ""
+
+#: client/app/modules/public/dashboard/controllers/dashboard.ctrl.js:192
+#: client/app/modules/public/post/views/post.html:51
+msgid "Participants"
+msgstr ""
+
+#: client/app/modules/common/widgets/todo-list/controllers/todo-list.ctrl.js:66
+msgid "Participate in a Discussion"
+msgstr ""
+
+#: client/app/modules/admin/users/controllers/login.ctrl.js:52
+#: client/app/modules/admin/users/controllers/login.ctrl.js:56
+#: client/app/modules/admin/users/controllers/register.ctrl.js:77
+#: client/app/modules/admin/users/controllers/register.ctrl.js:82
+#: client/app/modules/public/reset-password/views/reset-password.html:15
+msgid "Password"
+msgstr ""
+
+#: client/app/modules/admin/posts/services/posts.service.js:187
+msgid "Permalink"
+msgstr ""
+
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:104
+msgid "Please approve the registration, E-mail has been sent to your inbox."
+msgstr ""
+
+#: client/app/modules/public/reset-password/views/reset-password.html:11
+msgid "Please Choose a Password:"
+msgstr ""
+
+#: client/app/modules/public/reset-password/controllers/reset-password.ctrl.js:83
+msgid "Please make sure you have entered a valid mail."
+msgstr ""
+
+#: client/app/modules/admin/users/views/login.html:21
+#: client/app/modules/admin/users/views/login.html:4
+msgid "Please Sign-in to Continue"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/form.html:60
+msgid "Poll Section"
+msgstr ""
+
+#: client/app/modules/core/controllers/admin-base.ctrl.js:142
+#: client/app/modules/core/controllers/admin-base.ctrl.js:39
+msgid "Polls Votes"
+msgstr ""
+
+#: client/app/modules/public/category/controllers/category.ctrl.js:67
+#: client/app/modules/public/main/controllers/main.ctrl.js:25
+msgid "Popular"
+msgstr ""
+
+#: client/app/modules/public/post/views/post.html:131
+msgid "Popularity"
+msgstr ""
+
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:105
+msgid "Post Analysis"
+msgstr ""
+
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:73
+msgid "Post Offical Title"
+msgstr ""
+
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:60
+#: client/app/modules/admin/posts/views/list.html:14
+msgid "Post Title"
+msgstr ""
+
+#: client/app/modules/admin/posts/config/posts.config.js:6
+#: client/app/modules/admin/posts/views/list.html:4
+msgid "Posts"
+msgstr ""
+
+#: client/app/modules/public/bot/views/bot.html:9
+msgid "posts that might interest you"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/analyze.html:178
+#: client/app/modules/admin/posts/views/form.html:99
+msgid "Preview"
+msgstr ""
+
+#: client/app/modules/public/category/controllers/category.ctrl.js:72
+#: client/app/modules/public/main/controllers/main.ctrl.js:30
+msgid "Previous Discussions"
+msgstr ""
+
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:16
+#: client/app/modules/core/views/elements/navbar.html:40
+msgid "Profile"
+msgstr ""
+
+#: client/app/modules/admin/files/views/upload.html:19
+msgid "Progress"
+msgstr ""
+
+#: client/app/modules/public/post/controllers/post.ctrl.js:43
+msgid "Public Brainstorming"
+msgstr ""
+
+#: client/app/modules/public/post/controllers/post.ctrl.js:50
+msgid "Public Data Analysis"
+msgstr ""
+
+#: client/app/modules/public/post/views/post.html:6
+msgid "Public Discussion Ended"
+msgstr ""
+
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:18
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:29
+#: client/app/modules/admin/posts/services/posts.service.js:160
+msgid "Published"
+msgstr ""
+
+#: client/app/modules/admin/faqs/services/faqs.service.js:59
+#: client/app/modules/admin/posts/views/form.html:72
+msgid "Question"
+msgstr ""
+
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:6
+msgid "Register"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/form.html:40
+msgid "Related Posts"
+msgstr ""
+
+#: client/app/modules/common/top-nav-bar/controllers/top-nav-bar.ctrl.js:21
+msgid "replied on your comment in"
+msgstr ""
+
+#: client/app/modules/admin/categories/views/form.html:22
+#: client/app/modules/admin/committees/views/form.html:29
+#: client/app/modules/admin/faqs/views/form.html:21
+#: client/app/modules/admin/mks/views/form.html:22
+#: client/app/modules/admin/sandbox/views/forms.html:19
+#: client/app/modules/admin/settings/views/form.html:19
+#: client/app/modules/admin/users/views/form.html:41
+#: client/app/modules/admin/users/views/profile.html:16
+msgid "Reset"
+msgstr ""
+
+#: client/app/modules/public/reset-password/views/reset-password.html:48
+#: client/app/modules/public/reset-password/views/reset-password.html:59
+msgid "Reset password"
+msgstr ""
+
+#: client/app/modules/public/reset-password/controllers/reset-password.ctrl.js:10
+#: client/app/modules/public/reset-password/views/reset-password.html:28
+#: client/app/modules/public/reset-password/views/reset-password.html:7
+msgid "Reset Password"
+msgstr ""
+
+#: client/app/modules/public/reset-password/views/reset-password.html:51
+msgid "Reset password email was sent"
+msgstr ""
+
+#: client/app/modules/public/reset-password/views/reset-password.html:62
+msgid "Reset password process complete"
+msgstr ""
+
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:86
+msgid "Reset Settings"
+msgstr ""
+
+#: client/app/modules/admin/users/config/users.routes.js:114
+#: client/app/modules/admin/users/views/view.html:16
+msgid "Roles"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/form.html:94
+#: client/app/modules/public/user-settings/views/user-settings.html:61
+msgid "Save"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/list.html:15
+msgid "Search Post.."
+msgstr ""
+
+#: client/app/modules/public/post/views/post.html:178
+#: client/app/modules/public/post/views/post.html:97
+msgid "Search Tags or Type a New One"
+msgstr ""
+
+#: client/app/modules/admin/users/views/list.html:13
+msgid "Search User (by ID, name or email)"
+msgstr ""
+
+#: client/app/modules/admin/users/views/list.html:14
+msgid "Search User.."
+msgstr ""
+
+#: client/app/modules/public/bot/views/bot.html:7
+msgid "Searching for Specific Discussion?"
+msgstr ""
+
+#: client/app/modules/common/count-down/controllers/count-down.ctrl.js:42
+msgid "Seconds"
+msgstr ""
+
+#: client/app/modules/public/main/controllers/main.ctrl.js:87
+msgid "security"
+msgstr ""
+
+#: client/app/modules/common/widgets/comments-list/views/comments-list.html:27
+#: client/app/modules/common/widgets/followers-box/views/followers-box.html:12
+msgid "see more"
+msgstr ""
+
+#: client/app/modules/admin/users/views/form.html:23
+msgid "Select a Committee"
+msgstr ""
+
+#: client/app/modules/public/categories-selection/views/categories-selection.html:8
+msgid "Select at least 3 subjects you find interesting.."
+msgstr ""
+
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:113
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:18
+msgid "Select Subjects"
+msgstr ""
+
+#: client/app/modules/public/dashboard/views/dashboard.html:82
+msgid "send"
+msgstr ""
+
+#: client/app/modules/public/post/views/post.html:122
+#: client/app/modules/public/post/views/post.html:242
+#: client/app/modules/public/post/views/post.html:288
+#: client/app/modules/public/reset-password/views/reset-password.html:21
+#: client/app/modules/public/reset-password/views/reset-password.html:41
+msgid "Send"
+msgstr ""
+
+#: client/app/modules/admin/users/views/form.html:31
+msgid "Send invitation"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/analyze.html:73
+msgid "Sentiments Average"
+msgstr ""
+
+#: client/app/modules/admin/settings/services/setting.service.js:43
+msgid "Setting deleted"
+msgstr ""
+
+#: client/app/modules/admin/settings/services/setting.service.js:21
+msgid "Setting saved"
+msgstr ""
+
+#: client/app/modules/admin/settings/views/main.html:2
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:17
+msgid "Settings"
+msgstr ""
+
+#: client/app/modules/public/post/views/post.html:229
+#: client/app/modules/public/post/views/post.html:314
+msgid "Share"
+msgstr ""
+
+#: client/app/modules/public/post/views/post.html:324
+msgid "Show All Comments"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/list.html:44
+msgid "Show Cancelled Only"
+msgstr ""
+
+#: client/app/modules/core/views/admin/home.html:6
+msgid "Show Stats"
+msgstr ""
+
+#: client/app/modules/admin/users/views/login.html:43
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:7
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:8
+msgid "Sign in"
+msgstr ""
+
+#: client/app/modules/core/views/elements/navbar.html:43
+msgid "Sign out"
+msgstr ""
+
+#: client/app/modules/admin/users/views/login.html:48
+msgid "Sign Up"
+msgstr ""
+
+#: client/app/modules/admin/users/views/register.html:20
+msgid "Signup"
+msgstr ""
+
+#: client/app/modules/admin/files/views/upload.html:18
+msgid "Size"
+msgstr ""
+
+#: client/app/modules/admin/categories/services/categories.service.js:78
+#: client/app/modules/admin/committees/services/committees.service.js:72
+msgid "Slug"
+msgstr ""
+
+#: client/app/modules/public/post/views/post.html:130
+msgid "Sort By"
+msgstr ""
+
+#: client/app/modules/public/dashboard/views/dashboard.html:23
+msgid "Statistics"
+msgstr ""
+
+#: client/app/modules/admin/files/views/upload.html:20
+#: client/app/modules/admin/posts/controllers/posts.list.ctrl.js:79
+#: client/app/modules/admin/posts/services/posts.service.js:153
+#: client/app/modules/admin/posts/views/list.html:20
+msgid "Status"
+msgstr ""
+
+#: client/app/modules/public/categories-selection/views/categories-selection.html:14
+msgid "Subjects"
+msgstr ""
+
+#: client/app/modules/public/categories-selection/controllers/categories-selection.ctrl.js:9
+msgid "Subjects Selection"
+msgstr ""
+
+#: client/app/modules/admin/browser/views/models.items.add.html:11
+#: client/app/modules/admin/browser/views/models.items.edit.html:12
+#: client/app/modules/admin/categories/views/form.html:20
+#: client/app/modules/admin/committees/views/form.html:27
+#: client/app/modules/admin/faqs/views/form.html:19
+#: client/app/modules/admin/mks/views/form.html:20
+#: client/app/modules/admin/sandbox/views/forms.html:94
+#: client/app/modules/admin/settings/views/form.html:17
+#: client/app/modules/admin/users/views/form.html:39
+#: client/app/modules/admin/users/views/profile.html:14
+msgid "Submit"
+msgstr ""
+
+#: client/app/modules/public/subscriptions/views/subscriptions.html:8
+msgid "Subscritions error message"
+msgstr ""
+
+#: client/app/modules/public/subscriptions/views/subscriptions.html:5
+msgid "Subscritions success message"
+msgstr ""
+
+#: client/app/modules/admin/posts/services/posts.service.js:137
+msgid "Subtitle"
+msgstr ""
+
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:83
+msgid "Switch Contrast"
+msgstr ""
+
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:80
+msgid "Switch Font Size"
+msgstr ""
+
+#: client/app/modules/public/dashboard/controllers/dashboard.ctrl.js:60
+msgid "Tel-Aviv"
+msgstr ""
+
+#: client/app/modules/admin/users/views/register.html:24
+msgid "Terms and Conditions"
+msgstr ""
+
+#: client/app/modules/common/site-navigation/controllers/site-navigation.ctrl.js:58
+msgid "Terms and Privacy Policy"
+msgstr ""
+
+#: client/app/modules/public/bot/controllers/bot.ctrl.js:10
+msgid "The Bot"
+msgstr ""
+
+#: client/app/modules/public/main/controllers/main.ctrl.js:95
+msgid "the environment"
+msgstr ""
+
+#: client/app/modules/public/main/controllers/main.ctrl.js:99
+msgid "the housing market"
+msgstr ""
+
+#: client/app/modules/public/post/controllers/post.ctrl.js:60
+msgid "The products of the public discussion will be presented, and will include the conclusions and the recommendations for action"
+msgstr ""
+
+#: client/app/modules/common/widgets/recommend-to-friend/views/recommend-to-friend.html:2
+msgid "The subject has {{ctrl.followersCount}} followers. Know people who care about {{category.name}}? Let them know."
+msgstr ""
+
+#: client/app/modules/public/about/views/about.html:13
+msgid "The Team"
+msgstr ""
+
+#: client/app/modules/admin/categories/views/list.html:25
+msgid "There are no Categories"
+msgstr ""
+
+#: client/app/modules/admin/committees/views/list.html:29
+msgid "There are no Committees"
+msgstr ""
+
+#: client/app/modules/admin/faqs/views/list.html:27
+msgid "There are no Faqs"
+msgstr ""
+
+#: client/app/modules/admin/files/views/list.html:26
+#: client/app/modules/admin/files/views/upload.html:56
+msgid "There are no files"
+msgstr ""
+
+#: client/app/modules/admin/mks/views/list.html:34
+msgid "There are no MKs"
+msgstr ""
+
+#: client/app/modules/admin/settings/views/list.html:27
+msgid "There are no settings"
+msgstr ""
+
+#: client/app/modules/common/export-to-calendar/controllers/export-to-calendar.ctrl.js:30
+msgid "This event was added to calendar via ePart."
+msgstr ""
+
+#: client/app/modules/public/user-settings/services/user-settings.service.js:50
+msgid "This post could no be saved:"
+msgstr ""
+
+#: client/app/modules/admin/settings/services/setting.service.js:29
+msgid "This setting could no be saved:"
+msgstr ""
+
+#: client/app/modules/common/count-down/views/count-down.html:2
+msgid "Time to Make a Difference"
+msgstr ""
+
+#: client/app/modules/admin/posts/services/posts.service.js:126
+msgid "Title"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/list.html:39
+msgid "To Date"
+msgstr ""
+
+#: client/app/modules/public/qa/views/qa.html:29
+msgid "to find out more about ePart."
+msgstr ""
+
+#: client/app/modules/core/views/elements/navbar.html:3
+msgid "Toggle navigation"
+msgstr ""
+
+#: client/app/modules/public/main/views/main.html:34
+msgid "Top Contributing Decision Makers"
+msgstr ""
+
+#: client/app/modules/common/widgets/community-list/views/community-list.html:2
+msgid "Top Contributors"
+msgstr ""
+
+#: client/app/modules/public/category/controllers/category.ctrl.js:68
+#: client/app/modules/public/main/controllers/main.ctrl.js:26
+msgid "Top ranked posts"
+msgstr ""
+
+#: client/app/modules/public/main/controllers/main.ctrl.js:91
+msgid "transportation"
+msgstr ""
+
+#: client/app/modules/public/bot/views/bot.html:30
+msgid "Try Again"
+msgstr ""
+
+#: client/app/modules/public/post/views/post.html:232
+#: client/app/modules/public/post/views/post.html:316
+msgid "Tweet"
+msgstr ""
+
+#: client/app/modules/common/widgets/recommend-to-friend/views/recommend-to-friend.html:5
+msgid "Twitter"
+msgstr ""
+
+#: client/app/modules/admin/posts/controllers/posts.analize.ctrl.js:27
+msgid "Uncategorized"
+msgstr ""
+
+#: client/app/modules/common/top-nav-bar/views/top-nav-bar.html:77
+msgid "Underline Links"
+msgstr ""
+
+#: client/app/modules/public/post/views/post.html:187
+#: client/app/modules/public/post/views/post.html:276
+msgid "Update Comment"
+msgstr ""
+
+#: client/app/modules/public/dashboard/views/dashboard.html:166
+msgid "update committees"
+msgstr ""
+
+#: client/app/modules/public/profile/views/profile.html:13
+msgid "update details"
+msgstr ""
+
+#: client/app/modules/public/post/views/post.html:106
+msgid "Upload a File"
+msgstr ""
+
+#: client/app/modules/admin/files/views/upload.html:5
+msgid "Upload files"
+msgstr ""
+
+#: client/app/modules/common/widgets/todo-list/controllers/todo-list.ctrl.js:50
+msgid "Upload Profile Picture"
+msgstr ""
+
+#: client/app/modules/admin/users/config/users.routes.js:151
+#: client/app/modules/admin/users/config/users.routes.js:204
+#: client/app/modules/admin/users/config/users.routes.js:56
+#: client/app/modules/admin/users/config/users.routes.js:65
+msgid "User"
+msgstr ""
+
+#: client/app/modules/admin/users/config/users.routes.js:228
+#: client/app/modules/public/user-settings/controllers/user-settings.ctrl.js:91
+msgid "User details saved."
+msgstr ""
+
+#: client/app/modules/admin/users/views/form.html:13
+#: client/app/modules/admin/users/views/list.html:19
+msgid "User Role"
+msgstr ""
+
+#: client/app/modules/public/user-settings/controllers/user-settings.ctrl.js:11
+msgid "User Settings"
+msgstr ""
+
+#: client/app/modules/admin/users/config/users.routes.js:181
+msgid "User Was Created."
+msgstr ""
+
+#: client/app/modules/admin/users/config/users.config.js:5
+#: client/app/modules/admin/users/views/list.html:4
+msgid "Users"
+msgstr ""
+
+#: client/app/modules/public/dashboard/views/dashboard.html:147
+msgid "Users Stats"
+msgstr ""
+
+#: client/app/modules/admin/settings/services/setting.service.js:70
+msgid "Value"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/analyze.html:181
+#: client/app/modules/admin/posts/views/form.html:102
+msgid "View Post"
+msgstr ""
+
+#: client/app/modules/common/widgets/todo-list/controllers/todo-list.ctrl.js:72
+msgid "Vote in a Poll"
+msgstr ""
+
+#: client/app/modules/public/dashboard/controllers/dashboard.ctrl.js:166
+msgid "Votes"
+msgstr ""
+
+#: client/app/modules/public/reset-password/views/reset-password.html:31
+msgid "Welcome mk"
+msgstr ""
+
+#: client/app/modules/public/categories-selection/views/categories-selection.html:7
+msgid "Welcome to ePart!"
+msgstr ""
+
+#: client/app/modules/public/bot/views/bot.html:13
+msgid "What Subjects interest you?"
+msgstr ""
+
+#: client/app/modules/public/main/controllers/main.ctrl.js:83
+msgid "what you care about"
+msgstr ""
+
+#: client/app/modules/public/post/views/post.html:92
+msgid "What`s Your Opinion?"
+msgstr ""
+
+#: client/app/modules/common/widgets/about/views/about.html:3
+msgid "Who we are?"
+msgstr ""
+
+#: client/app/modules/public/dashboard/controllers/dashboard.ctrl.js:78
+msgid "Women"
+msgstr ""
+
+#: client/app/modules/public/qa/views/qa.html:27
+msgid "Write us"
+msgstr ""
+
+#: client/app/modules/public/about/controllers/about.ctrl.js:31
+msgid "Yossi Hayut – Co founder & CEO"
+msgstr ""
+
+#: client/app/modules/public/about/controllers/about.ctrl.js:32
+msgid "Yossi is a social entrepreneur and a public interest lawyer. He is the founder and CEO of ePart. <br/>Previously, Yossi founded the clinical legal education program that provides pro-bono assistance to Holocaust survivors at Tel Aviv University’s Faculty of Law. He was also an instructor in the Economic Justice clinic, specializing in social business and microfinance loans for women in poverty, also at Tel Aviv University. Yossi was awarded the \"Medal of Light\" on behalf of the Foundation for the Benefit of Holocaust Victims and President of Israel, for his unique contribution to Holocaust survivors rights and his involvement in writing the Holocaust Survivors National Assistance Program. He holds an M.A. in public leadership from Tel Aviv University and he lives in near the yarkon park with his wife and daughters, Alona and Galia."
+msgstr ""
+
+#: client/app/modules/public/about/controllers/about.ctrl.js:43
+msgid "Yotam is the head of our technology team. He joined us a few months ago to help us build our new web platform. Yotam has been a full-stack developer in the last five years, in which he was a team leader in My6sense, a startup in the Ad-Tech industry, and a volunteering developer at Helpi, a startup dedicated to increasing social involvement within the community.<br/>Yotam has Bsc in computer science from the Hebrew University of Jerusalem and a Master`s degree in Philosophy from Tel-Aviv University."
+msgstr ""
+
+#: client/app/modules/public/about/controllers/about.ctrl.js:42
+msgid "Yotam Shalev – Full Stack Developer"
+msgstr ""
+
+#: client/app/modules/admin/files/views/upload.html:6
+msgid "You can just drag them in this window!"
+msgstr ""
+
+#: client/app/modules/public/categories-selection/views/categories-selection.html:11
+#: client/app/modules/public/categories-selection/views/categories-selection.html:14
+msgid "You chose"
+msgstr ""
+
+#: client/app/modules/common/widgets/login-box/views/login-box.html:3
+msgid "You Got Plenty of Options to Make a Change"
+msgstr ""
+
+#: client/app/modules/public/user-settings/controllers/user-settings.ctrl.js:18
+msgid "You have a new follower."
+msgstr ""
+
+#: client/app/modules/admin/users/controllers/login.ctrl.js:44
+msgid "You need an email address"
+msgstr ""
+
+#: client/app/modules/common/widgets/todo-list/views/todo-list.html:3
+msgid "Your Checklist"
+msgstr ""
+
+#: client/app/modules/admin/users/views/profile.html:24
+msgid "Your Gravatar"
+msgstr ""
+
+#: client/app/modules/admin/users/controllers/register.ctrl.js:96
+msgid "Your passwords need to match"
+msgstr ""
+
+#: client/app/modules/public/user-settings/services/user-settings.service.js:47
+msgid "Your post is safe with us!"
+msgstr ""
+
+#: client/app/modules/admin/settings/services/setting.service.js:44
+msgid "Your setting is deleted!"
+msgstr ""
+
+#: client/app/modules/admin/settings/services/setting.service.js:51
+msgid "Your setting is not deleted!"
+msgstr ""
+
+#: client/app/modules/admin/settings/services/setting.service.js:22
+msgid "Your setting is safe with us!"
+msgstr ""
+
+#: client/app/modules/admin/posts/views/form.html:56
+msgid "Youtube Video ID"
+msgstr ""

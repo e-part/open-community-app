@@ -1,0 +1,43 @@
+@import "../variables";
+@import "../responsive";
+@import "base-overrides";
+
+.epart {
+    $primary-color: #0872ba;
+    $dark-primary-color: #08589c;
+    $hover-primary-color: #087cc6;
+  $negative-color: #ffffff;
+  $negative-color-hover: #eeeeee;
+  @include theme($primary-color, $dark-primary-color, $hover-primary-color, $negative-color, $negative-color-hover);
+  #top-nav-bar {
+    .nav-bar-content {
+      .right-side-cont {
+        .contact-bubble {
+          display: none;
+
+        }
+      }
+      .middle-cont {
+        .dt-links {
+          display: none;
+        }
+      }
+      .logo-cont {
+        .logo-img {
+          background-image: url('../../images/clients/epart/logo.png');
+        }
+        .mobile-side-menu-btn {
+          display: none !important;
+        }
+      }
+    }
+  }
+
+  .user-profile {
+
+    header.profile-header {
+      background-image: url('../../images/clients/epart/city-silouette.jpg');
+    }
+  }
+
+}

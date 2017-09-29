@@ -1,0 +1,49 @@
+<div class="page-content-container clearfix">
+  <div class="hidden-xs hidden-sm col-md-2 col-lg-2 nav-side-bar" ng-if="!ctrl.welcomeMode">
+    <site-navigation></site-navigation>
+  </div>
+  <div class="col-xs-12 categories-selection" role="main" ng-class="{'col-lg-10 col-md-10' : !ctrl.welcomeMode, 'col-lg-12 col-md-12' : ctrl.welcomeMode}">
+    <header ng-if="ctrl.welcomeMode">
+      <h1>{{'Welcome!' | translate }}</h1>
+      <h3>{{'Select at least 3 subjects you find interesting..' | translate }}</h3>
+      <h4>
+        <span ng-if="ctrl.sessionData.currentUser.categories.length < 4">
+          {{'You chose' | translate }} {{ctrl.sessionData.currentUser.categories.length}} {{'out of' | translate }} 3
+        </span>
+        <span ng-if="ctrl.sessionData.currentUser.categories.length > 3">
+        {{'You chose' | translate }} {{ctrl.sessionData.currentUser.categories.length}} {{'Subjects' | translate }}
+        </span>
+        <button class="btn btn-primary" ng-class="{disabled : ctrl.sessionData.currentUser.categories.length < 3}" ng-click="ctrl.saveAndContinue()">{{'Continue' | translate }}</button>
+      </h4>
+    </header>
+    <ul class="categories-selection-list" ng-class="{'margin-top': ctrl.welcomeMode}">
+    	<li ng-repeat="c in ctrl.categoriesList">
+        <div ng-if="!ctrl.welcomeMode">
+      		<div class="category-image-wrapper">
+    	  		<a ui-sref="app.public.category({slug: c.slug, id: c.id})" >
+              <div class="category-image" back-img="{{c.imageUrl}}">
+              </div>
+            </a>
+    	  	</div>
+      		<div class="category-details clearfix">
+      			<button ng-show="!c.following" class="btn-follow btn" ng-click="ctrl.addRemoveCategory(c)"><i class="material-icons">add</i> {{'Interested?' | translate }}</button>
+            <button ng-show="c.following" class="btn-following btn" ng-click="ctrl.addRemoveCategory(c)"><i class="fa fa-check"></i> {{'Interested!' | translate }}</button>
+            </button>
+            <div class="category-name">
+              <a ui-sref="app.public.category({slug: c.slug, id: c.id})">{{c.name}}</a>
+            </div>
+      		</div>
+        </div>
+        <div ng-if="ctrl.welcomeMode" ng-class="{selected : c.following}" ng-click="ctrl.addRemoveCategory(c)">
+          <div class="category-image-wrapper">
+            <div class="category-image" back-img="{{c.imageUrl}}"></div>
+          </div>
+          <div class="category-details clearfix text-center">
+            <span>{{c.name}}</span>
+          </div>
+        </div>
+    	</li>
+    </ul>
+  </div>
+
+</div>

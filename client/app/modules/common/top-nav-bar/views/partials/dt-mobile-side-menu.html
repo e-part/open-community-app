@@ -1,0 +1,38 @@
+<div class="menu-wrapper">
+  <h1 class="close-menu-btn title" ng-click="ctrl.showMobileSideMenu();">
+    ✕ {{'Close Menu' | translate}}
+  </h1>
+  <section ng-show="!ctrl.sessionData.currentUser" class="sign-in-actions">
+    <div class="btn-cont">
+      <a href="#" class="btn btn-link sign-in ng-animate-disabled sign-in-button"
+         ng-click="ctrl.login(); sendGaEvent('top nav bar','login');">{{::'Sign in' | translate}}</a>
+    </div>
+    <div class="btn-cont">
+      <a href="#"  class="btn btn-link ng-animate-disabled register-btn"
+         ng-click="ctrl.register(); sendGaEvent('top nav bar','register');">{{::'Register' | translate}}</a>
+    </div>
+  </section>
+  <section ng-show="ctrl.sessionData.currentUser" class="user-details">
+    <h4>{{ctrl.sessionData.currentUser.firstName}}</h4>
+    <cl-photo image-src="{{ctrl.sessionData.currentUser.imageUrl}}
+          " image-width="45" image-height="45"  image-gravity="faces" image-crop="thumb" image-alt="user profile"
+              image-zoom="0.8" image-class="user-avatar"></cl-photo>
+  </section>
+  <section class="nav-menu">
+    <h5 class="title">{{'Explore' | translate}}</h5>
+    <ul class="dt-mobile-section-list">
+      <li ng-repeat="link in ctrl.dtLinks"><a href="{{link.href}}" ng-class="{'active': link.active}">
+        {{ link.text }}
+      </a>
+        <ul ng-if="link.subMenuItems" class="sub-menu">
+          <li ng-repeat="subMenuLink in link.subMenuItems">
+            <a href="{{subMenuLink.href}}">
+              {{ subMenuLink.text }}
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+</div>
+

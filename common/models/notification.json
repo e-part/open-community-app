@@ -1,0 +1,67 @@
+{
+  "name": "Notification",
+  "plural": "notifications",
+  "base": "AppModel",
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "method": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "string",
+      "default": "UNREAD",
+      "required": true
+    },
+    "meta": {
+      "mysql": {
+        "dataType": "TEXT"
+      },
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "receiver": {
+      "type": "belongsTo",
+      "model": "user"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "property": "getNotificationsByUser",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "property": "bulkUpdateByUser",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+
+  ],
+  "methods": {}
+}

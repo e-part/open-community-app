@@ -1,0 +1,259 @@
+@import "variables";
+
+
+
+.about-widget {
+  background-color: $primary-color;
+  color: #ffffff;
+  padding: 20px 25px 20px 25px;
+  .about-title {
+    margin-bottom: 10px;
+  }
+  .about-text {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+}
+
+
+.side-widget-list {
+  background-color: $white;
+
+  h4 {
+    border-bottom: 1px solid $gray-borders;
+    padding: 15px 10px;
+    color: $black;
+    font-size: 17px;
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      padding: 0px;
+
+      &.member-item {
+        padding: 15px;
+        border-bottom: 1px solid $gray-borders;
+        .member-img {
+          height: 50px;
+          display: inline;
+          border-radius: 50%;
+          width: 50px;
+          img {
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+          }
+          .org-icon {
+            height: 20px;
+            width: 20px;
+            top: -15px;
+            right: 0px;
+            position: absolute;
+          }
+        }
+        .member-details {
+          display: inline;
+          padding: 10px 15px 0 15px;
+
+          .member-name {
+            font-size: 17px;
+
+            color: $dark-gray;
+          }
+          .follow-button {
+            margin-top: 8px;
+          }
+        }
+      }
+      &.comment-item {
+        border-bottom: 1px solid $gray-borders;
+        .member-details {
+          width: 100%;
+          padding: 15px 20px 10px 20px;
+
+          .member-img {
+            height: 50px;
+            float: right;
+            .app-ltr & { /* handle ltr case */
+              float: left;
+            }
+            border-radius: 50%;
+            width: 50px;
+            img {
+              border-radius: 50%;
+              width: 50px;
+              height: 50px;
+            }
+            .org-icon {
+              height: 20px;
+              width: 20px;
+              top: -1px;
+              right: -3px;
+              position: absolute;
+            }
+          }
+          .member-details-titles {
+            margin-right: 60px;
+            .app-ltr & { /* handle ltr case */
+              margin-right: inherit;
+              margin-left: 60px;
+            }
+            margin-top: 5px;
+
+            .member-name {
+              font-size: 15px;
+              color: $black;
+              display: block;
+            }
+            .comment-date {
+              color: $gray-text;
+            }
+          }
+
+        }
+        .comment-details {
+          padding: 0 10px;
+          margin-left: 15px;
+          margin-right: 15px;
+          a {
+            font-weight: 700;
+            display: block;
+            color: $black;
+            &:hover {
+              color: darken($gray-text,30%);
+            }
+          }
+
+        }
+        .comment-meta {
+          margin-left: 15px;
+          margin-right: 15px;
+          padding: 10px;
+          color: $gray-text;
+          .discussion-title {
+          }
+        }
+      }
+    }
+  }
+
+  .see-more-wrapper {
+    padding: 10px 15px;
+    .see-more {
+      font-size: 18px;
+    }
+  }
+}
+
+.recommend-to-friend {
+  min-height: 150px;
+  background: $white;
+  padding: 20px 25px 20px 25px;
+  text-align: center;
+
+  h4 {
+    margin: 0 0 20px 0;
+  }
+
+  a.btn {
+    margin: 0 5px;
+    border: 0;
+  }
+}
+
+.bot-widget {
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+  .bg {
+    position: absolute;
+    left: -15px;
+    bottom: -30px;
+/*    background-image: url(../images/ro-bot.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;*/
+    width: 100px;
+    height: 100px;
+    z-index: 0;
+    transform: rotate(25deg);
+  }
+  h4 {
+    text-align: center;
+    padding: 0;
+    border-bottom: 0;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 22px;
+    color: $primary-color;
+    text-align: center;
+  }
+}
+
+.login-box {
+  background-color: $white;
+  text-align: center;
+  border: 1px solid $primary-color;
+  h4 {
+    text-align: center;
+    padding: 15px 10px;
+    color: $black;
+    font-weight: 700;
+    font-size: 17px;
+  }
+  p {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+  a {
+    margin: 5px 5px 20px 5px;
+    &.btn-email {
+      background: $gray;
+      color: $black;
+    }
+  }
+}
+
+.todo-list {
+  background-color: $white;
+  h4 {
+    text-align: center;
+    border-bottom: 1px solid $gray-borders;
+    padding: 15px 10px;
+    color: $black;
+    font-size: 17px;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    li {
+      font-size: 15px;
+      padding: 10px 20px;
+      i {
+        color: $gray-text;
+      }
+      &.done {
+        a {
+          text-decoration: line-through;
+          color: $gray-text;
+          pointer-events: none;
+        }
+        i {
+          color: $primary-color;
+        }
+      }
+      &:first-child {
+        padding-top: 20px;
+      }
+      &:last-child {
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
