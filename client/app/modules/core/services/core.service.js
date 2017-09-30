@@ -116,13 +116,13 @@
       };
 
       service.sendGaPageview = function(url, title) {
-        ga = ga || function(){};
-        ga('send', 'pageview', { page: url, title: title});
+        var gaSvc = ga || function(){};
+        gaSvc('send', 'pageview', { page: url, title: title});
       };
 
       service.sendGaEvent = function(category,action) {
-        ga = ga || function(){};
-        ga('send', 'event', category, action);
+        var gaSvc = ga || function(){};
+        gaSvc('send', 'event', category, action);
       };
 
       service.calculatePollPercentage = function(poll) {

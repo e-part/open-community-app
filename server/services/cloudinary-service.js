@@ -2,11 +2,10 @@
  * Created by yotam on 16/11/2016.
  */
 var cloudinary = require('cloudinary');
-cloudinary.config({
-  cloud_name: 'XXX',
-  api_key: 'XXX',
-  api_secret: 'XXX'
-});
+var app = require('../server');
+
+
+cloudinary.config(app.get('cloudinary'));
 
 var CloudinaryService = {
   uploadByUrl : function(url){

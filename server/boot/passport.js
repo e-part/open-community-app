@@ -6,7 +6,7 @@ var Utils = require('../services/utils');
 var CustomersConfigProvider = require('../services/customers-config-provider');
 
 module.exports = function (app) {
-  
+
   var bodyParser = require('body-parser');
   var loopback = require('loopback');
   var passport = require('passport');
@@ -92,8 +92,9 @@ module.exports = function (app) {
 
         var providerClass = c.provider;
         if (c.provider === 'google') {
-          var providerClass = 'google-plus';
+         providerClass = 'google-plus';
         }
+/*
         if (c.provider === 'digitalTown'){
           c.userProfile = function(token, done){
             request({
@@ -113,6 +114,7 @@ module.exports = function (app) {
             });
           }
         }
+*/
         c.profileToUser = profileToUser;
 
         var entry = {
@@ -137,10 +139,8 @@ module.exports = function (app) {
     }
   }
 
-  function setupAuthProviders(dtAuthProviders){
-    for (var dtProvider in dtAuthProviders){
-      config[dtProvider] = dtAuthProviders[dtProvider];
-    }
+  function setupAuthProviders(){
+
     if (config) {
 
       var AuthProvider = app.models.AuthProvider;
@@ -246,10 +246,7 @@ module.exports = function (app) {
   try {
     var env = process.env.NODE_ENV || 'dev';
     config = require('../providers.' + env + '.json');
-    CustomersConfigProvider.getAuthProviders(app).then(function(dtAuthProviders){
-      setupAuthProviders(dtAuthProviders);
-    });
-
+    setupAuthProviders();
   } catch (err) {
     console.error('Please configure your passport strategy in `providers.json`.');
     console.error('Copy `providers.json.template` to `providers.json` and replace the clientID/clientSecret values with your own.');

@@ -71,9 +71,6 @@
 <ep-footer id="app-footer">
 
 </ep-footer>
-<!-- <div ng-controller="toasty-controller">
-  <toasty-container toasty-defaults='{"timeout": 3000, "close-button":true, "sound": false}'></toasty-container>
-</div> -->
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 
@@ -90,14 +87,15 @@
     m.parentNode.insertBefore (a, m)
   }) (window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-66701579-1');
-  // ga('send', 'pageview');
+  ga('create', 'YOUR_ANALYTICS_ID');
 </script>
 
-<script>
+<!-- FACEBOOK: change YOUR_APP_ID to be your Facebook app ID -->
+
+<!--<script>
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '611558115690973',
+      appId      : 'YOUR_APP_ID',
       xfbml      : true,
       version    : 'v2.8'
     });
@@ -111,21 +109,8 @@
      js.src = "https://connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-</script>
+</script>-->
 
-<script type='text/javascript'>
-  var toky_container=document.createElement('div');
-  toky_container.id='toky';
-  (document.getElementsByTagName('body')[0]).appendChild(toky_container);
-  var toky_id = 345;
-  (function () {
-    var toky = document.createElement('script');
-    toky.type = 'text/javascript';
-    toky.async = true;
-    toky.src = '//az601263.vo.msecnd.net/webview/'+toky_id+'/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(toky);
-  })();
-</script>
 <!-- build:js scripts/oldieshim.js -->
 <!--[if lt IE 9]>
 <script src="bower_components/es5-shim/es5-shim.js"></script>

@@ -81,7 +81,7 @@
   },
 
   "Container": {
-    "dataSource": "epart-app-dev",
+    "dataSource": "storage-bucket-name-dev",
     "public": true
   },
   "Comment": {

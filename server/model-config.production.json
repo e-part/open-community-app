@@ -1,6 +1,6 @@
 {
   "Container": {
-    "dataSource": "epart-app-prod",
+    "dataSource": "storage-bucket-name-prod",
     "public": true
   }
 

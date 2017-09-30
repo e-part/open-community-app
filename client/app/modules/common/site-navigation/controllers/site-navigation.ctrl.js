@@ -54,13 +54,8 @@
         ];
         ctrl.secondaryLinks = [
           {
-            text: gettextCatalog.getString('About'),
-            state: 'app.public.about',
-            link: CLIENT_CONFIG.attributes.ABOUT_URL || 'http://digitaltown.com/about'
-          },
-          {
             text: gettextCatalog.getString('Terms and Privacy Policy'),
-            link: CLIENT_CONFIG.attributes.TERMS_URL || 'http://digitaltown.com/terms'
+            link: CLIENT_CONFIG.attributes.TERMS_URL
           }
         ];
       }

@@ -1,19 +1,8 @@
 /**
  * Created by yotam on 07/11/2016.
  */
-
-var settings = {
-  gcm: {
-    id: "XXX",
-  },
-  apn: {
-    token: {
-      key: './certs/key.pem',
-      keyId: 'XXX',
-      teamId: 'XXX'
-    }
-  }
-};
+var app = require('../server');
+var settings = app.get('push_services');
 
 var PushNotifications = new require('node-pushnotifications');
 var pushClient = new PushNotifications(settings);

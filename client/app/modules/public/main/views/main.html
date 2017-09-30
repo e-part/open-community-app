@@ -1,4 +1,4 @@
-<div class="home-header-image page-content-container hidden-xs" ng-if="CLIENT_CONFIG.attributes.features.showHeader">
+<div ng-init="showHpHeader=true" class="home-header-image page-content-container hidden-xs" ng-if="showHpHeader && CLIENT_CONFIG.attributes.features.showHeader">
 	<div class="home-header-tr">
 		<div class="home-header-td">
 			<div class="home-header-overlay"></div>
@@ -8,15 +8,12 @@
 			        <div class="filter"></div>
 			        <video autoplay muted class="fillWidth" ng-repeat="s in ctrl.headerSubjects" ng-init="$last && ctrl.headerInit()" ng-src="{{s.video}}" ng-show="$index === ctrl.showHeaderSubjectId">
 			        </video>
-			        <div class="poster hidden">
-			            <img src="../images/knesset-banner.jpg" alt="">
-			        </div>
 			    </div>
 			</div>
 
 			<h1>{{'Londoners, Have Your Say!' | translate }}</h1>
 			<a ng-click="sendGaEvent('home page','הצטרף'); ctrl.openLoginDialog()" ng-if="!ctrl.sessionData.currentUser" class="join">{{'Join Now' | translate }}</a>
-			<button class="close-hp-header" ng-click="sendGaEvent('home page','סגירת header'); showHpHeader=false"><i class="material-icons">close</i></button>
+			<button class="close-hp-header" ng-click="sendGaEvent('home page','close header'); showHpHeader=false"><i class="material-icons">close</i></button>
 		</div>
 	</div>
 </div>

@@ -19,6 +19,7 @@
   },
   "scripts": {
     "test": "cross-env NODE_ENV=test mocha --recursive --timeout 15000",
+    "start_db": "cross-env INIT_DB=true node server/server.js",
     "start": "node server/server.js",
     "dev": "nodemon server/server.js --watch server --watch common --ext js,json ",
     "stop": "sudo pkill --signal SIGINT epartApp"
@@ -99,6 +100,7 @@
     "loopback-component-explorer": "2.2.0",
     "loopback-component-fixtures": "0.0.6",
     "loopback-component-mailchimp": "0.0.1",
+    "loopback-component-migrate": "0.4.0",
     "loopback-component-passport": "2.2.0",
     "loopback-component-storage": "1.6.1",
     "loopback-connector-mongodb": "1.13.3",

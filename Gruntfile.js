@@ -22,14 +22,14 @@ module.exports = function (grunt) {
     test: require('./bower.json').appPath || 'client/test',
     dist: 'dist',
     api: {
-      development: 'http://localhost.com:3000/api/',
+      development: 'http://localhost:3000/api/',
       production: '/api/'
     },
     site: {
-      development: 'http://localhost.com:3000',
+      development: 'http://localhost:3000',
       production: ''
     },
-    host: 'localhost.com'
+    host: 'localhost'
   };
 
   // Define the configuration for all the tasks
@@ -129,7 +129,7 @@ module.exports = function (grunt) {
             name: 'development',
             apiUrl: '<%= yeoman.api.development %>',
             siteUrl: '<%= yeoman.site.development %>',
-            bucket : 'epart-app-dev',
+            bucket : 'storage-bucket-name-dev',
             digitalTownDomain: 'http://gator.dev.rezserve.net',
             uiLanguage : 'en_US'
           }
@@ -145,7 +145,7 @@ module.exports = function (grunt) {
             name: 'stage',
             apiUrl: '<%= yeoman.api.production %>',
             siteUrl: '<%= yeoman.site.production %>',
-            bucket : 'epart-app-stage',
+            bucket : 'storage-bucket-name-stage',
             uiLanguage : 'en_US',
             digitalTownDomain: 'http://gator.dev.rezserve.net'
 
@@ -161,7 +161,7 @@ module.exports = function (grunt) {
             name: 'production',
             apiUrl: '<%= yeoman.api.production %>',
             siteUrl: '<%= yeoman.site.production %>',
-            bucket : 'epart-app-prod',
+            bucket : 'storage-bucket-name-prod',
             uiLanguage : 'en_US',
             digitalTownDomain: 'http://smart.london'
 
@@ -792,7 +792,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build-prd', [
     'clean:dist',
-    
+
     'ngconstant:production',
     'loopback_sdk_angular:production',
     'includeSource:dist',

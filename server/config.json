@@ -11,7 +11,24 @@
   "digitalTownDomain" : "http://gator.dev.rezserve.net/",
   "digitalTownApi" : "https://v1.srv.sso.uat.rezserve.net/api/",
   "digitalTownSSODomain" : "https://v1.srv.sso.uat.rezserve.net/",
-
+  "cloudinary": {
+    "cloud_name": "XXX",
+    "api_key": "XXX",
+    "api_secret": "XXX",
+    "upload_preset": "XXX"
+  },
+  "push_services": {
+    "gcm": {
+      "id": "XXX"
+    },
+    "apn": {
+      "token": {
+        "key": "./certs/key.pem",
+        "keyId": "XXX",
+        "teamId": "XXX"
+      }
+    }
+  },
   "remoting": {
     "context": {
       "enableHttpContext": false

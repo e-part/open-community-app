@@ -1,6 +1,6 @@
 {
   "Container": {
-    "dataSource": "epart-app-stage",
+    "dataSource": "storage-bucket-name-stage",
     "public": true
   }
 

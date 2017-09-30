@@ -74,7 +74,6 @@
       'com.module.post',
       'com.module.welcome',
       'com.module.profile',
-      'com.module.about',
       'com.module.privacy',
       'com.module.terms',
       'com.module.qa',
@@ -84,8 +83,7 @@
       'com.module.user-posts'
     ])
 
-    .run(function ($rootScope, $cookies, gettextCatalog, AppAuth, ENV, i18nService, $document, tmhDynamicLocale, $window,
-                   $http, CLIENT_CONFIG, CoreService) {
+    .run(function ($rootScope, $cookies, gettextCatalog, AppAuth, ENV, i18nService, $document, tmhDynamicLocale, $window) {
 
       console.log("Running with config: ", JSON.stringify(ENV));
       var DEFAULT_LANGUAGE = ENV.uiLanguage || 'en_US';
@@ -160,10 +158,10 @@
         }
 
       }])
-    .config(['cloudinaryProvider', function (cloudinaryProvider) {
+    .config(['cloudinaryProvider','CLIENT_CONFIG', function (cloudinaryProvider, CLIENT_CONFIG) {
       cloudinaryProvider
-        .set("cloud_name", "epart")
-        .set("upload_preset", "nxwzkoou")
+        .set("cloud_name", CLIENT_CONFIG.services.cloudinary.cloud_name)
+        .set("upload_preset", CLIENT_CONFIG.services.cloudinary.upload_preset)
         .set("secure", true);
     }])
     .run(function (formlyConfig, $rootScope) {

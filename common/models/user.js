@@ -921,21 +921,6 @@ module.exports = function (user) {
 
   // ----------- EVENT HOOKS ------------ //
 
-  //send password reset link when requested
-/*  user.on('resetPasswordRequest', function (info) {
-    var resetOptions = info.options || {};
-    var url = config.url + config.restApiRoot + '/users/passwordResetRedirect';
-    var options = {
-      to: info.email,
-      vars: {
-        resetUrl: url + '?invitation=' + (resetOptions.isInvitation || 'false') + '&email=' + encodeURIComponent(info.email) + '&access_token=' + info.accessToken.id,
-        fullName: resetOptions.fullName
-      },
-      name : resetOptions.template || "reset"
-    };
-    console.log("senging reset password email for: " + info.email);
-    EmailService.sendFromEpartServer(options);
-  });*/
 
   user.on('resetPasswordRequest', function(info) {
     var resetOptions = info.options || {};

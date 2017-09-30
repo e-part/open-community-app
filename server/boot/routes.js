@@ -39,11 +39,20 @@ module.exports = function (app) {
         attributes : customer.attributes,
         apiProtocol: app.get('https') ? 'https' : 'http',
         apiPort: app.get('apiPort') !== '80' ? app.get('apiPort') : null,
-        apiPrefix : app.get('restApiRoot')
+        apiPrefix : app.get('restApiRoot'),
+        services: {
+          cloudinary: {
+            "cloud_name": app.get('cloudinary').cloud_name,
+            "upload_preset": app.get('cloudinary').upload_preset
+          }
+        }
       };
       return res.json(uiConfigs);
 
-    });
+    })
+      .catch(function(){
+        return res.sendStatus(500);
+      });
 
   });
 
