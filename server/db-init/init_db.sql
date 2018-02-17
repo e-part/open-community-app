@@ -112,7 +112,7 @@ CREATE TABLE `user` (
   `tenantId` int(11) DEFAULT NULL,
   `firstName` varchar(512) DEFAULT NULL,
   `lastName` varchar(512) DEFAULT NULL,
-  `imageUrl` varchar(512) DEFAULT 'https://res.cloudinary.com/epart/image/upload/v1479118016/default-user-avatar-gray-back-medium_gwcr2r.png',
+  `imageUrl` varchar(512),
   `city` varchar(512) DEFAULT NULL,
   `dateOfBirth` varchar(512) DEFAULT NULL,
   `isPassMigrated` tinyint(1) DEFAULT NULL,

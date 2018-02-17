@@ -1,7 +1,14 @@
 /**
  * Created by yotam on 07/08/2016.
  */
-module.exports = {
+var _ = require('lodash');
+var local = {};
+try {
+  local = require('./config.local.json');
+} catch (e) {
+}
+
+module.exports = _.assign({}, local, {
   remoting: {
     errorHandler: {
       handler: function (err, req, res, next) {
@@ -17,4 +24,4 @@ module.exports = {
       }
     }
   }
-};
+});

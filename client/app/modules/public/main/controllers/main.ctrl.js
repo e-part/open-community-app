@@ -13,6 +13,7 @@
         title: title
       });
       var ctrl = this;
+      ctrl.showHpHeader = true;
       ctrl.$state = $state;
 
       $scope.$on('$viewContentLoaded', function(){

@@ -9,6 +9,7 @@ client/app/js/config.js
 client/app/index.html
 client/app/css/app.css
 client/app/css/app.css.map
+server/config.local.json
 log/out.log
 log/err.log
 log/server_out.log

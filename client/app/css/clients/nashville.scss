@@ -3,28 +3,34 @@
 @import "base-overrides";
 
 .nashville {
-  /*  $primary-color: #67b86b;
+    $primary-color: #67b86b;
     $dark-primary-color: #4b904f;
-    $hover-primary-color: #77cc7b;*/
+    $hover-primary-color: #77cc7b;
   $negative-color: #ffffff;
   $negative-color-hover: #eeeeee;
   @include theme($primary-color, $dark-primary-color, $hover-primary-color, $negative-color, $negative-color-hover);
 
   #top-nav-bar {
     .nav-bar-content {
+      .right-side-cont {
+        .contact-bubble {
+          display: none;
+
+        }
+      }
+      .middle-cont {
+        .dt-links {
+          display: none;
+        }
+      }
       .logo-cont {
         .logo-img {
-          background-image: url('../../images/clients/nashville/logo.png');
+          background-image: url('../../images/clients/epart/logo.png');
+        }
+        .mobile-side-menu-btn {
+          display: none !important;
         }
       }
-      .header-links {
-        .separator {
-          &.get-domain-link {
-            display: none;
-          }
-        }
-      }
-
     }
   }
 }

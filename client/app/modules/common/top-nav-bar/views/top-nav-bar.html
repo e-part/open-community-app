@@ -81,9 +81,9 @@
               <li ng-click="ctrl.menuVisible=false"><a ui-sref="app.public.profile({id: ctrl.sessionData.currentUser.id})">{{'Profile' | translate}}</a></li>
               <li ng-click="ctrl.menuVisible=false"><a ui-sref="app.public.user-settings">{{'Settings' | translate}}</a></li>
               <li ng-click="ctrl.menuVisible=false" ng-if="!ctrl.isMK"><a ui-sref="app.public.categories-selection">{{'Select Subjects' | translate}}</a></li>
-              <!--
-                            <li ng-click="ctrl.menuVisible=false" ng-show="ctrl.lang === 'he_IL'"><a href="#" ng-click="ctrl.switchLocale('en_US')">English</a></li>
-              -->
+<!--
+              <li ng-click="ctrl.menuVisible=false" ng-show="ctrl.lang === 'en_US'"><a href="#" ng-click="ctrl.switchLocale('he_IL')">English</a></li>
+-->
               <li ng-click="ctrl.menuVisible=false"><a href="#" ng-show="ctrl.sessionData.currentUser" ng-click="ctrl.logout()">{{::'Logout' | translate}}</a></li>
             </ul>
           </div>
