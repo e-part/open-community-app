@@ -47,7 +47,7 @@
     <div class="list-group">
       <div ng-repeat="item in ctrl.filesToView | orderBy :'-lastModified'" class="list-group-item media-item" ng-class="{selected : item.selected}"
            ng-click="ctrl.selectMedia(item)" ng-dblclick="ctrl.selectMedia(item, true)">
-        <div class="media-item-img" back-img="https://{{ctrl.bucket}}{{ctrl.S3_PREFIX}}{{item.name}}">
+        <div class="media-item-img" back-img="{{ctrl.getFileUrl(item.name)}}">
           <div>
             <h4 class="media-item-text">{{item.name}}</h4>
 

@@ -44,24 +44,11 @@
             },
             onCompleteItem: function (data) {
               console.log("Item upload completed!", data);
-              ctrl.mediaUrl = 'https://' + CoreService.env.bucket + CoreService.config.S3_PREFIX + data.file.name;
+              ctrl.mediaUrl = CoreService.getFileUrl(data.file.name);
               $scope.updateModel[$scope.updateProperty] = ctrl.mediaUrl;
-              /*              FileService.find().then(function (response) {
-                              ctrl.files = response.data;
-                            });*/
 
             }
           });
-
-          /*ctrl.chooseMedia = function (property) {
-            var modalInstance = DialogsService.openDialog('uploadMedia',{size : 'lg'});
-            modalInstance.result.then(function (selectedItem) {
-              var staticMediaUrl = 'https://' + CoreService.env.bucket + CoreService.config.S3_PREFIX + selectedItem.name;
-              ctrl.mediaUrl = staticMediaUrl;
-              $scope.updateModel[$scope.updateProperty] = staticMediaUrl;
-            }, function () {
-            });
-          };*/
         }],
         link: function postLink (scope, element) {
         }

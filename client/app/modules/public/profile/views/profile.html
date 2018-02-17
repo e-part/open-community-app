@@ -34,7 +34,8 @@
       <li ng-click="sendGaEvent('profile page','Tab clicked: followers');ctrl.visibleSection='followers'" ng-class="{active:ctrl.visibleSection=='followers'}">
 				<div class="counter-value">{{ctrl.userFollowers}}</div>
 				<div class="counter-title">{{'Followers' | translate }}</div>
-			</li><li ng-click="sendGaEvent('profile page','Tab clicked: folowees');ctrl.visibleSection='followees'" ng-class="{active:ctrl.visibleSection=='followees'}">
+			</li>
+      <li ng-click="sendGaEvent('profile page','Tab clicked: folowees');ctrl.visibleSection='followees'" ng-class="{active:ctrl.visibleSection=='followees'}">
 				<div class="counter-value">{{ctrl.userFollowees}}</div>
 				<div class="counter-title">{{'Following' | translate }}</div>
 			</li>

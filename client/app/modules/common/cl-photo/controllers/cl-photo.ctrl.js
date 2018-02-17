@@ -17,11 +17,11 @@
     		// it's a cloudinary image - set the configuration to display the image
     		var img = ctrl.imageSrc.split('/');
     		ctrl.imageSrc = cloudinary.url(img[img.length - 1].split('.')[0], {
-                height: $scope.imageHeight, 
-                width: $scope.imageWidth, 
-                crop: $scope.imageCrop, 
-                gravity: $scope.imageGravity, 
-                quality: 100, 
+                height: $scope.imageHeight,
+                width: $scope.imageWidth,
+                crop: $scope.imageCrop,
+                gravity: $scope.imageGravity,
+                quality: 100,
                 zoom: $scope.imageZoom
             });
     	} else {

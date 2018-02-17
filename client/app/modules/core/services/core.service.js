@@ -31,7 +31,15 @@
         $rootScope.metaTags.type         = meta.type || 'website';
       };
 
-      service.alert = function (title, text) {
+      service.getFileUrl = function(filename) {
+        if (ENV.name === 'development') {
+          return service.env.apiUrl + 'Containers/' + service.env.bucket + '/download/' + filename
+        } else {
+          return 'https://' + service.env.bucket + service.config.S3_PREFIX + filename;
+        }
+      };
+
+        service.alert = function (title, text) {
         SweetAlert.swal(title, text);
       };
 

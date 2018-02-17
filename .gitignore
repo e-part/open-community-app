@@ -16,6 +16,8 @@ log/server_err.log
 test_data_.json
 .idea/
 storage/
+!storage/dummy
+!storage/storage-bucket-name-dev/dummy
 .strong-pm
 .sass-cache
 providers.json

@@ -60,26 +60,6 @@
         angular.element('.upload_button').triggerHandler('click');
       }
 
-      // ctrl.uploader = new FileUploader({
-      //   url: ctrl.apiUrl + 'containers/' + ctrl.bucket + '/upload',
-      //   formData: [
-      //     {
-      //       key: 'value'
-      //     }
-      //   ],
-      //   onAfterAddingFile: function (item) {
-      //     var fileExtension = '.' + item.file.name.split('.').pop();
-      //     item.file.name = Math.random().toString(36).substring(7) + new Date().getTime() + fileExtension;
-      //     item.upload();
-      //     ctrl.uploading = true;
-      //   },
-      //   onCompleteItem: function (data) {
-      //     ctrl.user.imageUrl =  'https://' + CoreService.env.bucket + CoreService.config.S3_PREFIX + data.file.name;
-      //     ctrl.uploading = false;
-      //     ctrl.uploader.queue = [];
-      //   }
-      // });
-
       ctrl.submit = function () {
         UserSettingsService.updateUser(ctrl.user, ctrl.subscriptions).then(function () {
           // callback after update user

@@ -25,7 +25,7 @@
           ctrl.chooseMedia = function (property) {
             var modalInstance = DialogsService.openDialog('uploadMedia',{size : 'lg'});
             modalInstance.result.then(function (selectedItem) {
-              var staticMediaUrl = 'https://' + CoreService.env.bucket + CoreService.config.S3_PREFIX + selectedItem.name;
+              var staticMediaUrl = CoreService.getFileUrl(selectedItem.name);
               ctrl.mediaUrl = staticMediaUrl;
               $scope.updateModel[$scope.updateProperty] = staticMediaUrl;
             }, function () {

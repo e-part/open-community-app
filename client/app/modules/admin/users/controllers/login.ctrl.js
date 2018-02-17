@@ -29,7 +29,7 @@
 
       if (CoreService.env.name === 'development') {
         $scope.credentials.email = 'admin@admin.com';
-        $scope.credentials.password = 'admin';
+        $scope.credentials.password = 'admin1';
       }
 
       $scope.schema = [

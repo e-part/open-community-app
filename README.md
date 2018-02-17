@@ -27,10 +27,7 @@ Live site at [https://beta.epart.co.il](https://beta.epart.co.il)
     npm install
     
     bower install
-
-### Build the client:
-
-    grunt build    
+ 
 
 ### Setup a database
 
@@ -73,6 +70,10 @@ In order to use it, you'll need to put your Mailchimp account API key in the `da
 
  * in the index.tpl.html, uncomment the Google Analytics script tag, and insert your analytics account ID.
 
+### Build the client:
+
+    grunt build   
+    
 ## Running
 
 
@@ -113,6 +114,10 @@ We are using a translations lib called [angular-gettext](https://angular-gettext
 - Translate your texts.
 - Run `grunt gettext` again.
     
+## Email templates
+
+In order to enable emails sending you'll need to setup the email templates using the Mandrill service. 
+This is still a work in progress, so if you'd like to enable this feature, please contact me (yotamsha@gmail.com).
 
 ## API Security
 

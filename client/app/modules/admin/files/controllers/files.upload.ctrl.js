@@ -13,8 +13,7 @@
         ctrl.filesToView = ctrl.files.slice(0, ctrl.IMAGES_LIMIT);
         ctrl.apiUrl = CoreService.env.apiUrl;
         ctrl.bucket = CoreService.env.bucket;
-        ctrl.S3_PREFIX = CoreService.config.S3_PREFIX;
-
+        ctrl.getFileUrl = CoreService.getFileUrl;
         ctrl.skipImagesIndex = 0;
         this.uploader = new FileUploader({
           url: CoreService.env.apiUrl + 'containers/' + CoreService.env.bucket + '/upload',

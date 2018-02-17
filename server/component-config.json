@@ -9,13 +9,5 @@
   "loopback-component-fixtures": {
     "loadFixturesOnStartup": false,
     "fixturesPath" : "/test/fixtures/"
-  },
-  "loopback-component-mailchimp": {
-    "connector": "loopback-connector-mailgun",
-    "apikey": "XXX",
-    "defaultListId": "XXX",
-    "defaults": {
-      "double_optin" : false
-    }
   }
 }

@@ -82,7 +82,7 @@ var mySqlQueriesProvider = {
   "on u.id=uc.userId and uc.categoryId in (?) group by u.id;\n",
 
   // get all the active posts ordered by the user preference and date relevance.
-  getTopPostsByUser : "select distinct p.id \n"+
+  getTopPostsByUser : "select p.id \n"+
   "from (select * from Post where reviewStatus='APPROVED' and status='PUBLISHED' and customerId=? \n" +
   "and migrationStatus = 'NORMAL' and endDate > UTC_TIMESTAMP()) p \n"+
   "left join\n"+
@@ -155,6 +155,6 @@ var mySqlQueriesProvider = {
 
 };
 // if you want to print a query to test it directly:
-// console.log(mySqlQueriesProvider.getPostsByCommittees);
+//console.log(mySqlQueriesProvider.getTopPostsByUser);
 module.exports = mySqlQueriesProvider;
 

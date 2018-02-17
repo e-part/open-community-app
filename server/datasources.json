@@ -15,17 +15,22 @@
     "acquireTimeout" : 30000
   },
 
-  "mandrill": {
-    "connector": "lb-connector-mandrill",
-    "apikey": "XXX"
+  "Email": {
+    "name": "mail",
+    "defaultForType": "mail",
+    "connector": "mail",
+    "transports": [{
+      "type": "SMTP",
+      "host": "smtp.gmail.com",
+      "secure": true,
+      "port": 465,
+      "auth": {
+        "user": "XXX",
+        "pass": "XXX"
+      }
+    }]
   },
-  "storage-bucket-name-dev": {
-    "name": "storage-bucket-name-dev",
-    "connector": "loopback-component-storage",
-    "provider": "amazon",
-    "key": "XXX",
-    "keyId": "XXX"
-  },
+
   "transient": {
     "name": "transient",
     "connector": "transient"

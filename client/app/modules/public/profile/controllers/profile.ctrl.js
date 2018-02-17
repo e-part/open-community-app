@@ -59,7 +59,7 @@
 
       function _init() {
         ctrl.userFullName = user.firstName + ' ' + user.lastName;
-        ctrl.showUserCreatedPosts = (CLIENT_CONFIG.attributes.MASTER_CLIENT_TYPE !== Constants.MASTER_CLIENT_TYPES.EPART);
+        ctrl.showUserCreatedPosts = !CLIENT_CONFIG.attributes.features.DISABLE_USER_POST_CREATION;
         if (ctrl.showUserCreatedPosts) {
           ctrl.visibleSection = 'myPosts'
         } else {

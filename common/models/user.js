@@ -36,18 +36,22 @@ function updateUserImageToCloudinary(user, userId, imageUrl) {
   }
 }
 function sendEmail(mailOptions, next) {
-  var loopback = require('loopback');
-  loopback.Email.send(mailOptions, function (err, response) {
-    if (err || response[0].status !== 'sent' || response[0].reject_reason) {
-      if (!err) {
-        err = {error: response[0]};
-      }
-      console.error(" email couldn't be sent: " + JSON.stringify(err));
-      return next(err);
-    }
+  EmailService.send(mailOptions).then(function(response){
     console.log('email sent, response' + JSON.stringify(response));
     next();
   });
+
+  // loopback.Email.send(mailOptions, function (err, response) {
+  //   if (err || response[0].status !== 'sent' || response[0].reject_reason) {
+  //     if (!err) {
+  //       err = {error: response[0]};
+  //     }
+  //     console.error(" email couldn't be sent: " + JSON.stringify(err));
+  //     return next(err);
+  //   }
+  //   console.log('email sent, response' + JSON.stringify(response));
+  //   next();
+  // });
 }
 /**
  * Adds the default email subscriptions for the given userId.

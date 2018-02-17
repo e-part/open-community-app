@@ -399,9 +399,10 @@ module.exports = function (Post) {
       if (err) {
         return cb(err, null);
       }
-      var postsIds = _.map(data, function (post) {
+      var postsIds = _.uniq(_.map(data, function (post) {
         return post.id;
-      });
+      }));
+
       var COMMENTS_LIMIT = 5;
       // Expand the retrieved posts with additional data.
       Post.find({
